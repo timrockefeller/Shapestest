@@ -14,7 +14,10 @@
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
     </Filter>
     <Filter Include="Header Files\json">
-      <UniqueIdentifier>{d3270bc5-e82f-44c8-b84b-b5e6a7ebec61}</UniqueIdentifier>
+      <UniqueIdentifier>{893a5b80-22f9-4c84-a458-7852cbbccddb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\irrKlang">
+      <UniqueIdentifier>{8bb3a64c-1866-4219-82b6-264256a15036}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
@@ -31,6 +34,9 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Src\Player.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Header\LevelManager.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Header\dist\jsoncpp.cpp">
@@ -55,6 +61,72 @@
     </ClInclude>
     <ClInclude Include="..\..\Header\MathHandle.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\LevelManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_ESoundEngineOptions.h">
+      <Filter>Header Files\irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_ESoundOutputDrivers.h">
+      <Filter>Header Files\irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_EStreamModes.h">
+      <Filter>Header Files\irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_IAudioRecorder.h">
+      <Filter>Header Files\irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_IAudioStream.h">
+      <Filter>Header Files\irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_IAudioStreamLoader.h">
+      <Filter>Header Files\irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_IFileFactory.h">
+      <Filter>Header Files\irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_IFileReader.h">
+      <Filter>Header Files\irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_IRefCounted.h">
+      <Filter>Header Files\irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_irrKlangTypes.h">
+      <Filter>Header Files\irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_ISound.h">
+      <Filter>Header Files\irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_ISoundDeviceList.h">
+      <Filter>Header Files\irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_ISoundEffectControl.h">
+      <Filter>Header Files\irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_ISoundEngine.h">
+      <Filter>Header Files\irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_ISoundMixedOutputReceiver.h">
+      <Filter>Header Files\irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_ISoundSource.h">
+      <Filter>Header Files\irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_ISoundStopEventReceiver.h">
+      <Filter>Header Files\irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_IVirtualRefCounted.h">
+      <Filter>Header Files\irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_SAudioStreamFormat.h">
+      <Filter>Header Files\irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_vec3d.h">
+      <Filter>Header Files\irrKlang</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\dist\irrKlang\irrKlang.h">
+      <Filter>Header Files\irrKlang</Filter>
     </ClInclude>
     <ClInclude Include="..\..\Header\dist\json\json-forwards.h">
       <Filter>Header Files\json</Filter>

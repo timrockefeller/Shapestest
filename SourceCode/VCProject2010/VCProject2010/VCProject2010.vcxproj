@@ -73,7 +73,7 @@
       <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
     </ClCompile>
     <Link>
-      <AdditionalDependencies>Winmm.lib;..\..\Src\CommonClass_2010.Lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Winmm.lib;..\..\Src\CommonClass_2010.Lib;..\..\Src\irrKlang.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <OutputFile>..\..\..\Bin\Game.exe</OutputFile>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <ProgramDatabaseFile>$(Configuration)\$(TargetName).pdb</ProgramDatabaseFile>
@@ -104,6 +104,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Header\dist\jsoncpp.cpp" />
+    <ClCompile Include="..\..\Header\LevelManager.cpp" />
     <ClCompile Include="..\..\Src\HitObject.cpp" />
     <ClCompile Include="..\..\Src\LessonX.cpp" />
     <ClCompile Include="..\..\Src\Level.cpp" />
@@ -112,11 +113,33 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Header\CommonClass.h" />
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_ESoundEngineOptions.h" />
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_ESoundOutputDrivers.h" />
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_EStreamModes.h" />
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_IAudioRecorder.h" />
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_IAudioStream.h" />
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_IAudioStreamLoader.h" />
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_IFileFactory.h" />
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_IFileReader.h" />
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_IRefCounted.h" />
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_irrKlangTypes.h" />
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_ISound.h" />
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_ISoundDeviceList.h" />
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_ISoundEffectControl.h" />
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_ISoundEngine.h" />
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_ISoundMixedOutputReceiver.h" />
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_ISoundSource.h" />
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_ISoundStopEventReceiver.h" />
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_IVirtualRefCounted.h" />
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_SAudioStreamFormat.h" />
+    <ClInclude Include="..\..\Header\dist\irrKlang\ik_vec3d.h" />
+    <ClInclude Include="..\..\Header\dist\irrKlang\irrKlang.h" />
     <ClInclude Include="..\..\Header\dist\json\json-forwards.h" />
     <ClInclude Include="..\..\Header\dist\json\json.h" />
     <ClInclude Include="..\..\Header\HitObject.h" />
     <ClInclude Include="..\..\Header\LessonX.h" />
     <ClInclude Include="..\..\Header\Level.h" />
+    <ClInclude Include="..\..\Header\LevelManager.h" />
     <ClInclude Include="..\..\Header\MathHandle.h" />
     <ClInclude Include="..\..\Header\Player.h" />
   </ItemGroup>

@@ -1,7 +1,7 @@
-//-------------------------- 7/12/2018 -- 09:49:28 -----
+//-------------------------- 7/12/2018 -- 15:06:17 -----
 Processor Init:
    Intel (unknown, Pentium Pro/II/III family), ~2.80 Ghz
-     (timed at roughly 2.79 Ghz)
+     (timed at roughly 2.81 Ghz)
    FPU detected
    MMX detected
    SSE detected
@@ -116,6 +116,7 @@ Loading compiled script D:/Program Files (x86)/FunCode/Games/Shapestest/Bin/comm
 FunCode (v1.7.5) initialized...
 Loading compiled script D:/Program Files (x86)/FunCode/Games/Shapestest/Bin/game/managed/datablocks.cs.
 Loading compiled script D:/Program Files (x86)/FunCode/Games/Shapestest/Bin/game/managed/persistent.cs.
+Compiling D:/Program Files (x86)/FunCode/Games/Shapestest/Bin/game/managed/brushes.cs...
 Loading compiled script D:/Program Files (x86)/FunCode/Games/Shapestest/Bin/game/managed/brushes.cs.
 Loading compiled script D:/Program Files (x86)/FunCode/Games/Shapestest/Bin/game/gameScripts/datablocks.cs.
 Loading compiled script D:/Program Files (x86)/FunCode/Games/Shapestest/Bin/game/gameScripts/guiProfiles.cs.
@@ -125,3 +126,9 @@ Activating DirectInput...
 DirectInput joystick failed to enable!
 Compiling D:/Program Files (x86)/FunCode/Games/Shapestest/Bin/game/data/levels/level.t2d...
 Loading compiled script D:/Program Files (x86)/FunCode/Games/Shapestest/Bin/game/data/levels/level.t2d.
+DirectInput deactivated.
+Activating DirectInput...
+DirectInput deactivated.
+Activating DirectInput...
+DirectInput deactivated.
+Activating DirectInput...

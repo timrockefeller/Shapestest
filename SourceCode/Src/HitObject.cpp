@@ -18,6 +18,16 @@ void HitObject::setPosInMs(float ms){
     this->posInMs = ms;
 }
 
+void HitObject::setPosInBeat(float beat)
+{
+	this->posInBeat = beat;
+}
+
+void HitObject::setType(HitObjectType _type)
+{
+	this->type = _type;
+}
+
 float HitObject::getPosInBeatByBpm(float tempo,float offset)
 {
 	this->posInMs;

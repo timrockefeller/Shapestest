@@ -17,5 +17,7 @@ public:
 	HitObject(float _posInBeat, HitObjectType _type);
 	~HitObject();
     void setPosInMs(float ms);
+	void setPosInBeat(float beat);
+	void setType(HitObjectType _type);
 	float getPosInBeatByBpm(float tempo,float offset);
 };

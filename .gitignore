@@ -26,3 +26,9 @@
 *.exe
 *.out
 *.app
+
+Bin/console\.log
+
+SourceCode/VCProject2010/
+
+SourceCode/Library/lib/Win32-visualStudio/

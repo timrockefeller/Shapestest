@@ -18,4 +18,5 @@ public:
 	
 	//º”‘ÿHit Objects
 	void loadMap(std::string songInfoFilePath);
+	std::string getSongPath();
 };

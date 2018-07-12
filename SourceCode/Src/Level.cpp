@@ -4,12 +4,12 @@
 
 Level::Level()
 {
-	this->loadMap("../Assets/Songs/level0.json");
+	this->loadMap("../../Assets/Songs/level0.json");
 }
 
 Level::Level(std::string mapname)
 {
-	this->loadMap("../Assets/Songs/" + mapname);
+	this->loadMap("../../Assets/Songs/" + mapname);
 }
 
 void Level::loadMap(std::string songInfoFilePath)
@@ -34,11 +34,12 @@ void Level::loadMap(std::string songInfoFilePath)
 	this->songOffset = root["songOffset"].asFloat();
 	this->songTempo = root["songTempo"].asFloat();
 	//³¢ÊÔÐÂ¶«Î÷
-	for (int i = 0; i < root["beatmap"].size(); i++)
+	int beatmap_size = root["beatmap"].size();
+	for (int i = 0; i < beatmap_size; i++)
 	{
 		HitObject temp;
 		temp.setPosInBeat(root["beatmap"][i]["posInBeat"].asFloat());
-		1 == HIT_UP;
+		//1 == HIT_UP;
 		HitObjectType temptype=HIT_UNDEFINE;
 		switch (root["beatmap"][i]["type"].asInt())
 		{
@@ -52,5 +53,10 @@ void Level::loadMap(std::string songInfoFilePath)
 		temp.setType(temptype);
 		beatmap.push_back(temp);
 	}
+
+}
+std::string Level::getSongPath()
+{
+	return "../../Assets/Songs/"+this->songPath;
 }
 //this->songname=root["people"][0]["lastName"].asString();

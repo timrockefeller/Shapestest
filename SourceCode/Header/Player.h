@@ -12,7 +12,7 @@ public:
 	const float HitSize = 160;
 
 	const float DefaultSize = 128;
-
+	float currentSize=128;
 	void UpdateRender();
 
 	Player();

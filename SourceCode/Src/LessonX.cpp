@@ -24,7 +24,8 @@ CGameMain::CGameMain()
 {
 	m_iGameState			=	1;
 
-	this->m_Player = new Player();
+	
+	this->m_Levels = new LevelManager();
 }
 //==============================================================================
 //
@@ -83,7 +84,8 @@ void CGameMain::GameInit()
 // 每局游戏进行中
 void CGameMain::GameRun( float fDeltaTime )
 {
-	m_Player->UpdateRender();
+	
+	m_Levels->update();
 }
 //=============================================================================
 //
@@ -139,7 +141,7 @@ void CGameMain::OnKeyDown( const int iKey, const bool bAltPress, const bool bShi
 		type = HIT_RIGHT;
 		break;
 	}
-	m_Player->OnKeyPressed(type);
+	m_Levels->m_Player->OnKeyPressed(type);
 }
 //==========================================================================
 //

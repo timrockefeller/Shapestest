@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
     </Filter>
+    <Filter Include="Header Files\json">
+      <UniqueIdentifier>{d3270bc5-e82f-44c8-b84b-b5e6a7ebec61}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Src\LessonX.cpp">
@@ -29,6 +32,9 @@
     </ClCompile>
     <ClCompile Include="..\..\Src\Player.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Header\dist\jsoncpp.cpp">
+      <Filter>Header Files\json</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -49,6 +55,12 @@
     </ClInclude>
     <ClInclude Include="..\..\Header\MathHandle.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\dist\json\json-forwards.h">
+      <Filter>Header Files\json</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\dist\json\json.h">
+      <Filter>Header Files\json</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

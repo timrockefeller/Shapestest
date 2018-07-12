@@ -26,3 +26,7 @@
 *.exe
 *.out
 *.app
+
+Bin/console\.log
+
+*.log

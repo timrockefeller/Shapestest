@@ -9,7 +9,7 @@ public:
 	CSprite *	handle_down;
 	CSprite *	handle_left;
 
-	const float HitSize = 150;
+	const float HitSize = 180;
 
 	const float DefaultSize = 128;
 

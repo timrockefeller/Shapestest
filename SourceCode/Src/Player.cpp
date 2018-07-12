@@ -3,17 +3,17 @@
 #include "MathHandle.h"
 void Player::UpdateRender()
 {
-	handle_up->SetSpriteHeight(MathHandle::LerpDouble(handle_up->GetSpriteHeight(),DefaultSize,0.01));
-	handle_up->SetSpriteWidth(MathHandle::LerpDouble(handle_up->GetSpriteWidth(), DefaultSize, 0.01));
+	handle_up->SetSpriteHeight((float)MathHandle::LerpDouble(handle_up->GetSpriteHeight(),DefaultSize,0.01));
+	handle_up->SetSpriteWidth((float)MathHandle::LerpDouble(handle_up->GetSpriteWidth(), DefaultSize, 0.01));
 
-	handle_right->SetSpriteHeight(MathHandle::LerpDouble(handle_right->GetSpriteHeight(), DefaultSize, 0.01));
-	handle_right->SetSpriteWidth(MathHandle::LerpDouble(handle_right->GetSpriteWidth(), DefaultSize, 0.01));
+	handle_right->SetSpriteHeight((float)MathHandle::LerpDouble(handle_right->GetSpriteHeight(), DefaultSize, 0.01));
+	handle_right->SetSpriteWidth((float)MathHandle::LerpDouble(handle_right->GetSpriteWidth(), DefaultSize, 0.01));
 	
-	handle_down->SetSpriteHeight(MathHandle::LerpDouble(handle_down->GetSpriteHeight(), DefaultSize, 0.01));
-	handle_down->SetSpriteWidth(MathHandle::LerpDouble(handle_down->GetSpriteWidth(), DefaultSize, 0.01));
+	handle_down->SetSpriteHeight((float)MathHandle::LerpDouble(handle_down->GetSpriteHeight(), DefaultSize, 0.01));
+	handle_down->SetSpriteWidth((float)MathHandle::LerpDouble(handle_down->GetSpriteWidth(), DefaultSize, 0.01));
 	
-	handle_left->SetSpriteHeight(MathHandle::LerpDouble(handle_left->GetSpriteHeight(), DefaultSize, 0.01));
-	handle_left->SetSpriteWidth(MathHandle::LerpDouble(handle_left->GetSpriteWidth(), DefaultSize, 0.01));
+	handle_left->SetSpriteHeight((float)MathHandle::LerpDouble(handle_left->GetSpriteHeight(), DefaultSize, 0.01));
+	handle_left->SetSpriteWidth((float)MathHandle::LerpDouble(handle_left->GetSpriteWidth(), DefaultSize, 0.01));
 }
 
 Player::Player() {

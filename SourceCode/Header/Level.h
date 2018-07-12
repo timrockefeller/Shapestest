@@ -5,15 +5,17 @@
 class Level {
 
 private:
+	std::string songName;
 	std::string songPath;
 	//song info
-	float tempo;
-	float offset;
+	float songTempo;
+	float songOffset;
 	std::vector<HitObject> beatmap;
 public:
 	Level();
-	Level(std::string _songPath, float _tempo, float _offset);
+	
+	void loadSongInfo();
 	
 	//º”‘ÿHit Objects
-	void loadMap();
+	void loadMap(std::string songInfoFilePath);
 };

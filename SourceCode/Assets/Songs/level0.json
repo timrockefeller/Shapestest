@@ -1,0 +1,21 @@
+{
+    "songName":"Test Song",
+    "songPath":"./nekodex - aureole (osu! xmas 2017).mp3",
+    "songTempo":128,
+    "songOffset":750,
+    "beatmap":[
+        {
+            "posInBeat":0.0,
+            "type":1
+        },
+        {
+            "posInBeat":1.5,
+            "type":2
+        },
+        {
+            "posInBeat":2.0,
+            "type":3
+        }
+
+    ]
+}

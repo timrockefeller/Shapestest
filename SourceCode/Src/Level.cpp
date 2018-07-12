@@ -2,6 +2,16 @@
 #include "Level.h"
 #include "dist\json\json.h"
 
+Level::Level()
+{
+	this->loadMap("../Assets/Songs/level0.json");
+}
+
+Level::Level(std::string mapname)
+{
+	this->loadMap("../Assets/Songs/" + mapname);
+}
+
 void Level::loadMap(std::string songInfoFilePath)
 {
 	std::ifstream ifs;

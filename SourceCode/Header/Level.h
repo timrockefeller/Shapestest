@@ -13,8 +13,8 @@ private:
 	std::vector<HitObject> beatmap;
 public:
 	Level();
+	Level(std::string mapname);
 	
-	void loadSongInfo();
 	
 	//º”‘ÿHit Objects
 	void loadMap(std::string songInfoFilePath);

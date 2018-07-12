@@ -8,7 +8,7 @@
 #define _LESSON_X_H_
 //
 //#include <windows.h>
-
+#include <vector>
 #include "CommonClass.h"
 #include "Player.h"
 /////////////////////////////////////////////////////////////////////////////////
@@ -19,6 +19,8 @@ class	CGameMain
 private:
 	int				m_iGameState;				// 游戏状态，0：结束或者等待开始；1：初始化；2：游戏进行中
 	Player*			m_Player;
+
+	LevelManager*   m_Levels;
 public:
 	CGameMain();            //构造函数
 	~CGameMain();           //析构函数  

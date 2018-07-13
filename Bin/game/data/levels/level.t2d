@@ -85,6 +85,7 @@
       canSaveDynamicFields = "1";
       Position = "-400.000 500.000";
       size = "50.000 50.000";
+      Layer = "1";
       WorldLimitMin = "-50.000 -37.500";
       WorldLimitMax = "50.000 37.500";
       PolyList = "0.000 -1.000 1.000 0.000 0.000 1.000 -1.000 0.000";
@@ -92,5 +93,17 @@
       fillColor = "1 1 1 1";
       FillMode = "1";
          mountID = "6";
+   };
+   new t2dShapeVector(process_bar) {
+      canSaveDynamicFields = "1";
+      Position = "-400.000 300.000";
+      size = "40.000 40.000";
+      WorldLimitMin = "-50.000 -37.500";
+      WorldLimitMax = "50.000 37.500";
+      PolyList = "0.000 -1.000 1.000 -1.000 1.000 0.000 0.000 0.000";
+      LineColor = "1 1 1 0";
+      fillColor = "1 0.8 0.62745 0.392157";
+      FillMode = "1";
+         mountID = "7";
    };
 };

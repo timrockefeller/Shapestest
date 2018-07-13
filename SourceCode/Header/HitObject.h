@@ -20,6 +20,7 @@ public:
     void setPosInMs(float ms);
 	void setPosInBeat(float beat);
 	void setType(HitObjectType _type);
+	HitObjectType getType();
 	float getPosInBeatByBpm(float tempo,float offset);
 	float getPosInBeat();
 	CSprite* bindSprite = NULL;

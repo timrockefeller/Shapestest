@@ -36,11 +36,15 @@ public:
 	//声音系统
 	SoundSystem * soundSystem;
 
-	//note
+	//note预设，界面里左下角那个小白框
 	CSprite* m_NotePrefab;
 
 	//玩家~
 	Player*			m_Player;
+
+	//进度条
+	CSprite* m_ProccessBar;
+
 private:
 	GAME_STATS stats;
 
@@ -49,9 +53,20 @@ private:
 	float songPosition;
 	float songPosInBeats;
 
+	//////////////////////////////////////////
+	//////////////  Level Mode  //////////////
+	
+	//note
 	int nextHitObjectCur=0;
 
+	//常量，note速度
 	const float beatsShownInAdvance = 1.0f;
 
-	int _nextdelay = 1;//防误触
+	//常量，note出生点
+	const float beatsSpawn = 500.0f;
+	//////////////////////////////////////////
+	//////////////  Pure Mode  ///////////////
+
+	//puresong 防误触用，勿理
+	int _nextdelay = 1;
 };

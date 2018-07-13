@@ -6,7 +6,7 @@
 Level::Level()
 {
 	this->levelPath = "../SourceCode/Assets/Songs/level0.json";
-	this->type = GAME_LEVEL_TYPE_PURESONG;
+	this->type = GAME_LEVEL_TYPE_LEVEL;
 }
 
 Level::Level(std::string mapname, GAME_LEVEL_TYPE _type)

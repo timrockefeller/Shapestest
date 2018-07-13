@@ -28,6 +28,11 @@ void HitObject::setType(HitObjectType _type)
 	this->type = _type;
 }
 
+HitObjectType HitObject::getType()
+{
+	return type;
+}
+
 float HitObject::getPosInBeatByBpm(float tempo,float offset)
 {
 	this->posInMs;

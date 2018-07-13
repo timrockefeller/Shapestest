@@ -10,7 +10,9 @@ LevelManager::LevelManager()
 
 	this->m_Player = new Player();
 
-	this->m_NotePrefab = new CSprite ("note_prefab");
+	this->m_NotePrefab = new CSprite("note_prefab");
+
+	this->m_ProccessBar = new CSprite("process_bar");
 	
 	this->init();
 
@@ -50,8 +52,9 @@ void LevelManager::update()
 
 			songPosInBeats = (songPosition - playingLevel->songOffset) / (60000.0f / playingLevel->songTempo);
 
+			//load NextClick
 			if (nextHitObjectCur < playingLevel->beatmap.size() &&
-				this->playingLevel->beatmap[nextHitObjectCur].getPosInBeat() <= beatsShownInAdvance) {
+				this->playingLevel->beatmap[nextHitObjectCur].getPosInBeat() <= beatsShownInAdvance+ songPosInBeats) {
 
 				//Instantiate( /* Music Note Prefab */);
 				char tempName[128];
@@ -59,26 +62,59 @@ void LevelManager::update()
 				playingLevel->beatmap[nextHitObjectCur].bindSprite = new CSprite(tempName);
 				if (playingLevel->beatmap[nextHitObjectCur].bindSprite->CloneSprite("note_prefab")) {
 
-					pathBuffer[0].push_back(this->playingLevel->beatmap[nextHitObjectCur]);
-
+					//pathBuffer[0].push_back(this->playingLevel->beatmap[nextHitObjectCur]);
+					int _I = 0;
+					switch (playingLevel->beatmap[nextHitObjectCur].getType()) {
+					case HIT_UP:
+						_I = 0; break;
+					case HIT_RIGHT:
+						_I = 1; break;
+					case HIT_DOWN:
+						_I = 2; break;
+					case HIT_LEFT:
+						_I = 3; break;
+					default:
+						_I = -1;
+					}
+					if (_I != -1)
+						pathBuffer[_I].push_back(this->playingLevel->beatmap[nextHitObjectCur]);
 					nextHitObjectCur++;
 				}
 			}
 
-			//update positions
+			//update notes positions
 			for (int _I = 0; _I < 4; _I++) {
 				for (int _J = 0; _J < pathBuffer[_I].size(); _J++) {
+					
 					pathBuffer[_I][_J].bindSprite->SetSpritePosition(
 						MathHandle::LerpFloat(
-							500,
-							128,
+							beatsSpawn,
+							(m_Player->HitSize + m_Player->DefaultSize) / 4.0f,
 							(beatsShownInAdvance - (pathBuffer[_I][_J].getPosInBeat() - songPosInBeats)) / beatsShownInAdvance
-						),
-						0
+						)*(_I == 1 ? 1 : _I == 3 ? -1 : 0),
+						MathHandle::LerpFloat(
+							beatsSpawn,
+							(m_Player->HitSize + m_Player->DefaultSize) / 4.0f,
+							(beatsShownInAdvance - (pathBuffer[_I][_J].getPosInBeat() - songPosInBeats)) / beatsShownInAdvance
+						)*(_I == 0 ? 1 : _I == 2 ? -1 : 0)
 					);
-
+					
 				}
+				////////////////////////////////////
+				//判定！！在这里！！
+				//对每一边的第一个元素进行判定
+				if (pathBuffer[_I].size() > 0) {
+					//到达底线
+					if (pathBuffer[_I][0].getPosInBeat() - songPosInBeats < /**/0/**用HitObject::checkMiss判定*/) {
+						
+						//Miss Event Here
 
+						//destroy
+						pathBuffer[_I][0].bindSprite->DeleteSprite();
+						std::vector<HitObject>::iterator it = pathBuffer[_I].begin();
+						pathBuffer[_I].erase(it);
+					}
+				}
 			}
 
 		}

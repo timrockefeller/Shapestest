@@ -35,3 +35,8 @@ float HitObject::getPosInBeatByBpm(float tempo,float offset)
 	this->posInBeat = (this->posInMs - offset) / (secPerBeat * 1000.f);
 	return this->posInBeat;
 }
+
+float HitObject::getPosInBeat()
+{
+	return this->posInBeat;
+}

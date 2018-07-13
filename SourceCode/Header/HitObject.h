@@ -1,4 +1,5 @@
 #pragma once
+#include "CommonClass.h"
 enum HitObjectType {
 	HIT_UNDEFINE,
 	HIT_UP,
@@ -20,4 +21,6 @@ public:
 	void setPosInBeat(float beat);
 	void setType(HitObjectType _type);
 	float getPosInBeatByBpm(float tempo,float offset);
+	float getPosInBeat();
+	CSprite* bindSprite=NULL;
 };

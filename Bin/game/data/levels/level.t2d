@@ -81,4 +81,16 @@
       FillMode = "1";
          mountID = "5";
    };
+   new t2dShapeVector(note_prefab) {
+      canSaveDynamicFields = "1";
+      Position = "-400.000 500.000";
+      size = "50.000 50.000";
+      WorldLimitMin = "-50.000 -37.500";
+      WorldLimitMax = "50.000 37.500";
+      PolyList = "0.000 -1.000 1.000 0.000 0.000 1.000 -1.000 0.000";
+      LineColor = "1 1 1 0";
+      fillColor = "1 1 1 1";
+      FillMode = "1";
+         mountID = "6";
+   };
 };

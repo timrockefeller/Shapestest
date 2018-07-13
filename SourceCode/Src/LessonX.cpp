@@ -126,22 +126,7 @@ void CGameMain::OnMouseUp( const int iMouseType, const float fMouseX, const floa
 // 参数 iAltPress, iShiftPress，iCtrlPress：键盘上的功能键Alt，Ctrl，Shift当前是否也处于按下状态(0未按下，1按下)
 void CGameMain::OnKeyDown( const int iKey, const bool bAltPress, const bool bShiftPress, const bool bCtrlPress )
 {	
-	HitObjectType type = HIT_UNDEFINE;
-	switch (iKey) {
-	case KEY_UP:
-		type = HIT_UP;
-		break;
-	case KEY_DOWN:
-		type = HIT_DOWN;
-		break;
-	case KEY_LEFT:
-		type = HIT_LEFT;
-		break;
-	case KEY_RIGHT:
-		type = HIT_RIGHT;
-		break;
-	}
-	m_Levels->m_Player->OnKeyPressed(type);
+	m_Levels->keyDown(iKey);
 }
 //==========================================================================
 //

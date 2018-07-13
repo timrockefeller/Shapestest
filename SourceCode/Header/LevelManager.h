@@ -6,16 +6,20 @@
 //#include "dist/irrKlang/irrKlang.h"//audio engine
 #include "SoundSystem.h"
 //#pragma comment(lib,"irrKlang.lib")
-class LevelManager {
+
+enum GAME_STATS {
+	
+};
+class LevelManager{
 public:
 
 	LevelManager();
 	~LevelManager();
 
 	std::vector<Level*> playlist;
-
+	void init();
 	void update();
-
+	void keyDown(const int ikey);
 	//playsong
 	void playLevel(Level* level);
 	

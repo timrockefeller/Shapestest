@@ -61,7 +61,7 @@ float SoundSystem::getSpectrumCurruentTime()
 	FMOD_DSP_PARAMETER_FFT *fft;
 
 	char* ts = new char[40];
-	dspSpectrum->getParameterData(FMOD_DSP_FFT_SPECTRUMDATA, (void **)&fft, 0, 0, 0);
+	ERRCHECK(dspSpectrum->getParameterData(FMOD_DSP_FFT_SPECTRUMDATA, (void **)&fft, 0, 0, 0));
 	/*for (int channel = 0; channel < fft->numchannels; channel++) {
 		for (int bin = 0; bin < fft->length; bin++)
 		{
@@ -69,7 +69,9 @@ float SoundSystem::getSpectrumCurruentTime()
 			printf(ts, "> spec: %f \n", val);
 		}
 	}*/
-	float temp = fft->spectrum[0][4];
+	int channel = 0;
+	int bin = fft->length / 4;
+	float temp = fft->spectrum[channel][bin];
 	return temp;
 }
 

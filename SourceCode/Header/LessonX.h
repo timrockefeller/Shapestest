@@ -24,7 +24,7 @@ private:
 	LevelManager*   m_Levels;
 public:
 	CGameMain();            //构造函数
-	~CGameMain();           //析构函数  
+	~CGameMain();           //析构函数
 
 	// Get方法
 	int				GetGameState()											{ return m_iGameState; }

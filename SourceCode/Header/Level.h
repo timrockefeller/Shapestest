@@ -11,21 +11,19 @@ enum GAME_LEVEL_TYPE {
 class Level {
 
 private:
+	//关卡文件路径
 	std::string levelPath;
 
-	GAME_LEVEL_TYPE type;
+	
 
 	std::string songName;
 	std::string songPath;
 
-	//song info
-	float songTempo;
-	float songOffset;
+	
 
-	/*
-		临时beatmap储存库。
-	*/
-	std::vector<HitObject> beatmap;
+	//关卡模式
+	GAME_LEVEL_TYPE type = GAME_LEVEL_TYPE_PURESONG;
+	
 
 
 	//1.加载关卡 (加载Hit Objects)
@@ -39,8 +37,18 @@ public:
 	Level();
 	Level(std::string mapname,GAME_LEVEL_TYPE _type);
 
+	//song info
+	float songTempo;
+	float songOffset;
+
+	//临时beatmap储存库。
+	std::vector<HitObject> beatmap;
+
 	//加载地图
 	void loadLevel();
 	
 	std::string getSongPath();
+	GAME_LEVEL_TYPE getLevelType();
+
+
 };

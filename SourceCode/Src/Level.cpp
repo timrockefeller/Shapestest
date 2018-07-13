@@ -29,20 +29,23 @@ void Level::loadLevel()
 		printf("parse failed \n");
 		return;
 	}
-
+	
 	this->songName = root["songName"].asString();
 	this->songPath = root["songPath"].asString();
 	this->songOffset = root["songOffset"].asFloat();
 	this->songTempo = root["songTempo"].asFloat();
 
-	switch (this->type) {
+	switch (root["levelType"].asInt()) {
 	case GAME_LEVEL_TYPE_LEVEL:
+		this->type = GAME_LEVEL_TYPE_LEVEL;
 		this->loadMap(root);
 		break;
 	case GAME_LEVEL_TYPE_CHAT:
+		this->type = GAME_LEVEL_TYPE_CHAT;
 		this->loadChat(root);
 		break;
 	case GAME_LEVEL_TYPE_PURESONG:
+		this->type = GAME_LEVEL_TYPE_PURESONG;
 		this->loadSong(root);
 		break;
 	}
@@ -88,3 +91,9 @@ std::string Level::getSongPath()
 {
 	return "../../Assets/Songs/"+this->songPath;
 }
+
+GAME_LEVEL_TYPE Level::getLevelType()
+{
+	return type;
+}
+

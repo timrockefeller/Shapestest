@@ -45,7 +45,7 @@ public:
 	std::vector<HitObject> beatmap;
 
 	//╪сть╣ьм╪
-	void loadLevel();
+	boolean loadLevel();
 	
 	std::string getSongPath();
 	GAME_LEVEL_TYPE getLevelType();

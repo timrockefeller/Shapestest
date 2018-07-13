@@ -4,6 +4,7 @@
 LevelManager::LevelManager()
 {
 	
+	this->stats = GAME_STATS_INITIAL;
 	
 	this->soundSystem = new SoundSystem();
 
@@ -13,8 +14,9 @@ LevelManager::LevelManager()
 	
 	this->init();
 
+	this->playingLevel = NULL;
 	//test song
-	this->playLevel(playlist[0]);
+	
 }
 
 LevelManager::~LevelManager()
@@ -36,46 +38,50 @@ void LevelManager::update()
 {
 	soundSystem->update();
 	m_Player->UpdateRender();
-	
-	if (playingLevel->getLevelType() == GAME_LEVEL_TYPE_PURESONG) {
-		//彦恺，你来调参数
-		m_Player->currentSize = m_Player->DefaultSize + 1500.0f * soundSystem->getSpectrumCurruentTime();
-	}
-	else if (playingLevel->getLevelType() == GAME_LEVEL_TYPE_LEVEL) {//dspTIME refresh
-		
+	if (stats == GAME_STATS_PLAYING) {
+		if (playingLevel->getLevelType() == GAME_LEVEL_TYPE_PURESONG) {
+			//彦恺，你来调参数
+			m_Player->currentSize = m_Player->DefaultSize + 1500.0f * soundSystem->getSpectrumCurruentTime();
+		}
+		else if (playingLevel->getLevelType() == GAME_LEVEL_TYPE_LEVEL) {//dspTIME refresh
 
-		songPosition = this->soundSystem->getPositionInMs();
 
-		songPosInBeats = (songPosition - playingLevel->songOffset) / (60.f / playingLevel->songTempo);
+			songPosition = this->soundSystem->getPositionInMs();
 
-		if (nextHitObjectCur < playingLevel->beatmap.size() && 
-			playingLevel->beatmap[nextHitObjectCur].getPosInBeat() <= beatsShownInAdvance){
+			songPosInBeats = (songPosition - playingLevel->songOffset) / (60000.0f / playingLevel->songTempo);
 
-			//Instantiate( /* Music Note Prefab */);
-			if (true) {
-				playingLevel->beatmap[nextHitObjectCur].bindSprite->CloneSprite("note_prefab");
-				pathBuffer[0].push_back(&playingLevel->beatmap[nextHitObjectCur]);
+			if (nextHitObjectCur < playingLevel->beatmap.size() &&
+				this->playingLevel->beatmap[nextHitObjectCur].getPosInBeat() <= beatsShownInAdvance) {
+
+				//Instantiate( /* Music Note Prefab */);
+				char tempName[128];
+				sprintf(tempName, "note_%d", nextHitObjectCur);
+				playingLevel->beatmap[nextHitObjectCur].bindSprite = new CSprite(tempName);
+				if (playingLevel->beatmap[nextHitObjectCur].bindSprite->CloneSprite("note_prefab")) {
+
+					pathBuffer[0].push_back(this->playingLevel->beatmap[nextHitObjectCur]);
+
+					nextHitObjectCur++;
+				}
 			}
-			nextHitObjectCur++;
+
+			//update positions
+			for (int _I = 0; _I < 4; _I++) {
+				for (int _J = 0; _J < pathBuffer[_I].size(); _J++) {
+					pathBuffer[_I][_J].bindSprite->SetSpritePosition(
+						MathHandle::LerpFloat(
+							500,
+							128,
+							(beatsShownInAdvance - (pathBuffer[_I][_J].getPosInBeat() - songPosInBeats)) / beatsShownInAdvance
+						),
+						0
+					);
+
+				}
+
+			}
 
 		}
-
-		//update positions
-		for (int _I=0; _I < 4; _I++) {
-			for (int _J=0; _J < pathBuffer[_I].size(); _J++) {
-				pathBuffer[_I][_J]->bindSprite->SetSpritePosition(
-				MathHandle::LerpFloat(
-					128,
-					300,
-					(beatsShownInAdvance - (pathBuffer[_I][_J]->getPosInBeat() - songPosInBeats)) / beatsShownInAdvance
-				),
-				0
-				);
-			
-			}
-		
-		}
-
 	}
 }
 
@@ -96,22 +102,38 @@ void LevelManager::keyDown(const int iKey)
 		type = HIT_RIGHT;
 		break;
 	}
-	if (playingLevel->getLevelType()==GAME_LEVEL_TYPE_LEVEL||//按键只在游戏、对话里面响应方向。
-		playingLevel->getLevelType()==GAME_LEVEL_TYPE_CHAT) {
-		m_Player->OnKeyPressed(type);
+	if (stats == GAME_STATS_PLAYING) {
+		if (playingLevel->getLevelType() == GAME_LEVEL_TYPE_LEVEL ||//按键只在游戏、对话里面响应方向。
+			playingLevel->getLevelType() == GAME_LEVEL_TYPE_CHAT) {
+			m_Player->OnKeyPressed(type);
+		}
+		else {//其他就提前结束
+			_nextdelay--;//防误触
+			if (_nextdelay < 1) { this->nextLevel(); _nextdelay = 1; }
+		}
 	}
-	else {//其他就提前结束
-		_nextdelay--;//防误触
-		if (_nextdelay < 1) { this->nextLevel(); _nextdelay = 1; }
+
+	if (iKey == KEY_R) {//test
+		
+		this->playLevel(playlist[0]);
 	}
 }
 
 void LevelManager::playLevel(Level* level)
 {
+	this->stats = GAME_STATS_PASSING;
+	nextHitObjectCur = 0;
+
+	soundSystem->killPlaying();
+
 	// instantiate
-	level->loadLevel();
-	this->playingLevel = level;
-	soundSystem->playMusic(level->getSongPath());
+	if (level->loadLevel()) {
+		this->playingLevel = level;
+		soundSystem->playMusic(level->getSongPath());
+		this->stats = GAME_STATS_PLAYING;
+	}
+	else printf("failed to play Level.");
+		
 }
 
 void LevelManager::nextLevel() {

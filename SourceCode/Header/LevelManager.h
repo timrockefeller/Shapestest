@@ -9,7 +9,9 @@
 //#pragma comment(lib,"irrKlang.lib")
 
 enum GAME_STATS {
-	
+	GAME_STATS_INITIAL,
+	GAME_STATS_PASSING,//过场
+	GAME_STATS_PLAYING,//运行音乐中
 };
 class LevelManager{
 public:
@@ -40,15 +42,16 @@ public:
 	//玩家~
 	Player*			m_Player;
 private:
-	
-	std::vector<HitObject*> pathBuffer[4];
+	GAME_STATS stats;
+
+	std::vector<HitObject> pathBuffer[4];
 
 	float songPosition;
 	float songPosInBeats;
 
-	int nextHitObjectCur;
+	int nextHitObjectCur=0;
 
-	const float beatsShownInAdvance = 5.0f;
+	const float beatsShownInAdvance = 1.0f;
 
 	int _nextdelay = 1;//防误触
 };

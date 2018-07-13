@@ -1,33 +1,34 @@
 #include <fstream>
 #include "Level.h"
-
+//
+//#include <direct.h>
 
 Level::Level()
 {
-	this->levelPath = "../../Assets/Songs/level0.json";
-	this->type = GAME_LEVEL_TYPE_LEVEL;
+	this->levelPath = "../SourceCode/Assets/Songs/level0.json";
+	this->type = GAME_LEVEL_TYPE_PURESONG;
 }
 
 Level::Level(std::string mapname, GAME_LEVEL_TYPE _type)
 {
-	this->levelPath = "../../Assets/Songs/" + mapname;
+	this->levelPath = "../SourceCode/Assets/Songs/" + mapname;
 	this->type = _type;
 }
 
-void Level::loadLevel()
+boolean Level::loadLevel()
 {
 	std::ifstream ifs;
 	ifs.open(this->levelPath);
 	if (!ifs.is_open()) {
 		printf("Error to open file");
-		return;
+		return false;
 	}
 	Json::Reader reader;
 	Json::Value root;
 	if (!reader.parse(ifs, root, false))
 	{
 		printf("parse failed \n");
-		return;
+		return false;
 	}
 	
 	this->songName = root["songName"].asString();
@@ -35,7 +36,7 @@ void Level::loadLevel()
 	this->songOffset = root["songOffset"].asFloat();
 	this->songTempo = root["songTempo"].asFloat();
 
-	switch (root["levelType"].asInt()) {
+	switch (this->type) {
 	case GAME_LEVEL_TYPE_LEVEL:
 		this->type = GAME_LEVEL_TYPE_LEVEL;
 		this->loadMap(root);
@@ -49,6 +50,7 @@ void Level::loadLevel()
 		this->loadSong(root);
 		break;
 	}
+	return true;
 }
 
 void Level::loadMap(Json::Value root)
@@ -89,7 +91,7 @@ void Level::loadChat(Json::Value root)
 
 std::string Level::getSongPath()
 {
-	return "../../Assets/Songs/"+this->songPath;
+	return "../SourceCode/Assets/Songs/"+this->songPath;
 }
 
 GAME_LEVEL_TYPE Level::getLevelType()

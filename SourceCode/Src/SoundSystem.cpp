@@ -35,11 +35,13 @@ void SoundSystem::playMusic(std::string song_name) {
 }
 void SoundSystem::killPlaying()
 {
-	ERRCHECK(channel->stop());
+	if (channel != NULL && music != NULL) {
+		ERRCHECK(channel->stop());
+		ERRCHECK(music->release());
+	}
 }
 void SoundSystem::update () {
 	ERRCHECK(fmod_system->update());
-	getSpectrumCurruentTime();
 }
 
 unsigned int SoundSystem::getPositionInMs()
@@ -58,24 +60,33 @@ unsigned int SoundSystem::getSongLengthInMs()
 
 float SoundSystem::getSpectrumCurruentTime()
 {
-	FMOD_DSP_PARAMETER_FFT *fft;
+	if (channel != NULL&&music != NULL) {
+		FMOD_DSP_PARAMETER_FFT *fft=NULL;
 
-	char* ts = new char[40];
-	ERRCHECK(dspSpectrum->getParameterData(FMOD_DSP_FFT_SPECTRUMDATA, (void **)&fft, 0, 0, 0));
-	/*for (int channel = 0; channel < fft->numchannels; channel++) {
-		for (int bin = 0; bin < fft->length; bin++)
-		{
-			float val = fft->spectrum[channel][bin];
-			printf(ts, "> spec: %f \n", val);
+		char* ts = new char[40];
+		ERRCHECK(dspSpectrum->getParameterData(FMOD_DSP_FFT_SPECTRUMDATA, (void **)&fft, 0, 0, 0));
+		/*for (int channel = 0; channel < fft->numchannels; channel++) {
+			for (int bin = 0; bin < fft->length; bin++)
+			{
+				float val = fft->spectrum[channel][bin];
+				printf(ts, "> spec: %f \n", val);
+			}
+		}*/
+		int channel = 0;
+		int bin = fft->length / 512;
+		float temp = 0;
+		if (fft != NULL) {
+			temp = fft->spectrum[channel][bin];
 		}
-	}*/
-	int channel = 0;
-	int bin = fft->length / 4;
-	float temp = fft->spectrum[channel][bin];
-	return temp;
+		return temp;
+	}
+	return 0;
 }
 
 inline void SoundSystem::ERRCHECK(FMOD_RESULT result)
 {
-	printf(FMOD_ErrorString(result));
+	if (result != FMOD_OK) {
+		printf(FMOD_ErrorString(result));
+	}
+	
 }

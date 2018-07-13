@@ -22,5 +22,5 @@ public:
 	void setType(HitObjectType _type);
 	float getPosInBeatByBpm(float tempo,float offset);
 	float getPosInBeat();
-	CSprite* bindSprite=NULL;
+	CSprite* bindSprite = NULL;
 };

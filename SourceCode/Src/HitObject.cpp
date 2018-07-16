@@ -18,6 +18,11 @@ void HitObject::setPosInMs(float ms){
     this->posInMs = ms;
 }
 
+float HitObject::getPosInMs(float ms)
+{
+	return this->posInMs;
+}
+
 void HitObject::setPosInBeat(float beat)
 {
 	this->posInBeat = beat;

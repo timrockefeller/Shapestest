@@ -34,7 +34,7 @@
    layerSortMode30 = "Normal";
    layerSortMode31 = "Normal";
    DebugRendering = "0";
-      cameraPosition = "0 0";
+      cameraPosition = "0.000 0";
       cameraSize = "800.000 600.000";
 
    new t2dShapeVector(Handle_UP) {
@@ -97,7 +97,7 @@
    new t2dShapeVector(process_bar) {
       canSaveDynamicFields = "1";
       Position = "-400.000 300.000";
-      size = "40.000 40.000";
+      size = "40.000 20.000";
       WorldLimitMin = "-50.000 -37.500";
       WorldLimitMax = "50.000 37.500";
       PolyList = "0.000 -1.000 1.000 -1.000 1.000 0.000 0.000 0.000";
@@ -105,5 +105,83 @@
       fillColor = "1 0.8 0.62745 0.392157";
       FillMode = "1";
          mountID = "7";
+   };
+   new t2dShapeVector(effect_noteSlide_UP) {
+      canSaveDynamicFields = "1";
+      Position = "0.000 -250.000";
+      size = "70.000 500.000";
+      Layer = "2";
+      WorldLimitMin = "-50.000 -37.500";
+      WorldLimitMax = "50.000 37.500";
+      PolyList = "-1.000 -1.000 1.000 -1.000 1.000 1.000 -1.000 1.000";
+      LineColor = "1 1 1 0";
+      fillColor = "1 0.78431 0.78431 0.0784314";
+      FillMode = "1";
+         mountID = "8";
+   };
+   new t2dShapeVector(effect_noteSlide_DOWN) {
+      canSaveDynamicFields = "1";
+      Position = "0.000 250.000";
+      size = "70.000 500.000";
+      Layer = "2";
+      WorldLimitMin = "-50.000 -37.500";
+      WorldLimitMax = "50.000 37.500";
+      PolyList = "-1.000 -1.000 1.000 -1.000 1.000 1.000 -1.000 1.000";
+      LineColor = "1 1 1 0";
+      fillColor = "1 0.78431 0.78431 0.0784314";
+      FillMode = "1";
+         mountID = "9";
+   };
+   new t2dShapeVector(effect_noteSlide_RIGHT) {
+      canSaveDynamicFields = "1";
+      Position = "250.000 0.000";
+      size = "500.000 70.000";
+      Layer = "2";
+      WorldLimitMin = "-50.000 -37.500";
+      WorldLimitMax = "50.000 37.500";
+      PolyList = "-1.000 -1.000 1.000 -1.000 1.000 1.000 -1.000 1.000";
+      LineColor = "1 1 1 0";
+      fillColor = "1 0.78431 0.78431 0.0784314";
+      FillMode = "1";
+         mountID = "10";
+   };
+   new t2dShapeVector(effect_noteSlide_LEFT) {
+      canSaveDynamicFields = "1";
+      Position = "-250.000 0.000";
+      size = "500.000 70.000";
+      Layer = "2";
+      WorldLimitMin = "-50.000 -37.500";
+      WorldLimitMax = "50.000 37.500";
+      PolyList = "-1.000 -1.000 1.000 -1.000 1.000 1.000 -1.000 1.000";
+      LineColor = "1 1 1 0";
+      fillColor = "1 0.78431 0.78431 0.0784314";
+      FillMode = "1";
+         mountID = "11";
+   };
+   new t2dTextObject() {
+      canSaveDynamicFields = "1";
+      Position = "243.147 -202.075";
+      size = "133.707 80.000";
+      WorldLimitMin = "-50.000 -37.500";
+      WorldLimitMax = "50.000 37.500";
+      DstBlendFactor = "DST_ALPHA";
+      text = "combo\n";
+      font = "BEYNO";
+      wordWrap = "1";
+      hideOverflow = "0";
+      textAlign = "Left";
+      lineHeight = "40";
+      aspectRatio = "0.716287";
+      lineSpacing = "0";
+      characterSpacing = "0";
+      autoSize = "0";
+      fontSizes = "10";
+      textColor = "1 1 1 1";
+      bilinearFilter = "0";
+      snapToInteger = "0";
+      noUnicode = "0";
+         hideOverlap = "0";
+         mountID = "12";
+         snapToIntegerPos = "1";
    };
 };

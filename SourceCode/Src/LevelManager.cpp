@@ -1,20 +1,22 @@
 #include "LevelManager.h"
 #include "fmod_inc\fmod.h"
 #include "MathHandle.h"
+
+//构造函数：初始化
 LevelManager::LevelManager()
 {
 	
 	this->stats = GAME_STATS_INITIAL;
 	
-	this->soundSystem = new SoundSystem();
+	LevelManager::soundSystem = new SoundSystem();
 
 	this->m_Player = new Player();
 
 	this->m_NotePrefab = new CSprite("note_prefab");
-
-	this->m_ProccessBar = new CSprite("process_bar");
 	
 	this->init();
+
+	this->bindEffects();
 
 	this->playingLevel = NULL;
 	//test song
@@ -29,6 +31,8 @@ LevelManager::~LevelManager()
 
 void LevelManager::init()
 {
+
+
 	//将json放在这里声明
 	// EXAMPLE: 
 	// this->playlist.push_back(new Level("examplesong.json",GAME_LEVEL_TYPE_PURESONG));
@@ -36,19 +40,59 @@ void LevelManager::init()
 
 }
 
+//绑定特效
+void LevelManager::bindEffects()
+{
+	effects.insert(std::pair<char*, Effect*>("process_bar",new Effect_ProcessBar()));
+	effects.insert(std::pair<char*, Effect*>("noteSlide_UP", new Effect_NoteSlide_Up()));
+	effects.insert(std::pair<char*, Effect*>("noteSlide_RIGHT", new Effect_NoteSlide_Right()));
+	effects.insert(std::pair<char*, Effect*>("noteSlide_DOWN", new Effect_NoteSlide_Down()));
+	effects.insert(std::pair<char*, Effect*>("noteSlide_LEFT", new Effect_NoteSlide_Left()));
+	//bar
+	//this->effect_processBar = new CSprite("process_bar");
+}
+
+
 void LevelManager::update()
 {
 	soundSystem->update();
 	m_Player->UpdateRender();
+	
+	
+
+
 	if (stats == GAME_STATS_PLAYING) {
+		
+		/////////
+		//effects
+		std::map<char*, Effect*>::iterator _it;
+		_it = effects.begin();
+		while (_it != effects.end())
+		{
+			_it->second->loop();
+			_it++;
+		}
+		//effect list
+		((Effect_ProcessBar*)effects["process_bar"])->setSongPos(soundSystem->getPositionInMs()*1.0f / soundSystem->getSongLengthInMs());
+		((Effect_NoteSlide_Up*)effects["noteSlide_UP"])->currents = 
+		((Effect_NoteSlide_Up*)effects["noteSlide_DOWN"])->currents=
+		((Effect_NoteSlide_Up*)effects["noteSlide_LEFT"])->currents=
+		((Effect_NoteSlide_Up*)effects["noteSlide_RIGHT"])->currents=
+			MathHandle::ComplexFloat(50,128,(50+1000*soundSystem->getSpectrumCurruentTime(2)));
+
+
+
+
+		/////////
+		//in play
 		if (playingLevel->getLevelType() == GAME_LEVEL_TYPE_PURESONG) {
 			//彦恺，你来调参数
-			m_Player->currentSize = m_Player->DefaultSize + 1500.0f * soundSystem->getSpectrumCurruentTime();
+			m_Player->currentSize = m_Player->DefaultSize + 1500.0f * soundSystem->getSpectrumCurruentTime(7);
 		}
 		else if (playingLevel->getLevelType() == GAME_LEVEL_TYPE_LEVEL) {//dspTIME refresh
 
 
-			songPosition = this->soundSystem->getPositionInMs();
+			songPosition = soundSystem->getPositionInMs();
 
 			songPosInBeats = (songPosition - playingLevel->songOffset) / (60000.0f / playingLevel->songTempo);
 
@@ -63,7 +107,7 @@ void LevelManager::update()
 				if (playingLevel->beatmap[nextHitObjectCur].bindSprite->CloneSprite("note_prefab")) {
 
 					//pathBuffer[0].push_back(this->playingLevel->beatmap[nextHitObjectCur]);
-					int _I = 0;
+					int _I = 0;//"_I"用来确定方向
 					switch (playingLevel->beatmap[nextHitObjectCur].getType()) {
 					case HIT_UP:
 						_I = 0; break;
@@ -82,7 +126,7 @@ void LevelManager::update()
 				}
 			}
 
-			//update notes positions
+			//update notes positions and check
 			for (int _I = 0; _I < 4; _I++) {
 				for (int _J = 0; _J < pathBuffer[_I].size(); _J++) {
 					
@@ -105,25 +149,29 @@ void LevelManager::update()
 				//对每一边的第一个元素进行判定
 				if (pathBuffer[_I].size() > 0) {
 					//到达底线
-					if (pathBuffer[_I][0].getPosInBeat() - songPosInBeats < /**/0/**用HitObject::checkMiss判定*/) {
+					if (pathBuffer[_I][0].getPosInBeat() - songPosInBeats < /**/-33.f*playingLevel->songTempo/6e4f/**用HitObject::checkMiss判定*/) {
 						
 						//Miss Event Here
 
 						//destroy
 						pathBuffer[_I][0].bindSprite->DeleteSprite();
+						pathBuffer[_I][0].bindSprite = NULL;
 						std::vector<HitObject>::iterator it = pathBuffer[_I].begin();
 						pathBuffer[_I].erase(it);
 					}
 				}
 			}
-
+		}
+		else if (playingLevel->getLevelType() == GAME_LEVEL_TYPE_CHAT) {
 		}
 	}
 }
-
+//按键按下
 void LevelManager::keyDown(const int iKey)
 {
 	HitObjectType type = HIT_UNDEFINE;
+
+	bool isHit = true;
 	switch (iKey) {
 	case KEY_UP:
 		type = HIT_UP;
@@ -137,20 +185,24 @@ void LevelManager::keyDown(const int iKey)
 	case KEY_RIGHT:
 		type = HIT_RIGHT;
 		break;
+	default:
+		isHit = false;
 	}
-	if (stats == GAME_STATS_PLAYING) {
+
+	if (stats == GAME_STATS_PLAYING) {//正在玩？
 		if (playingLevel->getLevelType() == GAME_LEVEL_TYPE_LEVEL ||//按键只在游戏、对话里面响应方向。
 			playingLevel->getLevelType() == GAME_LEVEL_TYPE_CHAT) {
-			m_Player->OnKeyPressed(type);
+			m_Player->OnKeyPressed(type);//传入数据
+			if(isHit) soundSystem->playFX(SOUND_FX_CLICK);
 		}
 		else {//其他就提前结束
 			_nextdelay--;//防误触
+			//再按一次跳过
 			if (_nextdelay < 1) { this->nextLevel(); _nextdelay = 1; }
 		}
 	}
 
 	if (iKey == KEY_R) {//test
-		
 		this->playLevel(playlist[0]);
 	}
 }
@@ -158,15 +210,31 @@ void LevelManager::keyDown(const int iKey)
 void LevelManager::playLevel(Level* level)
 {
 	this->stats = GAME_STATS_PASSING;
+
 	nextHitObjectCur = 0;
+	for (int __I = 0; __I < 4; __I++) { 
+		for (int __J = 0; __J < pathBuffer[__I].size(); __J++) {
+			pathBuffer[__I][__J].bindSprite->DeleteSprite();
+			pathBuffer[__I][__J].bindSprite = NULL;
+		}
+		this->pathBuffer[__I].clear(); 
+	}
 
 	soundSystem->killPlaying();
 
 	// instantiate
 	if (level->loadLevel()) {
 		this->playingLevel = level;
-		soundSystem->playMusic(level->getSongPath());
-		this->stats = GAME_STATS_PLAYING;
+		if (level->getLevelType() == GAME_LEVEL_TYPE_LEVEL) {
+			beatsShownInAdvance = level->songTempo / 70.0f;
+		}
+		if(soundSystem->playMusic(level->getSongPath()))
+			this->stats = GAME_STATS_PLAYING;
+		else {
+			printf("playLevel Failed! retry..");
+			playLevel(level);//tryAnain
+
+		}
 	}
 	else printf("failed to play Level.");
 		

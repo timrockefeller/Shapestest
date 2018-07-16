@@ -22,6 +22,7 @@ private:
 	
 
 	LevelManager*   m_Levels;
+	//游戏背景#352d3e
 public:
 	CGameMain();            //构造函数
 	~CGameMain();           //析构函数

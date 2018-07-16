@@ -20,18 +20,42 @@ SoundSystem::~SoundSystem() {
 	ERRCHECK(fmod_system->release());
 }
 
-void SoundSystem::playMusic(std::string song_name) {
+bool SoundSystem::playMusic(std::string song_name) {
 	ERRCHECK(fmod_system->createStream(	song_name.c_str(),
 										FMOD_LOOP_OFF | FMOD_3D | FMOD_UNIQUE, 
 										0, 
 										&music
 	));
+	if (music == NULL) return false;
 	ERRCHECK(fmod_system->playSound(music,
-									0,
+									FMOD_DEFAULT,
 									false,
 									&channel
 	));
 	channel->addDSP(0, dspSpectrum);
+	return true;
+}
+bool SoundSystem::playFX(SOUND_FX fx)
+{
+	//play sound
+	char * source = NULL;
+	switch (fx) {
+	case SOUND_FX_CLICK:
+		source = "../SourceCode/Assets/FX/normal-hitfinish.wav";
+	}
+	ERRCHECK(fmod_system->createSound(
+		source,
+		FMOD_DEFAULT | FMOD_3D,
+		false,
+		&fxs
+	));
+	ERRCHECK(fmod_system->playSound(
+		fxs,
+		FMOD_DEFAULT,
+		false,
+		&fxc
+	));
+	return false;
 }
 void SoundSystem::killPlaying()
 {
@@ -58,7 +82,7 @@ unsigned int SoundSystem::getSongLengthInMs()
 	return length;
 }
 
-float SoundSystem::getSpectrumCurruentTime()
+float SoundSystem::getSpectrumCurruentTime(int index)
 {
 	if (channel != NULL&&music != NULL) {
 		FMOD_DSP_PARAMETER_FFT *fft=NULL;
@@ -76,7 +100,9 @@ float SoundSystem::getSpectrumCurruentTime()
 		int bin = fft->length / 512;
 		float temp = 0;
 		if (fft != NULL) {
-			temp = fft->spectrum[channel][bin];
+			if (fft->spectrum[channel] != NULL) {
+				temp = fft->spectrum[channel][index];
+			}
 		}
 		return temp;
 	}

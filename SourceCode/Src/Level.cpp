@@ -5,7 +5,7 @@
 
 Level::Level()
 {
-	this->levelPath = "../SourceCode/Assets/Songs/level0.json";
+	this->levelPath = "../SourceCode/Assets/Songs/level2.json";
 	this->type = GAME_LEVEL_TYPE_LEVEL;
 }
 
@@ -58,12 +58,16 @@ void Level::loadMap(Json::Value root)
 	//load beatmap
 	//把json里面的数据一一对应到这个类的各个成员
 	
+	//delete beatmap first
+	beatmap.clear();
+	std::vector<HitObject>(beatmap).swap(beatmap);
 	//尝试新东西
 	int beatmap_size = root["beatmap"].size();
 	for (int i = 0; i < beatmap_size; i++)
 	{
 		HitObject temp;
 		temp.setPosInBeat(root["beatmap"][i]["posInBeat"].asFloat());
+		temp.setPosInMs(temp.getPosInBeat() * 60000.0f / this->songTempo + this->songOffset);
 		//1 == HIT_UP;
 		HitObjectType temptype=HIT_UNDEFINE;
 		switch (root["beatmap"][i]["type"].asInt())

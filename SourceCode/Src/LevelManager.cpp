@@ -78,7 +78,7 @@ void LevelManager::update()
 		((Effect_NoteSlide_Up*)effects["noteSlide_DOWN"])->currents=
 		((Effect_NoteSlide_Up*)effects["noteSlide_LEFT"])->currents=
 		((Effect_NoteSlide_Up*)effects["noteSlide_RIGHT"])->currents=
-			MathHandle::ComplexFloat(50,128,(50+1000*soundSystem->getSpectrumCurruentTime(2)));
+			MathHandle::ClampFloat(50,128,(50+1000*soundSystem->getSpectrumCurruentTime(2)));
 
 
 

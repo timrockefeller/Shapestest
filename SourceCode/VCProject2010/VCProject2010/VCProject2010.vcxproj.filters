@@ -19,6 +19,9 @@
     <Filter Include="Header Files\fmod">
       <UniqueIdentifier>{f82d8843-1808-4a31-b92d-aa6dbb388f81}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Header Files\effects">
+      <UniqueIdentifier>{d25bd620-107c-4fef-9263-b31321de9e37}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\Src\LessonX.cpp">
@@ -43,6 +46,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Src\LevelManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Header\Effects\Effect_process_bar.cpp">
+      <Filter>Header Files\effects</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Header\Effects\Effect_note_slide.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -100,6 +109,15 @@
     </ClInclude>
     <ClInclude Include="..\..\Header\LevelManager.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Effects.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Effects\Effect_process_bar.h">
+      <Filter>Header Files\effects</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Effects\Effect_note_slide.h">
+      <Filter>Header Files\effects</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

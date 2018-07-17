@@ -10,7 +10,7 @@ public :
 	double static LerpDouble(double start, double end, float lerp) {
 		return start + (end - start)*lerp;
 	}
-	float static ComplexFloat(float min, float max, float spe) {
+	float static ClampFloat(float min, float max, float spe) {
 		return spe > max ? max : spe < min ? min : spe;
 	}
 };

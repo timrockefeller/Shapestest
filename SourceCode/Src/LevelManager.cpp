@@ -49,6 +49,11 @@ void LevelManager::bindEffects()
 	effects.insert(std::pair<char*, Effect*>("noteSlide_RIGHT", new Effect_NoteSlide_Right()));
 	effects.insert(std::pair<char*, Effect*>("noteSlide_DOWN", new Effect_NoteSlide_Down()));
 	effects.insert(std::pair<char*, Effect*>("noteSlide_LEFT", new Effect_NoteSlide_Left()));
+	effects.insert(std::pair<char*, Effect*>("handleFlash_UP", new Effect_HandleFlash_UP()));
+	/*effects.insert(std::pair<char*, Effect*>("handleFlash_DOWN", new Effect_HandleFlash_DOWN()));
+	effects.insert(std::pair<char*, Effect*>("handleFlash_RIGHT", new Effect_HandleFlash_RIGHT()));
+	effects.insert(std::pair<char*, Effect*>("handleFlash_LEFT", new Effect_HandleFlash_LEFT()));*/
+	
 	
 	//once
 	effectsOnce.insert(std::pair<char*, Effect_Once*>("fade_in", new Effect_FadeIn()));
@@ -64,7 +69,7 @@ void LevelManager::bindEffects()
 }
 
 
-void LevelManager::update()
+void LevelManager::update(float deltaTime)
 {
 	soundSystem->update();
 	m_Player->UpdateRender();
@@ -77,7 +82,7 @@ void LevelManager::update()
 		_it = effects.begin();
 		while (_it != effects.end())
 		{
-			_it->second->loop();
+			_it->second->loop(deltaTime);
 			_it++;
 		}
 
@@ -87,21 +92,13 @@ void LevelManager::update()
 		_it2 = effectsOnce.begin();
 		while (_it2 != effectsOnce.end())
 		{
-			_it2->second->update();
+			_it2->second->update(deltaTime);
 			_it2++;
 		}
 
 		//effect list
 		((Effect_ProcessBar*)effects["process_bar"])->setSongPos(soundSystem->getPositionInMs()*1.0f / soundSystem->getSongLengthInMs());
-		effects["noteSlide_UP"]->currents = 
-		effects["noteSlide_DOWN"]->currents=
-		effects["noteSlide_LEFT"]->currents=
-		effects["noteSlide_RIGHT"]->currents=
-			MathHandle::ClampFloat(50,128,(50+1000*soundSystem->getSpectrumCurruentTime(2)));
-
-
-
-
+		
 		/////////
 		//in play
 		if (playingLevel->getLevelType() == GAME_LEVEL_TYPE_PURESONG) {
@@ -109,6 +106,13 @@ void LevelManager::update()
 			m_Player->currentSize = m_Player->DefaultSize + 1500.0f * soundSystem->getSpectrumCurruentTime(7);
 		}
 		else if (playingLevel->getLevelType() == GAME_LEVEL_TYPE_LEVEL) {//dspTIME refresh
+			
+			//path effects
+			effects["noteSlide_UP"]->currents =
+			effects["noteSlide_DOWN"]->currents =
+			effects["noteSlide_LEFT"]->currents =
+			effects["noteSlide_RIGHT"]->currents =
+				MathHandle::ClampFloat(50, 128, (50 + 1000 * soundSystem->getSpectrumCurruentTime(2)));
 
 
 			songPosition = soundSystem->getPositionInMs();
@@ -159,7 +163,7 @@ void LevelManager::update()
 							beatsSpawn,
 							(m_Player->HitSize + m_Player->DefaultSize) / 4.0f,
 							(beatsShownInAdvance - (pathBuffer[_I][_J].getPosInBeat() - songPosInBeats)) / beatsShownInAdvance
-						)*(_I == 0 ? 1 : _I == 2 ? -1 : 0)
+						)*(_I == 0 ? -1 : _I == 2 ? 1 : 0)
 					);
 					
 				}
@@ -171,8 +175,9 @@ void LevelManager::update()
 					if (pathBuffer[_I][0].getPosInMs() - songPosition < - HIT_CHECKTIME_MISS) {
 						
 						//Miss Event Here
-						//m_Player->Hitted(0);
+						m_Player->Hitted(0);
 						//if (m_Player->combo >= 20) soundSystem->playFX(SOUND_FX_MISS);
+						
 						//destroy
 						pathBuffer[_I][0].bindSprite->DeleteSprite();
 						pathBuffer[_I][0].bindSprite = NULL;
@@ -225,9 +230,17 @@ void LevelManager::keyDown(const int iKey)
 				if (pathBuffer[_I].size() > 0) {
 					if (MathHandle::AbsFloat(pathBuffer[_I][0].getPosInMs() - songPosition) < HIT_CHECKTIME_MISS) {
 						//Hit Event Here
-						int hited = 1;
-						//m_Player->Hitted(1);
+						
+						m_Player->Hitted(1);
 
+						//flash effects
+						effects["handleFlash_UP"]->trigger();
+
+						//destroy
+						pathBuffer[_I][0].bindSprite->DeleteSprite();
+						pathBuffer[_I][0].bindSprite = NULL;
+						std::vector<HitObject>::iterator it = pathBuffer[_I].begin();
+						pathBuffer[_I].erase(it);
 					}
 				}
 			}
@@ -247,7 +260,8 @@ void LevelManager::keyDown(const int iKey)
 	}
 
 	if (iKey == KEY_R) {//test
-		this->playLevel(playlist[0]);
+		this->playIndex = 0;
+		this->playLevel(playlist[playIndex]);
 	}
 }
 
@@ -270,6 +284,8 @@ void LevelManager::playLevel(Level* level)
 	if (level->loadLevel()) {
 		this->playingLevel = level;
 		if (level->getLevelType() == GAME_LEVEL_TYPE_LEVEL) {
+			effects["handleFlash_UP"]->start();
+
 			beatsShownInAdvance = level->songTempo / 70.0f;
 		}
 		if(soundSystem->playMusic(level->getSongPath()))
@@ -285,5 +301,7 @@ void LevelManager::playLevel(Level* level)
 }
 
 void LevelManager::nextLevel() {
-
+	if (playIndex < playlist.size() - 1) {
+		playLevel(playlist[playIndex++]);
+	}
 }

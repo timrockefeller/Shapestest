@@ -4,7 +4,7 @@
 class Effect_FadeOut :public Effect_Once {
 public:
 	virtual void start() {}
-	virtual void update() {
+	virtual void update(float deltaTime) {
 		for (int _I = 0; _I < ctn.size(); _I++) {
 			ctn[_I]->SetSpriteColorAlpha((int)MathHandle::LerpFloat(ctn[_I]->GetSpriteColorAlpha(),0,0.01));
 			if (ctn[_I]->GetSpriteColorAlpha() < 5) {
@@ -20,7 +20,7 @@ public:
 class Effect_FadeIn :public Effect_Once {
 public:
 	virtual void start() {}
-	virtual void update() {
+	virtual void update(float deltaTime) {
 		for (int _I = 0; _I < ctn.size(); _I++) {
 			ctn[_I]->SetSpriteColorAlpha(MathHandle::LerpFloat(ctn[_I]->GetSpriteColorAlpha(), 255, 0.01));
 			if (ctn[_I]->GetSpriteColorAlpha() < 5) {
@@ -35,7 +35,7 @@ public:
 class Effect_Fade128 :public Effect_Once {
 public:
 	virtual void start() {}
-	virtual void update() {
+	virtual void update(float deltaTime) {
 		for (int _I = 0; _I < ctn.size(); _I++) {
 			ctn[_I]->SetSpriteColorAlpha((int)MathHandle::LerpFloat(ctn[_I]->GetSpriteColorAlpha(), 128, 0.01));
 			if (MathHandle::AbsFloat(ctn[_I]->GetSpriteColorAlpha() - 5) < 128.0f) {

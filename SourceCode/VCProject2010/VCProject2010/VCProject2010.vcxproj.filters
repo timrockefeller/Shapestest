@@ -58,7 +58,7 @@
       <Filter>Header Files\effects_legacy</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Header\Effects\Effect_handleFlash.cpp">
-      <Filter>Source Files</Filter>
+      <Filter>Header Files\effects_legacy</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>

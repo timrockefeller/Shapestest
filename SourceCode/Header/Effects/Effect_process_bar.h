@@ -7,6 +7,8 @@ public:
 	Effect_ProcessBar();
 	virtual void start();
 	
-	virtual void loop();
+	virtual void loop(float deltaTime);
+	virtual void trigger() {}
 	void setSongPos(float pos);
+
 };

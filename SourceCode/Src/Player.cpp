@@ -41,6 +41,17 @@ void Player::OnKeyPressed(HitObjectType type)
 	}
 }
 
+void Player::Hitted(int isHitted)
+{
+	if (isHitted > 0) {
+		this->combo++;
+	}
+	else {
+		this->combo = 0;
+		
+	}
+}
+
 void Player::OnKeyAction(CSprite * obj)
 {
 	obj->SetSpriteHeight(HitSize);

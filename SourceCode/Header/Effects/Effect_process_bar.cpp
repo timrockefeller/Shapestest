@@ -10,7 +10,7 @@ void Effect_ProcessBar::start()
 	
 }
 
-void Effect_ProcessBar::loop()
+void Effect_ProcessBar::loop(float deltaTime)
 {
 	transfrom->SetSpriteWidth(MathHandle::LerpFloat(transfrom->GetSpriteWidth(), currents, 0.02f));
 }

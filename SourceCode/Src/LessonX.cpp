@@ -85,7 +85,7 @@ void CGameMain::GameInit()
 void CGameMain::GameRun( float fDeltaTime )
 {
 	
-	m_Levels->update();
+	m_Levels->update(fDeltaTime);
 }
 //=============================================================================
 //

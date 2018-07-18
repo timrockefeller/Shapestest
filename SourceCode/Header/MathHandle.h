@@ -2,13 +2,13 @@
 class MathHandle {
 public :
 	float static LerpFloat(float start, float end, float lerp) {
-		return (start + (end - start)*lerp);
+		return start - (start - end)*lerp;
 	}
 	int static LerpInt(int start, int end, float lerp) {
-		return (int)(start + (end - start)*lerp);
+		return start - (int)((start - end)*lerp);
 	}
 	double static LerpDouble(double start, double end, float lerp) {
-		return start + (end - start)*lerp;
+		return start - (start - end)*lerp;
 	}
 	float static ClampFloat(float min, float max, float spe) {
 		return spe > max ? max : spe < min ? min : spe;

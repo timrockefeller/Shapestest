@@ -7,7 +7,8 @@ public:
 	float currents = 0;
 	CSprite * transfrom=NULL;
 	virtual void start() = 0;
-	virtual void loop() = 0;
+	virtual void loop(float deltaTime) = 0;
+	virtual void trigger() = 0;
 };
 
 
@@ -38,6 +39,6 @@ public:
 		}
 	}
 	virtual void start() = 0;
-	virtual void update() = 0;
+	virtual void update(float deltaTime) = 0;
 	
 };

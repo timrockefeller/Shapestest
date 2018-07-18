@@ -10,6 +10,8 @@
 #include "Effects.h"
 #include "Effects\Effect_process_bar.h"
 #include "Effects\Effect_note_slide.h"
+#include "Effects\Effect_handleFlash.h"
+
 #include "stdEffects\Effect_Fade.h"
 #include "stdEffects\Effect_Pos.h"
 #include "stdEffects\Effect_Size.h"
@@ -37,12 +39,15 @@ public:
 	void bindEffects();
 
 	//每帧更新
-	void update();
+	void update(float deltaTime);
 
 	
 	void keyDown(const int ikey);
 
 
+	//关卡指针
+	int playIndex = 0;
+	
 	//开始关卡
 	void playLevel(Level* level);
 	//直接进入下一关卡
@@ -83,7 +88,7 @@ private:
 	//notecur，指向beatmap中下一个元素的index
 	int nextHitObjectCur=0;
 
-	//常量，note速度
+	//level->songTempo / 70.0f  note速度
 	float beatsShownInAdvance = 1.0f;
 
 	//常量，note出生点

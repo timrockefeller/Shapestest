@@ -19,7 +19,10 @@
     <Filter Include="Header Files\fmod">
       <UniqueIdentifier>{f82d8843-1808-4a31-b92d-aa6dbb388f81}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Header Files\effects">
+    <Filter Include="Header Files\effects_legacy">
+      <UniqueIdentifier>{48791935-c01d-4511-9ac0-10ec0ee557c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\effects_once">
       <UniqueIdentifier>{d25bd620-107c-4fef-9263-b31321de9e37}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -49,9 +52,12 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Header\Effects\Effect_process_bar.cpp">
-      <Filter>Header Files\effects</Filter>
+      <Filter>Header Files\effects_legacy</Filter>
     </ClCompile>
     <ClCompile Include="..\..\Header\Effects\Effect_note_slide.cpp">
+      <Filter>Header Files\effects_legacy</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Header\Effects\Effect_handleFlash.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
@@ -113,11 +119,26 @@
     <ClInclude Include="..\..\Header\Effects.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="..\..\Header\Effects\Effect_process_bar.h">
-      <Filter>Header Files\effects</Filter>
-    </ClInclude>
     <ClInclude Include="..\..\Header\Effects\Effect_note_slide.h">
-      <Filter>Header Files\effects</Filter>
+      <Filter>Header Files\effects_legacy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Effects\Effect_process_bar.h">
+      <Filter>Header Files\effects_legacy</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\stdEffects\Effect_Fade.h">
+      <Filter>Header Files\effects_once</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\stdEffects\Effect_Pos.h">
+      <Filter>Header Files\effects_once</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\stdEffects\Effect_Size.h">
+      <Filter>Header Files\effects_once</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Chat.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Header\Effects\Effect_handleFlash.h">
+      <Filter>Header Files\effects_legacy</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

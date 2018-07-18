@@ -43,13 +43,24 @@ void LevelManager::init()
 //绑定特效
 void LevelManager::bindEffects()
 {
+	//bind
 	effects.insert(std::pair<char*, Effect*>("process_bar",new Effect_ProcessBar()));
 	effects.insert(std::pair<char*, Effect*>("noteSlide_UP", new Effect_NoteSlide_Up()));
 	effects.insert(std::pair<char*, Effect*>("noteSlide_RIGHT", new Effect_NoteSlide_Right()));
 	effects.insert(std::pair<char*, Effect*>("noteSlide_DOWN", new Effect_NoteSlide_Down()));
 	effects.insert(std::pair<char*, Effect*>("noteSlide_LEFT", new Effect_NoteSlide_Left()));
-	//bar
-	//this->effect_processBar = new CSprite("process_bar");
+	
+	//once
+	effectsOnce.insert(std::pair<char*, Effect_Once*>("fade_in", new Effect_FadeIn()));
+	effectsOnce.insert(std::pair<char*, Effect_Once*>("fade_out", new Effect_FadeOut()));
+	effectsOnce.insert(std::pair<char*, Effect_Once*>("fade_128", new Effect_Fade128()));
+	effectsOnce.insert(std::pair<char*, Effect_Once*>("move_x", new Effect_Pos_MovetoX()));
+	effectsOnce.insert(std::pair<char*, Effect_Once*>("move_y", new Effect_Pos_MovetoY()));
+	effectsOnce.insert(std::pair<char*, Effect_Once*>("size_h", new Effect_Size_Height()));
+	effectsOnce.insert(std::pair<char*, Effect_Once*>("size_w", new Effect_Size_Width()));
+	//how to use:
+	// effectsOnce["move_y"]->addObject(m_NotePrefab,2);
+
 }
 
 
@@ -58,9 +69,6 @@ void LevelManager::update()
 	soundSystem->update();
 	m_Player->UpdateRender();
 	
-	
-
-
 	if (stats == GAME_STATS_PLAYING) {
 		
 		/////////
@@ -72,12 +80,23 @@ void LevelManager::update()
 			_it->second->loop();
 			_it++;
 		}
+
+		/////////
+		//effects once
+		std::map<char*, Effect_Once*>::iterator _it2;
+		_it2 = effectsOnce.begin();
+		while (_it2 != effectsOnce.end())
+		{
+			_it2->second->update();
+			_it2++;
+		}
+
 		//effect list
 		((Effect_ProcessBar*)effects["process_bar"])->setSongPos(soundSystem->getPositionInMs()*1.0f / soundSystem->getSongLengthInMs());
-		((Effect_NoteSlide_Up*)effects["noteSlide_UP"])->currents = 
-		((Effect_NoteSlide_Up*)effects["noteSlide_DOWN"])->currents=
-		((Effect_NoteSlide_Up*)effects["noteSlide_LEFT"])->currents=
-		((Effect_NoteSlide_Up*)effects["noteSlide_RIGHT"])->currents=
+		effects["noteSlide_UP"]->currents = 
+		effects["noteSlide_DOWN"]->currents=
+		effects["noteSlide_LEFT"]->currents=
+		effects["noteSlide_RIGHT"]->currents=
 			MathHandle::ClampFloat(50,128,(50+1000*soundSystem->getSpectrumCurruentTime(2)));
 
 
@@ -149,10 +168,11 @@ void LevelManager::update()
 				//对每一边的第一个元素进行判定
 				if (pathBuffer[_I].size() > 0) {
 					//到达底线
-					if (pathBuffer[_I][0].getPosInBeat() - songPosInBeats < /**/-33.f*playingLevel->songTempo/6e4f/**用HitObject::checkMiss判定*/) {
+					if (pathBuffer[_I][0].getPosInMs() - songPosition < - HIT_CHECKTIME_MISS) {
 						
 						//Miss Event Here
-
+						//m_Player->Hitted(0);
+						//if (m_Player->combo >= 20) soundSystem->playFX(SOUND_FX_MISS);
 						//destroy
 						pathBuffer[_I][0].bindSprite->DeleteSprite();
 						pathBuffer[_I][0].bindSprite = NULL;
@@ -163,6 +183,7 @@ void LevelManager::update()
 			}
 		}
 		else if (playingLevel->getLevelType() == GAME_LEVEL_TYPE_CHAT) {
+			//依晨你来写
 		}
 	}
 }
@@ -170,32 +191,55 @@ void LevelManager::update()
 void LevelManager::keyDown(const int iKey)
 {
 	HitObjectType type = HIT_UNDEFINE;
-
+	int _I = -1;
 	bool isHit = true;
 	switch (iKey) {
 	case KEY_UP:
 		type = HIT_UP;
+		_I = 0;
 		break;
 	case KEY_DOWN:
 		type = HIT_DOWN;
+		_I = 2;
 		break;
 	case KEY_LEFT:
 		type = HIT_LEFT;
+		_I = 3;
 		break;
 	case KEY_RIGHT:
 		type = HIT_RIGHT;
+		_I = 1;
 		break;
 	default:
 		isHit = false;
 	}
 
 	if (stats == GAME_STATS_PLAYING) {//正在玩？
-		if (playingLevel->getLevelType() == GAME_LEVEL_TYPE_LEVEL ||//按键只在游戏、对话里面响应方向。
-			playingLevel->getLevelType() == GAME_LEVEL_TYPE_CHAT) {
+		if (playingLevel->getLevelType() == GAME_LEVEL_TYPE_LEVEL) {//按键只在游戏、对话里面响应方向。
+			//Level Mode
 			m_Player->OnKeyPressed(type);//传入数据
-			if(isHit) soundSystem->playFX(SOUND_FX_CLICK);
+			if (isHit) { 
+				//音效
+				soundSystem->playFX(SOUND_FX_CLICK); 
+				//判定
+				if (pathBuffer[_I].size() > 0) {
+					if (MathHandle::AbsFloat(pathBuffer[_I][0].getPosInMs() - songPosition) < HIT_CHECKTIME_MISS) {
+						//Hit Event Here
+						int hited = 1;
+						//m_Player->Hitted(1);
+
+					}
+				}
+			}
+			
+			
 		}
-		else {//其他就提前结束
+		else if (playingLevel->getLevelType() == GAME_LEVEL_TYPE_CHAT) {
+			//Chat Mode
+
+			//依晨你来写
+		}
+		else {//PureSong Mode
 			_nextdelay--;//防误触
 			//再按一次跳过
 			if (_nextdelay < 1) { this->nextLevel(); _nextdelay = 1; }

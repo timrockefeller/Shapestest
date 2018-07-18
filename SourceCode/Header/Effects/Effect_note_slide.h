@@ -1,5 +1,5 @@
 #pragma once
-#include "../Effects.h";
+#include "../Effects.h"
 
 
 class Effect_NoteSlide_Up :public Effect {

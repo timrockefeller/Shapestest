@@ -10,7 +10,9 @@
 #include "Effects.h"
 #include "Effects\Effect_process_bar.h"
 #include "Effects\Effect_note_slide.h"
-
+#include "stdEffects\Effect_Fade.h"
+#include "stdEffects\Effect_Pos.h"
+#include "stdEffects\Effect_Size.h"
 //#include "dist/irrKlang/irrKlang.h"//audio engine
 #include "SoundSystem.h"
 //#pragma comment(lib,"irrKlang.lib")
@@ -62,6 +64,10 @@ public:
 private:
 
 	std::map<char*,Effect*>  effects;
+
+	std::map<char*, Effect_Once*> effectsOnce;
+
+	//std::map<char*, Effects*>  effects;
 
 	GAME_STATS stats;
 

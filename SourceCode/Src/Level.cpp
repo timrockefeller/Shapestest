@@ -30,7 +30,7 @@ boolean Level::loadLevel()
 		printf("parse failed \n");
 		return false;
 	}
-	
+
 	this->songName = root["songName"].asString();
 	this->songPath = root["songPath"].asString();
 	this->songOffset = root["songOffset"].asFloat();

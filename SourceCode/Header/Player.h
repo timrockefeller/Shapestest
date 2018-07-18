@@ -12,13 +12,14 @@ public:
 	const float HitSize = 160;
 
 	const float DefaultSize = 128;
+
 	float currentSize=128;
+
 	void UpdateRender();
 
 	Player();
 
 	void OnKeyPressed(HitObjectType type);
-
 
 	void OnKeyAction(CSprite* obj);
 };

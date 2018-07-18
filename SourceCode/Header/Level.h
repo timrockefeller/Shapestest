@@ -1,5 +1,6 @@
 #pragma once
 #include "HitObject.h"
+#include "Chat.h"
 #include <string>
 #include <vector>
 #include "dist\json\json.h"
@@ -43,6 +44,8 @@ public:
 
 	//¡Ÿ ±beatmap¥¢¥Êø‚°£
 	std::vector<HitObject> beatmap;
+
+	std::vector<Chat>      chats;
 
 	//º”‘ÿµÿÕº
 	boolean loadLevel();

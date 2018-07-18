@@ -18,7 +18,7 @@ void HitObject::setPosInMs(float ms){
     this->posInMs = ms;
 }
 
-float HitObject::getPosInMs(float ms)
+float HitObject::getPosInMs()
 {
 	return this->posInMs;
 }

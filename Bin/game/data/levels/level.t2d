@@ -81,7 +81,7 @@
       FillMode = "1";
          mountID = "5";
    };
-   new t2dShapeVector(note_prefab) {
+   new t2dShapeVector(note_prefab_legacy) {
       canSaveDynamicFields = "1";
       Position = "-400.000 500.000";
       size = "50.000 50.000";
@@ -115,7 +115,7 @@
       WorldLimitMax = "50.000 37.500";
       PolyList = "-1.000 -1.000 1.000 -1.000 1.000 1.000 -1.000 1.000";
       LineColor = "1 1 1 0";
-      fillColor = "1 0.78431 0.78431 0.0784314";
+      fillColor = "1 0.78431 0.78431 0.0980392";
       FillMode = "1";
          mountID = "8";
    };
@@ -128,7 +128,7 @@
       WorldLimitMax = "50.000 37.500";
       PolyList = "-1.000 -1.000 1.000 -1.000 1.000 1.000 -1.000 1.000";
       LineColor = "1 1 1 0";
-      fillColor = "1 0.78431 0.78431 0.0784314";
+      fillColor = "1 0.78431 0.78431 0.0980392";
       FillMode = "1";
          mountID = "9";
    };
@@ -141,7 +141,7 @@
       WorldLimitMax = "50.000 37.500";
       PolyList = "-1.000 -1.000 1.000 -1.000 1.000 1.000 -1.000 1.000";
       LineColor = "1 1 1 0";
-      fillColor = "1 0.78431 0.78431 0.0784314";
+      fillColor = "1 0.78431 0.78431 0.0980392";
       FillMode = "1";
          mountID = "10";
    };
@@ -154,8 +154,72 @@
       WorldLimitMax = "50.000 37.500";
       PolyList = "-1.000 -1.000 1.000 -1.000 1.000 1.000 -1.000 1.000";
       LineColor = "1 1 1 0";
-      fillColor = "1 0.78431 0.78431 0.0784314";
+      fillColor = "1 0.78431 0.78431 0.0980392";
       FillMode = "1";
          mountID = "11";
+   };
+   new t2dStaticSprite(note_prefab) {
+      imageMap = "starImageMap";
+      frame = "0";
+      useSourceRect = "0";
+      sourceRect = "-1.07374e+008 -1.07374e+008 -1.07374e+008 -1.07374e+008";
+      canSaveDynamicFields = "1";
+      Position = "-350.000 500.000";
+      size = "72.000 70.000";
+      Layer = "1";
+      WorldLimitMin = "-50.000 -37.500";
+      WorldLimitMax = "50.000 37.500";
+         mountID = "12";
+   };
+   new t2dStaticSprite(effect_handleFlash_UP) {
+      imageMap = "effect_flashImageMap";
+      frame = "0";
+      useSourceRect = "0";
+      sourceRect = "-1.07374e+008 -1.07374e+008 -1.07374e+008 -1.07374e+008";
+      canSaveDynamicFields = "1";
+      size = "128.000 128.000";
+      Layer = "2";
+      WorldLimitMin = "-50.000 -37.500";
+      WorldLimitMax = "50.000 37.500";
+         mountID = "13";
+   };
+   new t2dStaticSprite(effect_handleFlash_RIGHT) {
+      imageMap = "effect_flashImageMap";
+      frame = "0";
+      useSourceRect = "0";
+      sourceRect = "-1.07374e+008 -1.07374e+008 -1.07374e+008 -1.07374e+008";
+      canSaveDynamicFields = "1";
+      size = "128.000 128.000";
+      Rotation = "90";
+      Layer = "2";
+      WorldLimitMin = "-50.000 -37.500";
+      WorldLimitMax = "50.000 37.500";
+         mountID = "14";
+   };
+   new t2dStaticSprite(effect_handleFlash_DOWN) {
+      imageMap = "effect_flashImageMap";
+      frame = "0";
+      useSourceRect = "0";
+      sourceRect = "-1.07374e+008 -1.07374e+008 -1.07374e+008 -1.07374e+008";
+      canSaveDynamicFields = "1";
+      size = "128.000 128.000";
+      Rotation = "180";
+      Layer = "2";
+      WorldLimitMin = "-50.000 -37.500";
+      WorldLimitMax = "50.000 37.500";
+         mountID = "15";
+   };
+   new t2dStaticSprite(effect_handleFlash_LEFT) {
+      imageMap = "effect_flashImageMap";
+      frame = "0";
+      useSourceRect = "0";
+      sourceRect = "-1.07374e+008 -1.07374e+008 -1.07374e+008 -1.07374e+008";
+      canSaveDynamicFields = "1";
+      size = "128.000 128.000";
+      Rotation = "-90";
+      Layer = "2";
+      WorldLimitMin = "-50.000 -37.500";
+      WorldLimitMax = "50.000 37.500";
+         mountID = "16";
    };
 };

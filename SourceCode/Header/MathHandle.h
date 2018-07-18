@@ -13,4 +13,7 @@ public :
 	float static ClampFloat(float min, float max, float spe) {
 		return spe > max ? max : spe < min ? min : spe;
 	}
+	float static AbsFloat(float a) {
+		return a < 0 ? -a : a;
+	}
 };

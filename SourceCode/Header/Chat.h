@@ -7,7 +7,13 @@ public :
 	std::string left_str;
 	std::string right_str;
 	//谁在说话（0:left,1:right,默认左）
-	int speaking=0;
+	int onChating=0;
 	//存对话信息
 	std::vector<std::string> diags;
+/*	
+	std::string getleft_str();
+	void setleft_str(std::string left);
+	std::string getright_str();
+	void setright_str(std::string right);
+	*/
 };

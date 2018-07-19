@@ -1,5 +1,7 @@
 #include <fstream>
 #include "Level.h"
+#include<string>
+using std::string;
 //
 //#include <direct.h>
 
@@ -91,6 +93,32 @@ void Level::loadSong(Json::Value root)
 void Level::loadChat(Json::Value root)
 {
 	//load Chat
+	int chat_size = root["chat"].size();
+	for (int chat_index = 0; chat_index < chat_size; chat_index++)
+	{
+		Chat temp;
+		int diags_size = root["chat"][chat_index]["dialogue"].size();
+		for (int diags_index = 0; diags_index < diags_size; diags_index++)
+			//temp=Chatdiags(root["chat"][chat_index]["dialogue"].asString());
+			temp.diags.push_back(root["chat"][chat_index]["dialogue"].asString());
+		string tempLeftChara = root["chat"][chat_index]["left"].asString();
+		string tempRightChara = root["chat"][chat_index]["right"].asString();
+		int tempOnChating = root["chat"][chat_index]["onChating"].asInt();//0代表左边说话，1代表右边说话
+		/*switch (root["chat"][i]["left"].asInt())
+		{
+		case Syncopy:tempLeftChara = Syncopy; break;
+		case Crescendia:tempLeftChara = Crescemdo; break;
+		default blank:tempLeftChara = blank; break;
+		}
+		switch (root["chat"][i]["right"].asInt())
+		{
+		case Syncopy:tempRightChara = Syncopy; break;
+		case Crescendia:tempRightChara = Crescemdo; break;
+		default blank:tempRightChara = blank; break;
+		}*/
+		temp.setleft_str(tempLeftChara);
+		temp.setright_str(tempRightChara);
+	}
 }
 
 std::string Level::getSongPath()

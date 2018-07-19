@@ -203,6 +203,7 @@
       canSaveDynamicFields = "1";
       Position = "260.607 19.176";
       size = "438.787 561.648";
+      Layer = "2";
       WorldLimitMin = "-50.000 -37.500";
       WorldLimitMax = "50.000 37.500";
       BlendColor = "1 1 1 0";
@@ -216,6 +217,7 @@
       canSaveDynamicFields = "1";
       Position = "-271.448 18.882";
       size = "439.247 562.236";
+      Layer = "2";
       WorldLimitMin = "-50.000 -37.500";
       WorldLimitMax = "50.000 37.500";
       BlendColor = "1 1 1 0";

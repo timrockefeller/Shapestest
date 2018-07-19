@@ -45,6 +45,7 @@ public:
 	//ÁÙÊ±beatmap´¢´æ¿â¡£
 	std::vector<HitObject> beatmap;
 
+	//ÁÙÊ±chat´¢´æ¿â
 	std::vector<Chat>      chats;
 
 	//¼ÓÔØµØÍ¼

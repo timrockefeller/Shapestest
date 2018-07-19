@@ -1,11 +1,11 @@
 #include "Effect_handleFlash.h"
 
-Effect_HandleFlash_UP::Effect_HandleFlash_UP()
+Effect_HandleFlash::Effect_HandleFlash()
 {
 	this->transfrom = new CSprite("effect_handleFlash_UP");
 }
 
-void Effect_HandleFlash_UP::start()
+void Effect_HandleFlash::start()
 {
 	this->indexOfPresent = 0;
 	//Çå¿ÕÄÚºË
@@ -16,7 +16,7 @@ void Effect_HandleFlash_UP::start()
 	std::vector<CSprite*>(this->copies).swap(this->copies);
 }
 
-void Effect_HandleFlash_UP::loop(float deltaTime)
+void Effect_HandleFlash::loop(float deltaTime)
 {
 	for (int _I = 0; _I < this->copies.size(); _I++) {
 		float te = this->copies[_I]->GetSpriteWidth() + voyageSpeed * deltaTime;
@@ -32,7 +32,7 @@ void Effect_HandleFlash_UP::loop(float deltaTime)
 	}
 }
 
-void Effect_HandleFlash_UP::trigger()
+void Effect_HandleFlash::trigger()
 {
 	
 	char tempName[128];

@@ -120,31 +120,75 @@ static char getDecimalPoint() {
 
 /// Converts a unicode code-point to UTF-8.
 static inline JSONCPP_STRING codePointToUTF8(unsigned int cp) {
-  JSONCPP_STRING result;
+	/*  JSONCPP_STRING result;
 
-  // based on description from http://en.wikipedia.org/wiki/UTF-8
+	  // based on description from http://en.wikipedia.org/wiki/UTF-8
 
-  if (cp <= 0x7f) {
-    result.resize(1);
-    result[0] = static_cast<char>(cp);
-  } else if (cp <= 0x7FF) {
-    result.resize(2);
-    result[1] = static_cast<char>(0x80 | (0x3f & cp));
-    result[0] = static_cast<char>(0xC0 | (0x1f & (cp >> 6)));
-  } else if (cp <= 0xFFFF) {
-    result.resize(3);
-    result[2] = static_cast<char>(0x80 | (0x3f & cp));
-    result[1] = static_cast<char>(0x80 | (0x3f & (cp >> 6)));
-    result[0] = static_cast<char>(0xE0 | (0xf & (cp >> 12)));
-  } else if (cp <= 0x10FFFF) {
-    result.resize(4);
-    result[3] = static_cast<char>(0x80 | (0x3f & cp));
-    result[2] = static_cast<char>(0x80 | (0x3f & (cp >> 6)));
-    result[1] = static_cast<char>(0x80 | (0x3f & (cp >> 12)));
-    result[0] = static_cast<char>(0xF0 | (0x7 & (cp >> 18)));
-  }
+	  if (cp <= 0x7f) {
+		result.resize(1);
+		result[0] = static_cast<char>(cp);
+	  } else if (cp <= 0x7FF) {
+		result.resize(2);
+		result[1] = static_cast<char>(0x80 | (0x3f & cp));
+		result[0] = static_cast<char>(0xC0 | (0x1f & (cp >> 6)));
+	  } else if (cp <= 0xFFFF) {
+		result.resize(3);
+		result[2] = static_cast<char>(0x80 | (0x3f & cp));
+		result[1] = static_cast<char>(0x80 | (0x3f & (cp >> 6)));
+		result[0] = static_cast<char>(0xE0 | (0xf & (cp >> 12)));
+	  } else if (cp <= 0x10FFFF) {
+		result.resize(4);
+		result[3] = static_cast<char>(0x80 | (0x3f & cp));
+		result[2] = static_cast<char>(0x80 | (0x3f & (cp >> 6)));
+		result[1] = static_cast<char>(0x80 | (0x3f & (cp >> 12)));
+		result[0] = static_cast<char>(0xF0 | (0x7 & (cp >> 18)));
+	  }
 
-  return result;
+	  return result;*/
+	JSONCPP_STRING result;
+
+	// based on description from http://en.wikipedia.org/wiki/UTF-8
+
+	if (cp <= 0x7f) {
+		result.resize(1);
+		result[0] = static_cast<char>(cp);
+	}
+	else if (cp <= 0x7FF) {
+		result.resize(2);
+		result[1] = static_cast<char>(0x80 | (0x3f & cp));
+		result[0] = static_cast<char>(0xC0 | (0x1f & (cp >> 6)));
+	}
+	else if (cp <= 0xFFFF) {
+		if ((cp >= 0x4E00 && cp <= 0x9FA5) || (cp >= 0xF900 && cp <= 0xFA2D) || cp == 0x3002 || cp == 0xFF1F || cp == 0xFF01 || cp == 0xFF0C || cp == 0x3001 || cp == 0xFF1B || cp == 0xFF1A || cp == 0x300C || cp == 0x300D || cp == 0x300E || cp == 0x300F || cp == 0x2018 || cp == 0x2019 || cp == 0x201C || cp == 0x201D || cp == 0xFF08 || cp == 0xFF09 || cp == 0x3014 || cp == 0x3015 || cp == 0x3010 || cp == 0x3011 || cp == 0x2014 || cp == 0x2026 || cp == 0x2013 || cp == 0xFF0E || cp == 0x300A || cp == 0x300B || cp == 0x3008 || cp == 0x3009)
+		{
+			wchar_t src[2] = { 0 };
+			char dest[5] = { 0 };
+			src[0] = static_cast<wchar_t>(cp);
+			std::string curLocale = setlocale(LC_ALL, NULL);
+			setlocale(LC_ALL, "chs");
+			wcstombs_s(NULL, dest, 5, src, 2);
+			result = dest;
+			setlocale(LC_ALL, curLocale.c_str());
+		}
+		else
+		{
+			result.resize(3);
+			result[2] = static_cast<char>(0x80 | (0x3f & cp));
+			//result[1] = static_cast<char>(0x80 | (0x3f & (cp >> 6)));
+			//result[0] = static_cast<char>(0xE0 | (0xf & (cp >> 12)));
+			result[1] = 0x80 | static_cast<char>((0x3f & (cp >> 6)));
+			result[0] = 0xE0 | static_cast<char>((0xf & (cp >> 12)));
+		}
+	}
+	else if (cp <= 0x10FFFF) {
+		result.resize(4);
+		result[3] = static_cast<char>(0x80 | (0x3f & cp));
+		result[2] = static_cast<char>(0x80 | (0x3f & (cp >> 6)));
+		result[1] = static_cast<char>(0x80 | (0x3f & (cp >> 12)));
+		result[0] = static_cast<char>(0xF0 | (0x7 & (cp >> 18)));
+	}
+
+	return result;
 }
 
 enum {

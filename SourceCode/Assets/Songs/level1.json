@@ -1,10 +1,28 @@
 {
-    "songName":"Test Chat",
-    "songPath":"./nekodex - aureole (osu! xmas 2017).mp3",
-    "songTempo":128,
-    "songOffset":750,
-    "beatmap":[],
-    "chat":[
-        
-    ]
+	"songName": "Test Chat",
+	"songPath": "./bgm.wav",
+	"songTempo": 128,
+	"songOffset": 750,
+	"levelType": 2,
+	"beatmap": [],
+	"chat": [
+		{
+			"left": "chr_Syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"欢迎来到Channel 3电台，我的名字是Syncopy，你应该认识我吧？",
+				"是不是因为只是想找份兼职，结果竟然能和著名的主唱一起工作而感到吃惊呢？\n\"简单上手！只要会按↑↓←→就能完成工作！高薪酬，欢快明亮的工作环境！\"\n看起来是挺缺钱的呢- -。",
+				"事实上……有件事情想要拜托你。\n我先看看你的基本功怎么样吧，记住噢，只要按↑↓←→就行啦~"
+			]
+		},
+		{
+			"left": "chr_blank",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				""
+			]
+		}
+	]
 }

@@ -92,6 +92,18 @@
         {
             "posInBeat":17,
             "type":2
+        },
+        {
+            "posInBeat":17.5,
+            "type":2
+        },
+        {
+            "posInBeat":18.5,
+            "type":4
+        },
+        {
+            "posInBeat":19,
+            "type":4
         }
     ],
     "chat":[]

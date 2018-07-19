@@ -19,6 +19,8 @@
 #include "SoundSystem.h"
 //#pragma comment(lib,"irrKlang.lib")
 
+#define GAME_CHAT_LEFT -271
+#define GAME_CHAT_RIGHT 260
 enum GAME_STATS {
 	GAME_STATS_INITIAL,
 	GAME_STATS_PASSING,//过场
@@ -76,6 +78,7 @@ private:
 
 	GAME_STATS stats;
 
+	//音乐位置基本信息
 	float songPosition;
 	float songPosInBeats;
 
@@ -98,6 +101,26 @@ private:
 	//上右下左四个方向的note临时储存vector
 	std::vector<HitObject> pathBuffer[4];
 
+	//////////////////////////////////////////
+	//////////////  Chat Mode  ///////////////
+
+	//textbox句柄
+	CSprite * m_textBox = NULL;
+
+	//辣鸡模糊对话框句柄
+	CTextSprite * m_textInner = NULL;
+
+	//指向这一幕的位置
+	int currentChatCur = 0;
+
+	//指向这一句的位置
+	int currentDiagCur = 0;
+
+	//舞台
+	CSprite* chatStage[2];
+	
+	//下一句话
+	bool nextDiag();
 
 	//////////////////////////////////////////
 	//////////////  Pure Mode  ///////////////

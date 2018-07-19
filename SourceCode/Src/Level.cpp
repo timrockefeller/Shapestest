@@ -7,8 +7,8 @@ using std::string;
 
 Level::Level()
 {
-	this->levelPath = "../SourceCode/Assets/Songs/level2.json";
-	this->type = GAME_LEVEL_TYPE_LEVEL;
+	this->levelPath = "../SourceCode/Assets/Songs/level1.json";
+	this->type = GAME_LEVEL_TYPE_CHAT;
 }
 
 Level::Level(std::string mapname, GAME_LEVEL_TYPE _type)
@@ -92,6 +92,9 @@ void Level::loadSong(Json::Value root)
 }
 void Level::loadChat(Json::Value root)
 {
+	//erase saki
+	chats.clear();
+	std::vector<Chat>(chats).swap(chats);
 	//load Chat
 	int chat_size = root["chat"].size();
 	for (int chat_index = 0; chat_index < chat_size; chat_index++)
@@ -99,25 +102,14 @@ void Level::loadChat(Json::Value root)
 		Chat temp;
 		int diags_size = root["chat"][chat_index]["dialogue"].size();
 		for (int diags_index = 0; diags_index < diags_size; diags_index++)
-			//temp=Chatdiags(root["chat"][chat_index]["dialogue"].asString());
-			temp.diags.push_back(root["chat"][chat_index]["dialogue"].asString());
+			temp.diags.push_back(root["chat"][chat_index]["dialogue"][diags_index].asString());
 		string tempLeftChara = root["chat"][chat_index]["left"].asString();
 		string tempRightChara = root["chat"][chat_index]["right"].asString();
+		temp.left_str = tempLeftChara;
+		temp.right_str = tempRightChara;
 		int tempOnChating = root["chat"][chat_index]["onChating"].asInt();//0代表左边说话，1代表右边说话
-		/*switch (root["chat"][i]["left"].asInt())
-		{
-		case Syncopy:tempLeftChara = Syncopy; break;
-		case Crescendia:tempLeftChara = Crescemdo; break;
-		default blank:tempLeftChara = blank; break;
-		}
-		switch (root["chat"][i]["right"].asInt())
-		{
-		case Syncopy:tempRightChara = Syncopy; break;
-		case Crescendia:tempRightChara = Crescemdo; break;
-		default blank:tempRightChara = blank; break;
-		}*/
-		temp.setleft_str(tempLeftChara);
-		temp.setright_str(tempRightChara);
+		temp.onChating = tempOnChating;
+		this->chats.push_back(temp);
 	}
 }
 

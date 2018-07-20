@@ -1,6 +1,7 @@
 #pragma once
+﻿#pragma once
 #include "CommonClass.h"
-#define HIT_CHECKTIME_MISS 110.f
+#define HIT_CHECKTIME_MISS 33.f
 enum HitObjectType {
 	HIT_UNDEFINE,
 	HIT_UP,

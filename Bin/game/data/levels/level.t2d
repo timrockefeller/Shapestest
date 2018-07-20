@@ -40,6 +40,7 @@
    new t2dShapeVector(Handle_UP) {
       canSaveDynamicFields = "1";
       size = "128.000 128.000";
+      Layer = "3";
       WorldLimitMin = "-50.000 -37.500";
       WorldLimitMax = "50.000 37.500";
       PolyList = "0.000 0.000 1.000 -1.000 -1.000 -1.000";
@@ -51,6 +52,7 @@
    new t2dShapeVector(Handle_RIGHT) {
       canSaveDynamicFields = "1";
       size = "128.000 128.000";
+      Layer = "3";
       WorldLimitMin = "-50.000 -37.500";
       WorldLimitMax = "50.000 37.500";
       PolyList = "0.000 0.000 1.000 1.000 1.000 -1.000";
@@ -62,6 +64,7 @@
    new t2dShapeVector(Handle_DOWN) {
       canSaveDynamicFields = "1";
       size = "128.000 128.000";
+      Layer = "3";
       WorldLimitMin = "-50.000 -37.500";
       WorldLimitMax = "50.000 37.500";
       PolyList = "0.000 0.000 -1.000 1.000 1.000 1.000";
@@ -73,6 +76,7 @@
    new t2dShapeVector(Handle_LEFT) {
       canSaveDynamicFields = "1";
       size = "128.000 128.000";
+      Layer = "3";
       WorldLimitMin = "-50.000 -37.500";
       WorldLimitMax = "50.000 37.500";
       PolyList = "0.000 0.000 -1.000 -1.000 -1.000 1.000";
@@ -85,7 +89,7 @@
       canSaveDynamicFields = "1";
       Position = "-400.000 500.000";
       size = "50.000 50.000";
-      Layer = "1";
+      Layer = "4";
       WorldLimitMin = "-50.000 -37.500";
       WorldLimitMax = "50.000 37.500";
       PolyList = "0.000 -1.000 1.000 0.000 0.000 1.000 -1.000 0.000";
@@ -166,7 +170,7 @@
       canSaveDynamicFields = "1";
       Position = "-350.000 500.000";
       size = "72.000 70.000";
-      Layer = "1";
+      Layer = "4";
       WorldLimitMin = "-50.000 -37.500";
       WorldLimitMax = "50.000 37.500";
          mountID = "12";
@@ -186,7 +190,7 @@
    new t2dShapeVector(effect_handleFlash_UP) {
       canSaveDynamicFields = "1";
       size = "127.000 127.000";
-      Layer = "1";
+      Layer = "4";
       WorldLimitMin = "-50.000 -37.500";
       WorldLimitMax = "50.000 37.500";
       PolyList = "-1.000 -1.000 1.000 -1.000 1.000 1.000 -1.000 1.000";
@@ -203,7 +207,7 @@
       canSaveDynamicFields = "1";
       Position = "260.607 19.176";
       size = "438.787 561.648";
-      Layer = "2";
+      Layer = "1";
       WorldLimitMin = "-50.000 -37.500";
       WorldLimitMax = "50.000 37.500";
       BlendColor = "1 1 1 0";
@@ -217,7 +221,7 @@
       canSaveDynamicFields = "1";
       Position = "-271.448 18.882";
       size = "439.247 562.236";
-      Layer = "2";
+      Layer = "1";
       WorldLimitMin = "-50.000 -37.500";
       WorldLimitMax = "50.000 37.500";
       BlendColor = "1 1 1 0";
@@ -249,12 +253,11 @@
    };
    new t2dTextObject(innerText) {
       canSaveDynamicFields = "1";
-      Position = "-311.312 133.823";
-      size = "27.376 32.354";
+      Position = "-325.000 133.823";
+      size = "0.000 32.354";
       WorldLimitMin = "-50.000 -37.500";
       WorldLimitMax = "50.000 37.500";
       BlendColor = "1 1 1 0.980392";
-      text = "hh";
       font = "Segoe UI";
       wordWrap = "0";
       hideOverflow = "1";

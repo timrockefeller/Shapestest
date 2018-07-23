@@ -275,4 +275,28 @@
          hideOverlap = "0";
          mountID = "19";
    };
+   new t2dStaticSprite(check_great) {
+      imageMap = "greatImageMap";
+      frame = "0";
+      useSourceRect = "0";
+      sourceRect = "0 0 0 0";
+      canSaveDynamicFields = "1";
+      Position = "268.362 -366.092";
+      size = "296.724 197.816";
+      WorldLimitMin = "-50.000 -37.500";
+      WorldLimitMax = "50.000 37.500";
+         mountID = "20";
+   };
+   new t2dStaticSprite(check_miss) {
+      imageMap = "missImageMap";
+      frame = "0";
+      useSourceRect = "0";
+      sourceRect = "0 0 0 0";
+      canSaveDynamicFields = "1";
+      Position = "108.760 -362.410";
+      size = "137.520 91.680";
+      WorldLimitMin = "-50.000 -37.500";
+      WorldLimitMax = "50.000 37.500";
+         mountID = "21";
+   };
 };

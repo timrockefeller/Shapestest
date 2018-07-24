@@ -21,6 +21,7 @@
 
 #define GAME_CHAT_LEFT -271
 #define GAME_CHAT_RIGHT 260
+#define GAME_CHAT_CENTER 0
 enum GAME_STATS {
 	GAME_STATS_INITIAL,
 	GAME_STATS_PASSING,//过场
@@ -117,7 +118,7 @@ private:
 	int currentDiagCur = 0;
 
 	//舞台
-	CSprite* chatStage[2];
+	CSprite* chatStage[3];
 	
 	//下一句话
 	bool nextDiag();
@@ -132,5 +133,7 @@ private:
 	//////////////////////////////////////////
 	//////////////   EFFECTS   ///////////////
 	//CSprite* effect_processBar;
-
+	void alertSongInfo(std::string);
+	CTextSprite*	m_text_songInfo;
+	float		_text_songInfo_delay;
 };

@@ -17,6 +17,13 @@
 			]
 		},
 		{
+			"left": "chr_tutorial",
+			"right": "chr_blank",
+			"onChating": -1,
+			"dialogue": [
+				""
+			]
+		},{
 			"left": "chr_blank",
 			"right": "chr_blank",
 			"onChating": 0,

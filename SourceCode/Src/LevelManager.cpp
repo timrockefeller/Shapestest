@@ -18,7 +18,12 @@ LevelManager::LevelManager()
 
 	this->m_textInner = new CTextSprite("innerText");
 
-	
+	this->m_text_songInfo = new CTextSprite("songinfo_text");
+
+	_text_songInfo_delay = -1;
+
+	_nextdelay = 1;
+
 	this->init();
 
 	this->bindEffects();
@@ -106,7 +111,15 @@ void LevelManager::update(float deltaTime)
 
 		//effect list
 		((Effect_ProcessBar*)effects["process_bar"])->setSongPos(soundSystem->getPositionInMs()*1.0f / soundSystem->getSongLengthInMs());
-		
+		if (_text_songInfo_delay >= 0) {
+			_text_songInfo_delay += deltaTime;
+			if (_text_songInfo_delay > 5) {
+				_text_songInfo_delay = -1;
+				effectsOnce["fade_out"]->addObject(m_text_songInfo);
+			}
+		}
+
+
 		/////////
 		//in play
 		if (playingLevel->getLevelType() == GAME_LEVEL_TYPE_PURESONG) {
@@ -163,12 +176,10 @@ void LevelManager::update(float deltaTime)
 						pathBuffer[_I].push_back(this->playingLevel->beatmap[nextHitObjectCur]);
 					nextHitObjectCur++;
 				}
-
-				if (songPosition >= soundSystem->getSongLengthInMs()-2) {
-					nextLevel();
-				}
 			}
-
+			if (songPosition >= (int)(soundSystem->getSongLengthInMs()) - 200) {
+				nextLevel();
+			}
 			//update notes positions and check
 			for (int _I = 0; _I < 4; _I++) {
 				for (int _J = 0; _J < pathBuffer[_I].size(); _J++) {
@@ -308,13 +319,17 @@ void LevelManager::playLevel(Level* level)
 	}
 
 	/////
+	//重置显示设置
+	
+
+	/////
 	//重置音乐
 	soundSystem->killPlaying();
-
+	
 	/////
 	//重置chat对话框等元素
 	this->m_textBox->SetSpriteColorAlpha(0);
-
+	m_Player->combo_text->SetTextString("");
 	/////
 	//instantiate
 	if (level->loadLevel()) {
@@ -329,8 +344,11 @@ void LevelManager::playLevel(Level* level)
 			effects["handleFlash"]->start();
 			m_Player->start();
 			beatsShownInAdvance = level->songTempo / 70.0f;
+
+			effectsOnce["fade_in"]->addObject(m_Player->score_text);
 		}
 		else {
+			effectsOnce["fade_out"]->addObject(m_Player->score_text);
 			effects["noteSlide_UP"]->currents =
 			effects["noteSlide_DOWN"]->currents =
 			effects["noteSlide_LEFT"]->currents =
@@ -339,13 +357,15 @@ void LevelManager::playLevel(Level* level)
 				//加载Chat模式的必要信息
 				this->currentDiagCur = 999;//infinity
 				this->currentChatCur = -1;
-				this->chatStage[0] = this->chatStage[1] = new CSprite("chr_blank");
+				this->chatStage[0] = this->chatStage[1] = this->chatStage[2]= new CSprite("chr_blank");
 				this->m_textBox->SetSpriteColorAlpha(100);
 				m_textInner->SetTextString("");
 			}
 		}
-		if(soundSystem->playMusic(level->getSongPath()))
+		if (soundSystem->playMusic(level->getSongPath())) {
 			this->stats = GAME_STATS_PLAYING;
+			this->alertSongInfo(level->songName);
+		}
 		else {
 			printf("playLevel Failed! retry..");
 			playLevel(level);//tryAnain
@@ -377,27 +397,36 @@ bool LevelManager::nextDiag()
 
 			//reset
 			currentChatCur++;
-			if (!(this->chatStage[0] != NULL &&
-				strcmp(this->chatStage[0]->GetName() , playingLevel->chats[currentChatCur].left_str.c_str()))==0) {
-				effectsOnce["fade_out"]->addObject(this->chatStage[0]);
-				this->chatStage[0] = new CSprite(playingLevel->chats[currentChatCur].left_str.c_str());
-				this->chatStage[0]->SpriteAlpha = 0;
-			}
-			if (!(this->chatStage[1] != NULL &&
-				strcmp(this->chatStage[1]->GetName() , playingLevel->chats[currentChatCur].right_str.c_str()))==0) {
-				effectsOnce["fade_out"]->addObject(this->chatStage[1]);
-				this->chatStage[1] = new CSprite(playingLevel->chats[currentChatCur].right_str.c_str());
-				this->chatStage[1]->SpriteAlpha = 0;
-			}
-			effectsOnce["move_x"]->addObject(this->chatStage[0], GAME_CHAT_LEFT);
-			effectsOnce["move_x"]->addObject(this->chatStage[1], GAME_CHAT_RIGHT);
-			if (playingLevel->chats[currentChatCur].onChating == 0) {
-				effectsOnce["fade_in"]->addObject(chatStage[0]);
-				effectsOnce["fade_128"]->addObject(chatStage[1]);
+			if(playingLevel->chats[currentChatCur].onChating==-1){
+				this->chatStage[2]= new CSprite(playingLevel->chats[currentChatCur].left_str.c_str());
+				this->chatStage[2]->SpriteAlpha = 0;
+				effectsOnce["move_x"]->addObject(this->chatStage[2], GAME_CHAT_CENTER);
+				effectsOnce["fade_in"]->addObject(this->chatStage[2]);
 			}
 			else {
-				effectsOnce["fade_128"]->addObject(chatStage[0]);
-				effectsOnce["fade_in"]->addObject(chatStage[1]);
+				effectsOnce["fade_out"]->addObject(this->chatStage[2]);
+				if (!(this->chatStage[0] != NULL &&
+					strcmp(this->chatStage[0]->GetName(), playingLevel->chats[currentChatCur].left_str.c_str())) == 0) {
+					effectsOnce["fade_out"]->addObject(this->chatStage[0]);
+					this->chatStage[0] = new CSprite(playingLevel->chats[currentChatCur].left_str.c_str());
+					this->chatStage[0]->SpriteAlpha = 0;
+				}
+				if (!(this->chatStage[1] != NULL &&
+					strcmp(this->chatStage[1]->GetName(), playingLevel->chats[currentChatCur].right_str.c_str())) == 0) {
+					effectsOnce["fade_out"]->addObject(this->chatStage[1]);
+					this->chatStage[1] = new CSprite(playingLevel->chats[currentChatCur].right_str.c_str());
+					this->chatStage[1]->SpriteAlpha = 0;
+				}
+				effectsOnce["move_x"]->addObject(this->chatStage[0], GAME_CHAT_LEFT);
+				effectsOnce["move_x"]->addObject(this->chatStage[1], GAME_CHAT_RIGHT);
+				if (playingLevel->chats[currentChatCur].onChating == 0) {
+					effectsOnce["fade_in"]->addObject(chatStage[0]);
+					effectsOnce["fade_128"]->addObject(chatStage[1]);
+				}
+				else {
+					effectsOnce["fade_128"]->addObject(chatStage[0]);
+					effectsOnce["fade_in"]->addObject(chatStage[1]);
+				}
 			}
 			currentDiagCur = 0;
 
@@ -411,3 +440,12 @@ bool LevelManager::nextDiag()
 		}
 	}
 }
+
+void LevelManager::alertSongInfo(std::string name)
+{
+	this->m_text_songInfo->SetTextString(name.c_str());
+	_text_songInfo_delay = 0;
+	effectsOnce["fade_in"]->addObject(this->m_text_songInfo);
+}
+
+

@@ -17,7 +17,7 @@ private:
 
 	
 
-	std::string songName;
+	
 	std::string songPath;
 
 	
@@ -41,7 +41,7 @@ public:
 	//song info
 	float songTempo;
 	float songOffset;
-
+	std::string songName;
 	//¡Ÿ ±beatmap¥¢¥Êø‚°£
 	std::vector<HitObject> beatmap;
 

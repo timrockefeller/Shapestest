@@ -15,12 +15,15 @@ void Player::UpdateRender(float deltaTime)
 	handle_left->SetSpriteHeight((float)MathHandle::LerpDouble(handle_left->GetSpriteHeight(), currentSize, 0.01f));
 	handle_left->SetSpriteWidth((float)MathHandle::LerpDouble(handle_left->GetSpriteWidth(), currentSize, 0.01f));
 
+
 	
 	//alpha of check objs
 	check_great->SetSpriteColorAlpha(check_great->SpriteAlpha);
 	check_miss->SetSpriteColorAlpha(check_miss->SpriteAlpha);
 	check_great->SpriteAlpha = MathHandle::ClampInt(0, 255, check_great->SpriteAlpha - 2);
 	check_miss->SpriteAlpha = MathHandle::ClampInt(0, 255, check_miss->SpriteAlpha - 2);
+	_score = MathHandle::LerpInt(_score, score, 0.05);
+	score_text->SetTextValue(_score);
 }
 
 Player::Player() {
@@ -30,11 +33,12 @@ Player::Player() {
 	handle_down = new CSprite("Handle_DOWN");
 
 	check_great = new CSprite("check_great");
-	check_great->SpriteAlpha = 0;
 	check_miss = new CSprite("check_miss");
-	check_miss->SpriteAlpha = 0;
+	check_great->SpriteAlpha = check_miss->SpriteAlpha= 0;
 
 	combo_text = new CTextSprite("combo_text");
+	score_text = new CTextSprite("score_text");
+	_score = score = combo = 0;
 }
 
 void Player::OnKeyPressed(HitObjectType type)
@@ -59,10 +63,12 @@ void Player::Hitted(int isHitted)
 {
 	if (isHitted > 0) {
 		this->combo++;
+		score += (combo / 10 + 1) + (combo / 100 + 1)*20;
 		if (combo >= 5) {
 			char b[10];
 			sprintf_s(b, "%dx", combo);
 			combo_text->SetTextString(b);
+			
 		}
 		else {
 			combo_text->SetTextString("");

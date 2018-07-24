@@ -2,7 +2,7 @@
     "songName":"Falling Or Fallen",
     "songPath":"./Falling or Fallen (Short ver.).mp3",
     "songTempo":128,
-    "songOffset":890,
+    "songOffset":897,
     "levelType":1,
     "beatmap":[
         { "posInBeat":0.0, "type":3  },
@@ -199,7 +199,6 @@
         { "posInBeat":149.0, "type":4  },
         { "posInBeat":150.0, "type":4  },
         { "posInBeat":151.0, "type":4  },
-        { "posInBeat":151.0, "type":4  },
         { "posInBeat":151.5, "type":4  },
         { "posInBeat":152.0, "type":2  },
         { "posInBeat":153.0, "type":2  },
@@ -348,31 +347,7 @@
         { "posInBeat":254.0, "type":4  },
         { "posInBeat":254.5, "type":4  },
         { "posInBeat":254.5, "type":3  },
-        { "posInBeat":255.0, "type":3  },
-        { "posInBeat":256.0, "type":3  },
-        { "posInBeat":257.0, "type":3  },
-        { "posInBeat":258.0, "type":3  },
-        { "posInBeat":259.0, "type":3  },
-        { "posInBeat":260.0, "type":3  },
-        { "posInBeat":261.0, "type":3  },
-        { "posInBeat":262.0, "type":3  },
-        { "posInBeat":263.0, "type":3  },
-        { "posInBeat":264.0, "type":3  },
-        { "posInBeat":265.0, "type":3  },
-        { "posInBeat":266.0, "type":3  },
-        { "posInBeat":267.0, "type":3  },
-        { "posInBeat":268.0, "type":3  },
-        { "posInBeat":269.0, "type":3  },
-        { "posInBeat":270.0, "type":3  },
-        { "posInBeat":271.0, "type":3  },
-        { "posInBeat":272.0, "type":3  },
-        { "posInBeat":273.0, "type":3  },
-
-        { "posInBeat":275.0, "type":3  },
-        
-        { "posInBeat":277.0, "type":3  },
-        
-        { "posInBeat":279.0, "type":3  }
+        { "posInBeat":256, "type":3  }
 
     ],
     "chat":[]

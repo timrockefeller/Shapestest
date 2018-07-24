@@ -19,6 +19,8 @@ public:
 	CSprite *	check_great;
 	CTextSprite*combo_text;
 
+	CTextSprite*score_text;
+	
 	//optional Sizes
 	const float HitSize = 160;
 	const float DefaultSize = 128;
@@ -42,4 +44,7 @@ private:
 	void OnKeyAction(CSprite* obj);
 
 	int combo = 0;
+
+	int score = 0;
+	int _score;
 };

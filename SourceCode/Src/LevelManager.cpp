@@ -41,8 +41,13 @@ void LevelManager::init()
 	//将json放在这里声明
 	// EXAMPLE: 
 	// this->playlist.push_back(new Level("examplesong.json",GAME_LEVEL_TYPE_PURESONG));
-	this->playlist.push_back(new Level());//defaule song
+	this->playlist.push_back(new Level("level1.json",GAME_LEVEL_TYPE_CHAT));//defaule song
+	
 	this->playlist.push_back(new Level("level2.json", GAME_LEVEL_TYPE_LEVEL));
+	this->playlist.push_back(new Level("level4.json", GAME_LEVEL_TYPE_CHAT));
+	this->playlist.push_back(new Level("level5.json", GAME_LEVEL_TYPE_CHAT));
+	//song 2
+	this->playlist.push_back(new Level("level_bassTelekinesis.json", GAME_LEVEL_TYPE_LEVEL));
 
 }
 
@@ -75,7 +80,7 @@ void LevelManager::bindEffects()
 void LevelManager::update(float deltaTime)
 {
 	soundSystem->update();
-	m_Player->UpdateRender();
+	m_Player->UpdateRender(deltaTime);
 	
 	if (stats == GAME_STATS_PLAYING) {
 		
@@ -130,7 +135,15 @@ void LevelManager::update(float deltaTime)
 				char tempName[128];
 				sprintf(tempName, "note_%d", nextHitObjectCur);
 				playingLevel->beatmap[nextHitObjectCur].bindSprite = new CSprite(tempName);
-				if (playingLevel->beatmap[nextHitObjectCur].bindSprite->CloneSprite("note_prefab")) {
+				std::string  currentSprite = "note_prefab";
+				//check double
+				if (nextHitObjectCur > 0 && playingLevel->beatmap[nextHitObjectCur - 1].getPosInBeat() == playingLevel->beatmap[nextHitObjectCur].getPosInBeat() ||
+					nextHitObjectCur < playingLevel->beatmap.size() - 1 && playingLevel->beatmap[nextHitObjectCur + 1].getPosInBeat() == playingLevel->beatmap[nextHitObjectCur].getPosInBeat()) {
+					currentSprite = "note_prefab_double";
+				}
+					
+					
+				if (playingLevel->beatmap[nextHitObjectCur].bindSprite->CloneSprite(currentSprite.c_str())) {
 
 					//pathBuffer[0].push_back(this->playingLevel->beatmap[nextHitObjectCur]);
 					int _I = 0;//"_I"用来确定方向
@@ -272,6 +285,10 @@ void LevelManager::keyDown(const int iKey)
 		this->playIndex = 0;
 		this->playLevel(playlist[playIndex]);
 	}
+
+	if (iKey == KEY_P) {//test
+		this->nextLevel();
+	}
 }
 
 void LevelManager::playLevel(Level* level)
@@ -310,7 +327,7 @@ void LevelManager::playLevel(Level* level)
 			effects["noteSlide_LEFT"]->start(); 
 			effects["noteSlide_RIGHT"]->start();
 			effects["handleFlash"]->start();
-			m_Player->currentSize = m_Player->DefaultSize;
+			m_Player->start();
 			beatsShownInAdvance = level->songTempo / 70.0f;
 		}
 		else {

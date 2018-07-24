@@ -1,7 +1,7 @@
 #include "Player.h"
 #include "HitObject.h"
 #include "MathHandle.h"
-void Player::UpdateRender()
+void Player::UpdateRender(float deltaTime)
 {
 	handle_up->SetSpriteHeight((float)MathHandle::LerpDouble(handle_up->GetSpriteHeight(), currentSize, 0.01f));
 	handle_up->SetSpriteWidth((float)MathHandle::LerpDouble(handle_up->GetSpriteWidth(), currentSize, 0.01f));
@@ -14,6 +14,13 @@ void Player::UpdateRender()
 	
 	handle_left->SetSpriteHeight((float)MathHandle::LerpDouble(handle_left->GetSpriteHeight(), currentSize, 0.01f));
 	handle_left->SetSpriteWidth((float)MathHandle::LerpDouble(handle_left->GetSpriteWidth(), currentSize, 0.01f));
+
+	
+	//alpha of check objs
+	check_great->SetSpriteColorAlpha(check_great->SpriteAlpha);
+	check_miss->SetSpriteColorAlpha(check_miss->SpriteAlpha);
+	check_great->SpriteAlpha = MathHandle::ClampInt(0, 255, check_great->SpriteAlpha - 2);
+	check_miss->SpriteAlpha = MathHandle::ClampInt(0, 255, check_miss->SpriteAlpha - 2);
 }
 
 Player::Player() {
@@ -21,6 +28,13 @@ Player::Player() {
 	handle_right = new CSprite("Handle_RIGHT");
 	handle_left = new CSprite("Handle_LEFT");
 	handle_down = new CSprite("Handle_DOWN");
+
+	check_great = new CSprite("check_great");
+	check_great->SpriteAlpha = 0;
+	check_miss = new CSprite("check_miss");
+	check_miss->SpriteAlpha = 0;
+
+	combo_text = new CTextSprite("combo_text");
 }
 
 void Player::OnKeyPressed(HitObjectType type)
@@ -45,10 +59,22 @@ void Player::Hitted(int isHitted)
 {
 	if (isHitted > 0) {
 		this->combo++;
+		if (combo >= 5) {
+			char b[10];
+			sprintf_s(b, "%dx", combo);
+			combo_text->SetTextString(b);
+		}
+		else {
+			combo_text->SetTextString("");
+		}
+		check_great->SpriteAlpha = 250;
+		check_miss->SpriteAlpha = MathHandle::ClampInt(0, 20, check_great->SpriteAlpha);
 	}
 	else {
 		this->combo = 0;
-		
+		combo_text->SetTextString("");
+		check_miss->SpriteAlpha = 200;
+		check_great->SpriteAlpha = MathHandle::ClampInt(0, 20, check_great->SpriteAlpha);
 	}
 }
 

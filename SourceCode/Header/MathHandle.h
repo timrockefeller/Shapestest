@@ -13,6 +13,12 @@ public :
 	float static ClampFloat(float min, float max, float spe) {
 		return spe > max ? max : spe < min ? min : spe;
 	}
+	int static ClampInt(int min, int max, int spe) {
+		return spe > max ? max : spe < min ? min : spe;
+	}
+	int static MinInt(int first, int second) {
+		return first > second ? second : first;
+	}
 	float static AbsFloat(float a) {
 		return a < 0 ? -a : a;
 	}

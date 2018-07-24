@@ -1,8 +1,8 @@
 {
     "songName":"Falling Or Fallen",
-    "songPath":"./Falling Or Fallen (Original Mix).mp3",
+    "songPath":"./Falling or Fallen (Short ver.).mp3",
     "songTempo":128,
-    "songOffset":260,
+    "songOffset":890,
     "levelType":1,
     "beatmap":[
         { "posInBeat":0.0, "type":3  },
@@ -10,9 +10,9 @@
         { "posInBeat":1.5, "type":3  },
         { "posInBeat":2.0, "type":3  },
         { "posInBeat":3.0, "type":1  },
-
-        { "posInBeat":4.0, "type":4  },
-        { "posInBeat":5.0, "type":4  },
+        
+        { "posInBeat":4.0, "type":3  },
+        { "posInBeat":5.0, "type":1  },
         { "posInBeat":5.5, "type":4  },
         { "posInBeat":6.0, "type":4  },
         { "posInBeat":7.0, "type":1  },

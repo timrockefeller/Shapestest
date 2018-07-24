@@ -1,0 +1,351 @@
+{
+	"songName": "Day 2 before",
+	"songPath": "./[bgm]ramune.mp3",
+	"songTempo": 128,
+	"songOffset": 750,
+	"levelType": 2,
+	"beatmap": [],
+	"chat": [
+		{
+			"left": "chr_blank",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"早上好~~~\n欢迎来到Channel 3电台~\n咱家的名字是Crescendia，初次见面请多关照",
+				"昨晚大姐跟我发消息啦\n说找到了个不错的人呢",
+				"还发了朋友圈呢\n吃那么多好吃的竟然不叫我\n好嫉妒呀",
+				"唔。。。说起来大姐怎么还没来呀\n一般来说都是她比咱家先到来着\n(其实是咱家经常迟到啦-w-)",
+				"那咱家先带你看看DJ台吧\n不知道你昨天有没有好好爱护她呀？",
+				"这个旋钮可以调音调，那个按钮按了可以反相\n啊，还有那个咱家最喜欢的混响~~~",
+				"还有这个~~~按一下就会.....",
+				"!@%#!@&*#￥……&",
+				"哈哈哈声音变得好奇怪"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"Crescendia..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"还有这几个按钮可以调矩形波方波啥的\n用这个可以做出咱家最喜欢的chiptune~"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"Crescendia..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"顺带一提咱家最喜欢的饮料是弹珠汽水哦"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"Crescendia！"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"呀！！！\n"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"唉...你一谈到喜欢的东西就滔滔不绝的"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"大姐你今天怎么迟到了呀，是不是睡过头了呀(坏笑)"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"原来你之前迟到是因为睡过头呢\n",
+				"我还相信你说的什么\"因为路上的猫猫太会撒娇了才迟到的！\"\n"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"那你想说\"因为路上的兔兔太会撒娇了才迟到的\"吗？\n",
+				"不成立的！！！因为路上没有兔兔！"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"我迟到是因为早上发生了些事情\n",
+				"处理起来还挺麻烦的"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"处理...兔兔..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"想什么呢",
+				"说起来，节拍器丢失这件事你们知道吗？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"啊!知道知道!\n为了争头条，Channel 5和Channel 37都炸了",
+				"现在他们两边的人见面就打架呢...."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"那你知道节拍器丢失会带来什么影响吗？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"不知道......猫粮会涨价？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"恐怕今天整个国家就要发生恐慌了"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"啊？什么？？？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"今天早上，我和往常一样练习唱歌\n但是发现自己怎样都踩不到拍子上",
+				"不仅如此，我家兔兔吃东西时的声音也不是三三拍了"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"啊！你刚才说了\"兔兔\"对不对！\n果然是因为跟兔兔玩太久了才迟到的！",
+				"等等，你家兔兔是三三拍的？\n三三拍兔兔好贵的！"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"我记得你家的七八拍猫猫好像更贵吧......",
+				"说正题，早上我感觉到有些不对\n就在来的路上多绕了一点路",
+				"我到了定拍钟那边看了一眼\n发现它好像不太对劲"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"啊，我都没怎么在意它呢，怎么了？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"照理说，今天周四，它应该是四四拍才对",
+				"但是......\n我感觉不到它的拍子"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"感觉不到拍子是什么意思？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"就是...好像...我不太确定是不是这样说，但它好像...",
+				"它好像\"没有节奏\""
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"啊？\"枚友结揍\"是什么意思？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"是\"没有节奏\"",
+				"我知道这很难理解，但好像就是...我找不到它的节奏",
+				"我有个朋友以前是读节奏专业的\n于是我把钟的声音录了下来发给了他"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"他怎么说？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"他炸掉了"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"炸了\"?\""
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"中央第一人民医院精神科三楼308房42号床位\n没事我们去看看他吧"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"好...好吧"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"总之，他十分确定的告诉我说他的数据库里没有这种节奏\n如果这种节奏真的存在的话\n他就要吃了他的博士证书"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"可是咱家还不是很理解什么叫\"没有节奏\"\n咱家不能理解"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"我觉得你在DJ台上试一试就知道了"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"咱家脑子好像要短路了...\n咱家想要理清一下头脑"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"没事，那你先休息一下吧\n我可不想看你啃DJ台的样子"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"那看来只能拜托你了\n别忘了，按↑↓←→就可以了"
+			]
+		},
+		{
+			"left": "chr_blank",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				""
+			]
+		}
+	]
+}

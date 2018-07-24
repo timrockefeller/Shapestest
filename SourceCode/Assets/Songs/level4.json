@@ -1,0 +1,30 @@
+{
+	"songName": "Chat after day 1",
+	"songPath": "./bgm.wav",
+	"songTempo": 128,
+	"songOffset": 750,
+	"levelType": 2,
+	"beatmap": [],
+	"chat": [
+		{
+			"left": "chr_Syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"嗯。。。还不错啦。。。",
+				"一开始还手忙脚乱的，\n后面好像慢慢熟练起来了，\n但是最后一段对于你来说好像太难了呢。",
+				"总之今天辛苦你啦，\n今后我们就是工作关系了，\n请多关照呢",
+				"今晚我请你吃饭怎么样？\n哼哼，不用那么拘谨，今晚我请客喔。",
+				"那么，明天也请多多关照了。"
+			]
+		},
+		{
+			"left": "chr_blank",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				""
+			]
+		}
+	]
+}

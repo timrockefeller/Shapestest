@@ -1,0 +1,878 @@
+{
+    "songName": "Bass Telekinesis",
+    "songPath": "./Bass Telekinesis (Short Ver.).mp3",
+    "songTempo": 110,
+    "songOffset": 3343,
+    "levelType": 1,
+    "beatmap": [
+        {
+            "posInBeat": 0,
+            "type": 1
+        },
+        {
+            "posInBeat": 1,
+            "type": 1
+        },
+        {
+            "posInBeat": 2,
+            "type": 1
+        },
+        {
+            "posInBeat": 3,
+            "type": 1
+        },
+        {
+            "posInBeat": 3.5,
+            "type": 1
+        },
+        {
+            "posInBeat": 4,
+            "type": 2
+        },
+        {
+            "posInBeat": 5,
+            "type": 2
+        },
+        {
+            "posInBeat": 6,
+            "type": 2
+        },
+        {
+            "posInBeat": 7,
+            "type": 2
+        },
+        {
+            "posInBeat": 7.5,
+            "type": 2
+        },
+        {
+            "posInBeat": 8,
+            "type": 3
+        },
+        {
+            "posInBeat": 9,
+            "type": 3
+        },
+        {
+            "posInBeat": 10,
+            "type": 3
+        },
+        {
+            "posInBeat": 11,
+            "type": 3
+        },
+        {
+            "posInBeat": 11.5,
+            "type": 3
+        },
+        {
+            "posInBeat": 12,
+            "type": 4
+        },
+        {
+            "posInBeat": 13,
+            "type": 4
+        },
+        {
+            "posInBeat": 14,
+            "type": 4
+        },
+        {
+            "posInBeat": 15,
+            "type": 4
+        },
+        {
+            "posInBeat": 15.5,
+            "type": 4
+        },{ "posInBeat":16, "type":1  },
+
+
+
+        { "posInBeat":17, "type":2  },
+        
+        
+        
+        { "posInBeat":18, "type":3  },
+        
+        
+        
+        { "posInBeat":19, "type":4  },
+        
+        
+        
+        { "posInBeat":20, "type":3  },
+
+
+
+        { "posInBeat":21, "type":2  },
+        
+        
+        
+        { "posInBeat":22, "type":1  },
+        
+        
+        
+        { "posInBeat":23, "type":4  },
+        
+        
+        
+        { "posInBeat":24, "type":2  },
+
+
+
+        { "posInBeat":25, "type":1  },
+        
+        
+        
+        { "posInBeat":26, "type":4  },
+        
+        
+        
+        { "posInBeat":27, "type":3  },
+        { "posInBeat":28, "type":4  },
+
+
+
+        { "posInBeat":29, "type":1  },
+        
+        
+        
+        { "posInBeat":30, "type":2  },
+        
+        
+        
+        { "posInBeat":31, "type":3  },
+        
+        { "posInBeat":31.5, "type":3  },
+        
+        { "posInBeat":32, "type":3  },
+        { "posInBeat":32.75, "type":1  },
+        { "posInBeat":33, "type":1  },
+        
+        
+        
+        { "posInBeat":34, "type":2  },
+        
+        
+        { "posInBeat":34.75, "type":2  },
+        { "posInBeat":35, "type":2  },
+        { "posInBeat":36, "type":3  },
+
+
+
+        { "posInBeat":37, "type":4  },
+        
+        
+        
+        { "posInBeat":38, "type":3  },
+        
+        
+        { "posInBeat":38.75, "type":3  },
+        { "posInBeat":39, "type":3  },
+        { "posInBeat":40, "type":1  },
+
+
+
+        { "posInBeat":41, "type":2  },
+        
+        
+        
+        { "posInBeat":42, "type":1  },
+        
+        
+        { "posInBeat":42.75, "type":1  },
+        { "posInBeat":43, "type":1  },
+        { "posInBeat":44, "type":4  },
+
+
+
+        { "posInBeat":45, "type":3  },
+        
+        
+        
+        { "posInBeat":46, "type":4  },
+        
+        
+        { "posInBeat":46.75, "type":4  },
+        { "posInBeat":47, "type":4  },
+        { "posInBeat":48, "type":1  },
+
+
+
+{ "posInBeat":49, "type":3  },
+
+
+
+{ "posInBeat":50, "type":2  },
+
+
+{ "posInBeat":50.75, "type":2  },
+{ "posInBeat":51, "type":2  },
+{ "posInBeat":52, "type":2  },
+
+
+
+{ "posInBeat":53, "type":1  },
+
+
+
+{ "posInBeat":54, "type":3  },
+
+
+{ "posInBeat":54.75, "type":3  },
+{ "posInBeat":55, "type":3  },
+{ "posInBeat":56, "type":2  },
+
+
+
+{ "posInBeat":57, "type":3  },
+
+
+
+{ "posInBeat":58, "type":1  },
+
+
+{ "posInBeat":58.75, "type":1  },
+{ "posInBeat":59, "type":1  },
+{ "posInBeat":60, "type":4  },
+
+
+
+{ "posInBeat":61, "type":4  },
+
+
+
+{ "posInBeat":62, "type":3  },
+
+
+
+{ "posInBeat":63, "type":1  },
+{ "posInBeat":63.25, "type":2  },
+{ "posInBeat":63.5, "type":3  },
+{ "posInBeat":63.75, "type":4  },
+{ "posInBeat":64, "type":1  },
+
+
+
+{ "posInBeat":65, "type":1  },
+{ "posInBeat":65.25, "type":2  },
+{ "posInBeat":65.5, "type":1  },
+{ "posInBeat":65.75, "type":2  },
+
+{ "posInBeat":66.25, "type":2  },
+{ "posInBeat":66.5, "type":1  },
+{ "posInBeat":66.75, "type":2  },
+{ "posInBeat":67, "type":1  },
+
+{ "posInBeat":67.5, "type":4  },
+
+{ "posInBeat":68, "type":3  },
+
+
+
+{ "posInBeat":69, "type":2  },
+
+
+
+{ "posInBeat":70, "type":1  },
+{ "posInBeat":70.25, "type":4  },
+{ "posInBeat":70.5, "type":2  },
+
+{ "posInBeat":71, "type":3  },
+
+{ "posInBeat":71.5, "type":3  },
+{ "posInBeat":72, "type":2  },
+
+{ "posInBeat":72.5, "type":1  },
+
+{ "posInBeat":73, "type":3  },
+{ "posInBeat":73, "type":2  },
+
+{ "posInBeat":73.75, "type":3  },
+{ "posInBeat":73.75, "type":4  },
+
+{ "posInBeat":74.5, "type":4  },
+{ "posInBeat":74.5, "type":1  },
+
+{ "posInBeat":75.25, "type":1  },
+{ "posInBeat":75.25, "type":2  },
+{ "posInBeat":76, "type":4  },
+{ "posInBeat":76.25, "type":1  },
+
+{ "posInBeat":76.75, "type":4  },
+{ "posInBeat":77, "type":3  },
+
+{ "posInBeat":77.5, "type":4  },
+{ "posInBeat":77.75, "type":2  },
+{ "posInBeat":78, "type":1  },
+{ "posInBeat":78.25, "type":4  },
+{ "posInBeat":78.5, "type":3  },
+
+{ "posInBeat":79, "type":2  },
+{ "posInBeat":79, "type":1  },
+{ "posInBeat":79.5, "type":2  },
+{ "posInBeat":79.5, "type":3  },
+
+
+
+
+{ "posInBeat":81, "type":1  },
+{ "posInBeat":81.25, "type":4  },
+{ "posInBeat":81.5, "type":1  },
+{ "posInBeat":81.75, "type":4  },
+{ "posInBeat":82, "type":1  },
+
+{ "posInBeat":82.5, "type":1  },
+{ "posInBeat":82.75, "type":4  },
+{ "posInBeat":83, "type":1  },
+
+
+
+{ "posInBeat":84, "type":2  },
+
+
+
+{ "posInBeat":85, "type":2  },
+{ "posInBeat":85.25, "type":3  },
+{ "posInBeat":85.5, "type":2  },
+{ "posInBeat":85.75, "type":3  },
+{ "posInBeat":86, "type":2  },
+
+{ "posInBeat":86.5, "type":2  },
+{ "posInBeat":86.75, "type":3  },
+{ "posInBeat":87, "type":2  },
+{ "posInBeat":88, "type":2  },
+{ "posInBeat":88, "type":4  },
+
+
+{ "posInBeat":89, "type":1  },
+{ "posInBeat":89.25, "type":2  },
+{ "posInBeat":89.5, "type":3  },
+{ "posInBeat":89.75, "type":4  },
+{ "posInBeat":90, "type":1  },
+{ "posInBeat":90.25, "type":2  },
+{ "posInBeat":90.5, "type":3  },
+{ "posInBeat":90.75, "type":4  },
+{ "posInBeat":91, "type":1  },
+{ "posInBeat":91.25, "type":2  },
+{ "posInBeat":91.5, "type":3  },
+{ "posInBeat":91.75, "type":4  },
+{ "posInBeat":92, "type":4  },
+{ "posInBeat":92.25, "type":1  },
+
+{ "posInBeat":92.75, "type":4  },
+{ "posInBeat":93, "type":3  },
+
+{ "posInBeat":93.5, "type":4  },
+{ "posInBeat":93.75, "type":2  },
+{ "posInBeat":94, "type":1  },
+{ "posInBeat":94.25, "type":4  },
+{ "posInBeat":94.5, "type":3  },
+
+{ "posInBeat":95, "type":2  },
+{ "posInBeat":95, "type":1  },
+{ "posInBeat":95.5, "type":2  },
+{ "posInBeat":95.5, "type":3  },
+{ "posInBeat":96, "type":2  },
+
+{ "posInBeat":96.5, "type":1  },
+{ "posInBeat":96.75, "type":1  },
+
+{ "posInBeat":97.25, "type":2  },
+{ "posInBeat":97.5, "type":2  },
+
+{ "posInBeat":98, "type":4  },
+{ "posInBeat":98.25, "type":4  },
+
+{ "posInBeat":98.75, "type":3  },
+{ "posInBeat":99, "type":3  },
+
+{ "posInBeat":99.5, "type":2  },
+{ "posInBeat":100, "type":1  },
+
+{ "posInBeat":100.5, "type":4  },
+{ "posInBeat":100.75, "type":4  },
+
+{ "posInBeat":101.25, "type":3  },
+{ "posInBeat":101.5, "type":3  },
+
+{ "posInBeat":102, "type":1  },
+{ "posInBeat":102.25, "type":1  },
+
+{ "posInBeat":102.75, "type":2  },
+{ "posInBeat":103, "type":2  },
+
+{ "posInBeat":103.5, "type":4  },
+{ "posInBeat":104, "type":3  },
+
+{ "posInBeat":104.5, "type":2  },
+{ "posInBeat":104.75, "type":2  },
+
+{ "posInBeat":105.25, "type":1  },
+{ "posInBeat":105.5, "type":1  },
+
+{ "posInBeat":106, "type":3  },
+{ "posInBeat":106.25, "type":3  },
+
+{ "posInBeat":106.75, "type":4  },
+{ "posInBeat":107, "type":4  },
+
+{ "posInBeat":107.5, "type":1  },
+{ "posInBeat":108, "type":3  },
+
+{ "posInBeat":108.5, "type":1  },
+{ "posInBeat":108.75, "type":3  },
+
+{ "posInBeat":109.25, "type":4  },
+{ "posInBeat":109.5, "type":3  },
+
+{ "posInBeat":110, "type":4  },
+{ "posInBeat":110.25, "type":1  },
+{ "posInBeat":110.5, "type":2  },
+
+{ "posInBeat":111, "type":2  },
+{ "posInBeat":111.25, "type":3  },
+{ "posInBeat":111.5, "type":2  },
+{ "posInBeat":111.75, "type":3  },
+{ "posInBeat":112, "type":2  },
+
+{ "posInBeat":112.5, "type":1  },
+{ "posInBeat":112.75, "type":1  },
+
+{ "posInBeat":113.25, "type":2  },
+{ "posInBeat":113.5, "type":2  },
+
+{ "posInBeat":114, "type":4  },
+{ "posInBeat":114.25, "type":4  },
+
+{ "posInBeat":114.75, "type":3  },
+{ "posInBeat":115, "type":3  },
+
+{ "posInBeat":115.5, "type":2  },
+{ "posInBeat":116, "type":1  },
+
+{ "posInBeat":116.5, "type":4  },
+{ "posInBeat":116.75, "type":4  },
+
+{ "posInBeat":117.25, "type":3  },
+{ "posInBeat":117.5, "type":3  },
+
+{ "posInBeat":118, "type":1  },
+{ "posInBeat":118.25, "type":1  },
+
+{ "posInBeat":118.75, "type":2  },
+{ "posInBeat":119, "type":2  },
+
+{ "posInBeat":119.5, "type":4  },
+{ "posInBeat":120, "type":3  },
+
+{ "posInBeat":120.5, "type":2  },
+{ "posInBeat":120.75, "type":2  },
+
+{ "posInBeat":121.25, "type":1  },
+{ "posInBeat":121.5, "type":1  },
+
+{ "posInBeat":122, "type":3  },
+{ "posInBeat":122.25, "type":3  },
+
+{ "posInBeat":122.75, "type":4  },
+{ "posInBeat":123, "type":4  },
+
+{ "posInBeat":123.5, "type":1  },
+{ "posInBeat":124, "type":4  },
+{ "posInBeat":124.25, "type":1  },
+
+{ "posInBeat":124.75, "type":4  },
+{ "posInBeat":125, "type":3  },
+
+{ "posInBeat":125.5, "type":4  },
+{ "posInBeat":125.75, "type":2  },
+{ "posInBeat":126, "type":1  },
+{ "posInBeat":126.25, "type":4  },
+{ "posInBeat":126.5, "type":3  },
+
+{ "posInBeat":127, "type":2  },
+{ "posInBeat":127, "type":1  },
+{ "posInBeat":127.5, "type":2  },
+{ "posInBeat":127.5, "type":3  },
+{ "posInBeat":160, "type":1  },
+
+
+
+{ "posInBeat":161, "type":1  },
+
+
+
+{ "posInBeat":162, "type":1  },
+
+
+
+{ "posInBeat":163, "type":1  },
+
+{ "posInBeat":163.5, "type":1  },
+{ "posInBeat":164, "type":2  },
+
+
+
+{ "posInBeat":165, "type":2  },
+
+
+
+{ "posInBeat":166, "type":2  },
+
+
+
+{ "posInBeat":167, "type":2  },
+
+{ "posInBeat":167.5, "type":2  },
+{ "posInBeat":168, "type":3  },
+
+
+
+{ "posInBeat":169, "type":3  },
+
+
+
+{ "posInBeat":170, "type":3  },
+
+
+
+{ "posInBeat":171, "type":3  },
+
+{ "posInBeat":171.5, "type":3  },
+{ "posInBeat":172, "type":4  },
+
+
+
+{ "posInBeat":173, "type":4  },
+
+
+
+{ "posInBeat":174, "type":4  },
+
+
+
+{ "posInBeat":175, "type":4  },
+
+
+{ "posInBeat":175.5, "type":4  },
+{ "posInBeat":176, "type":1  },
+
+
+
+{ "posInBeat":177, "type":2  },
+
+
+
+{ "posInBeat":178, "type":3  },
+
+
+
+{ "posInBeat":179, "type":4  },
+
+{ "posInBeat":179.5, "type":4  },
+{ "posInBeat":179.75, "type":4  },
+{ "posInBeat":180, "type":3  },
+
+
+
+{ "posInBeat":181, "type":4  },
+
+
+
+{ "posInBeat":182, "type":1  },
+
+
+
+{ "posInBeat":183, "type":2  },
+
+{ "posInBeat":183.5, "type":2  },
+{ "posInBeat":183.75, "type":2  },
+{ "posInBeat":184, "type":1  },
+
+{ "posInBeat":184.5, "type":2  },
+
+{ "posInBeat":185, "type":3  },
+
+{ "posInBeat":185.5, "type":2  },
+
+{ "posInBeat":186, "type":1  },
+
+{ "posInBeat":186.5, "type":4  },
+
+{ "posInBeat":187, "type":3  },
+
+{ "posInBeat":187.5, "type":4  },
+{ "posInBeat":188, "type":1  },
+{ "posInBeat":188.25, "type":2  },
+{ "posInBeat":188.5, "type":3  },
+{ "posInBeat":188.75, "type":4  },
+{ "posInBeat":189, "type":1  },
+{ "posInBeat":189.25, "type":2  },
+{ "posInBeat":189.5, "type":3  },
+{ "posInBeat":189.75, "type":4  },
+{ "posInBeat":190, "type":1  },
+
+{ "posInBeat":190.5, "type":3  },
+
+{ "posInBeat":191, "type":2  },
+{ "posInBeat":191.25, "type":1  },
+{ "posInBeat":191.5, "type":4  },
+{ "posInBeat":191.75, "type":3  },
+{ "posInBeat":192, "type":2  },
+
+{ "posInBeat":192.5, "type":1  },
+{ "posInBeat":192.75, "type":1  },
+
+{ "posInBeat":193.25, "type":2  },
+{ "posInBeat":193.5, "type":2  },
+
+{ "posInBeat":194, "type":4  },
+{ "posInBeat":194.25, "type":4  },
+
+{ "posInBeat":194.75, "type":3  },
+{ "posInBeat":195, "type":3  },
+
+{ "posInBeat":195.5, "type":2  },
+{ "posInBeat":196, "type":1  },
+
+{ "posInBeat":196.5, "type":4  },
+{ "posInBeat":196.75, "type":4  },
+
+{ "posInBeat":197.25, "type":3  },
+{ "posInBeat":197.5, "type":3  },
+
+{ "posInBeat":198, "type":1  },
+{ "posInBeat":198.25, "type":1  },
+
+{ "posInBeat":198.75, "type":2  },
+{ "posInBeat":199, "type":2  },
+
+{ "posInBeat":199.5, "type":4  },
+{ "posInBeat":200, "type":3  },
+
+{ "posInBeat":200.5, "type":2  },
+{ "posInBeat":200.75, "type":2  },
+
+{ "posInBeat":201.25, "type":1  },
+{ "posInBeat":201.5, "type":1  },
+
+{ "posInBeat":202, "type":3  },
+{ "posInBeat":202.25, "type":3  },
+
+{ "posInBeat":202.75, "type":4  },
+{ "posInBeat":203, "type":4  },
+
+{ "posInBeat":203.5, "type":1  },
+{ "posInBeat":204, "type":3  },
+
+{ "posInBeat":204.5, "type":1  },
+{ "posInBeat":204.75, "type":3  },
+
+{ "posInBeat":205.25, "type":4  },
+{ "posInBeat":205.5, "type":3  },
+
+{ "posInBeat":206, "type":4  },
+{ "posInBeat":206.25, "type":1  },
+{ "posInBeat":206.5, "type":2  },
+
+{ "posInBeat":207, "type":2  },
+{ "posInBeat":207.25, "type":3  },
+{ "posInBeat":207.5, "type":2  },
+{ "posInBeat":207.75, "type":3  },
+{ "posInBeat":208, "type":2  },
+
+{ "posInBeat":208.5, "type":1  },
+{ "posInBeat":208.75, "type":1  },
+
+{ "posInBeat":209.25, "type":2  },
+{ "posInBeat":209.5, "type":2  },
+
+{ "posInBeat":210, "type":4  },
+{ "posInBeat":210.25, "type":4  },
+
+{ "posInBeat":210.75, "type":3  },
+{ "posInBeat":211, "type":3  },
+
+{ "posInBeat":211.5, "type":2  },
+{ "posInBeat":212, "type":1  },
+
+{ "posInBeat":212.5, "type":4  },
+{ "posInBeat":212.75, "type":4  },
+
+{ "posInBeat":213.25, "type":3  },
+{ "posInBeat":213.5, "type":3  },
+
+{ "posInBeat":214, "type":1  },
+{ "posInBeat":214.25, "type":1  },
+
+{ "posInBeat":214.75, "type":2  },
+{ "posInBeat":215, "type":2  },
+
+{ "posInBeat":215.5, "type":4  },
+{ "posInBeat":216, "type":3  },
+
+{ "posInBeat":216.5, "type":2  },
+{ "posInBeat":216.75, "type":2  },
+
+{ "posInBeat":217.25, "type":1  },
+{ "posInBeat":217.5, "type":1  },
+
+{ "posInBeat":218, "type":3  },
+{ "posInBeat":218.25, "type":3  },
+
+{ "posInBeat":218.75, "type":4  },
+{ "posInBeat":219, "type":4  },
+
+{ "posInBeat":219.5, "type":1  },
+{ "posInBeat":220, "type":4  },
+{ "posInBeat":220.25, "type":1  },
+
+{ "posInBeat":220.75, "type":4  },
+{ "posInBeat":221, "type":3  },
+
+{ "posInBeat":221.5, "type":4  },
+{ "posInBeat":221.75, "type":2  },
+{ "posInBeat":222, "type":1  },
+{ "posInBeat":222.25, "type":4  },
+{ "posInBeat":222.5, "type":3  },
+
+{ "posInBeat":223, "type":2  },
+{ "posInBeat":223, "type":1  },
+{ "posInBeat":223.5, "type":2  },
+{ "posInBeat":223.5, "type":3  },
+{ "posInBeat":224, "type":2  },
+
+{ "posInBeat":224.5, "type":1  },
+{ "posInBeat":224.75, "type":1  },
+
+{ "posInBeat":225.25, "type":2  },
+{ "posInBeat":225.5, "type":2  },
+
+{ "posInBeat":226, "type":4  },
+{ "posInBeat":226.25, "type":4  },
+
+{ "posInBeat":226.75, "type":3  },
+{ "posInBeat":227, "type":3  },
+
+{ "posInBeat":227.5, "type":2  },
+{ "posInBeat":228, "type":1  },
+
+{ "posInBeat":228.5, "type":4  },
+{ "posInBeat":228.75, "type":4  },
+
+{ "posInBeat":229.25, "type":3  },
+{ "posInBeat":229.5, "type":3  },
+
+{ "posInBeat":230, "type":1  },
+{ "posInBeat":230.25, "type":1  },
+
+{ "posInBeat":230.75, "type":2  },
+{ "posInBeat":231, "type":2  },
+
+{ "posInBeat":231.5, "type":4  },
+{ "posInBeat":232, "type":3  },
+
+{ "posInBeat":232.5, "type":2  },
+{ "posInBeat":232.75, "type":2  },
+
+{ "posInBeat":233.25, "type":1  },
+{ "posInBeat":233.5, "type":1  },
+
+{ "posInBeat":234, "type":3  },
+{ "posInBeat":234.25, "type":3  },
+
+{ "posInBeat":234.75, "type":4  },
+{ "posInBeat":235, "type":4  },
+
+{ "posInBeat":235.5, "type":1  },
+{ "posInBeat":236, "type":3  },
+
+{ "posInBeat":236.5, "type":1  },
+{ "posInBeat":236.75, "type":3  },
+
+{ "posInBeat":237.25, "type":4  },
+{ "posInBeat":237.5, "type":3  },
+
+{ "posInBeat":238, "type":4  },
+{ "posInBeat":238.25, "type":1  },
+{ "posInBeat":238.5, "type":2  },
+
+{ "posInBeat":239, "type":2  },
+{ "posInBeat":239.25, "type":3  },
+{ "posInBeat":239.5, "type":2  },
+{ "posInBeat":239.75, "type":3  },
+{ "posInBeat":240, "type":2  },
+
+{ "posInBeat":240.5, "type":1  },
+{ "posInBeat":240.75, "type":1  },
+
+{ "posInBeat":241.25, "type":2  },
+{ "posInBeat":241.5, "type":2  },
+
+{ "posInBeat":242, "type":4  },
+{ "posInBeat":242.25, "type":4  },
+
+{ "posInBeat":242.75, "type":3  },
+{ "posInBeat":243, "type":3  },
+
+{ "posInBeat":243.5, "type":2  },
+{ "posInBeat":244, "type":1  },
+
+{ "posInBeat":244.5, "type":4  },
+{ "posInBeat":244.75, "type":4  },
+
+{ "posInBeat":245.25, "type":3  },
+{ "posInBeat":245.5, "type":3  },
+
+{ "posInBeat":246, "type":1  },
+{ "posInBeat":246.25, "type":1  },
+
+{ "posInBeat":246.75, "type":2  },
+{ "posInBeat":247, "type":2  },
+
+{ "posInBeat":247.5, "type":4  },
+{ "posInBeat":248, "type":3  },
+
+{ "posInBeat":248.5, "type":2  },
+{ "posInBeat":248.75, "type":2  },
+
+{ "posInBeat":249.25, "type":1  },
+{ "posInBeat":249.5, "type":1  },
+
+{ "posInBeat":250, "type":3  },
+{ "posInBeat":250.25, "type":3  },
+
+{ "posInBeat":250.75, "type":4  },
+{ "posInBeat":251, "type":4  },
+
+{ "posInBeat":251.5, "type":1  },
+{ "posInBeat":252, "type":4  },
+{ "posInBeat":252.25, "type":1  },
+
+{ "posInBeat":252.75, "type":4  },
+{ "posInBeat":253, "type":3  },
+
+{ "posInBeat":253.5, "type":4  },
+{ "posInBeat":253.75, "type":2  },
+{ "posInBeat":254, "type":1  },
+{ "posInBeat":254.25, "type":4  },
+{ "posInBeat":254.5, "type":3  },
+
+{ "posInBeat":255, "type":2  },
+{ "posInBeat":255, "type":1  },
+{ "posInBeat":255.5, "type":2  },
+{ "posInBeat":255.5, "type":3  },
+{ "posInBeat":256, "type":1  },
+{ "posInBeat":256, "type":4  },
+{ "posInBeat":256, "type":2  }
+
+
+
+
+
+
+                                
+    ],
+    "chat": []
+}

@@ -24,12 +24,12 @@ public:
 	//optional Sizes
 	const float HitSize = 160;
 	const float DefaultSize = 128;
+	//const float JudgeSize = 500;
 	float currentSize=128;
 
 	void start() {
-		this->combo = 0;
-		check_miss->SpriteAlpha = 0;
-		check_great->SpriteAlpha = 0;
+		this->combo = this->hitCount = this->miss = 0;
+		check_miss->SpriteAlpha = check_great->SpriteAlpha = 0;
 		currentSize = DefaultSize;
 	}
 	//insert Update from clicks
@@ -39,12 +39,18 @@ public:
 	void OnKeyPressed(HitObjectType type);
 
 	void Hitted(int isHitted);
+	int getCombo() { return this->combo; }
+	int getHitCount() { return this->hitCount; }
+	float getAcc() { 
+		return (float)((int)((1.0f - this->miss * 1.0f / this->hitCount) * 10000)) / 100;
+	}
 private:
 	//just set sprite size..
 	void OnKeyAction(CSprite* obj);
-
+	
+	int hitCount = 0;
+	int miss = 0;
 	int combo = 0;
-
 	int score = 0;
 	int _score;
 };

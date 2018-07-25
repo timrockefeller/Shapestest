@@ -98,6 +98,8 @@ private:
 	//常量，note出生点
 	const float beatsSpawn = 500.0f;
 
+	//note判定
+	void checkNote(bool);
 
 	//上右下左四个方向的note临时储存vector
 	std::vector<HitObject> pathBuffer[4];
@@ -134,6 +136,11 @@ private:
 	//////////////   EFFECTS   ///////////////
 	//CSprite* effect_processBar;
 	void alertSongInfo(std::string);
-	CTextSprite*	m_text_songInfo;
-	float		_text_songInfo_delay;
+	CTextSprite*	m_text_songInfo = NULL;
+	float		_text_songInfo_delay=-1;
+
+	void alertMessage(std::string);
+	CTextSprite*m_text_message = NULL;
+	CSprite*	m_box_message=NULL;
+	float		_text_message_delay=-1;
 };

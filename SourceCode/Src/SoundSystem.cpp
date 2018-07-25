@@ -42,6 +42,12 @@ bool SoundSystem::playFX(SOUND_FX fx)
 	switch (fx) {
 	case SOUND_FX_CLICK:
 		source = "../SourceCode/Assets/FX/normal-hitfinish.wav";
+		break;
+	case SOUND_FX_MISS:
+		source = "../SourceCode/Assets/FX/combobreak.wav";
+		break;
+	default:
+		return false;
 	}
 	ERRCHECK(fmod_system->createSound(
 		source,
@@ -55,7 +61,7 @@ bool SoundSystem::playFX(SOUND_FX fx)
 		false,
 		&fxc
 	));
-	return false;
+	return true;
 }
 void SoundSystem::killPlaying()
 {

@@ -39,7 +39,11 @@ public:
 	Level(std::string mapname,GAME_LEVEL_TYPE _type);
 
 	//song info
+	
+	//¸èÇúbpm
 	float songTempo;
+	
+	//¸èÇúÆ«ÒÆÁ¿
 	float songOffset;
 	std::string songName;
 	//ÁÙÊ±beatmap´¢´æ¿â¡£

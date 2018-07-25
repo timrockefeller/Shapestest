@@ -61,6 +61,7 @@ void Player::OnKeyPressed(HitObjectType type)
 
 void Player::Hitted(int isHitted)
 {
+	hitCount++;
 	if (isHitted > 0) {
 		this->combo++;
 		score += (combo / 10 + 1) + (combo / 100 + 1)*20;
@@ -68,7 +69,6 @@ void Player::Hitted(int isHitted)
 			char b[10];
 			sprintf_s(b, "%dx", combo);
 			combo_text->SetTextString(b);
-			
 		}
 		else {
 			combo_text->SetTextString("");
@@ -78,6 +78,7 @@ void Player::Hitted(int isHitted)
 	}
 	else {
 		this->combo = 0;
+		this->miss++;
 		combo_text->SetTextString("");
 		check_miss->SpriteAlpha = 200;
 		check_great->SpriteAlpha = MathHandle::ClampInt(0, 20, check_great->SpriteAlpha);

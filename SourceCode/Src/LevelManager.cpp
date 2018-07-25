@@ -2,7 +2,7 @@
 #include "fmod_inc\fmod.h"
 #include "MathHandle.h"
 
-//ï¿½ï¿½ï¿½ìº¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½
+//¹¹Ôìº¯Êý£º³õÊ¼»¯
 LevelManager::LevelManager()
 {
 	
@@ -49,20 +49,23 @@ void LevelManager::init()
 {
 
 
-	//ï¿½ï¿½jsonï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	//½«json·ÅÔÚÕâÀïÉùÃ÷
 	// EXAMPLE: 
 	// this->playlist.push_back(new Level("examplesong.json",GAME_LEVEL_TYPE_PURESONG));
+	//song 1
 	this->playlist.push_back(new Level("level1.json",GAME_LEVEL_TYPE_CHAT));//defaule song
-	
 	this->playlist.push_back(new Level("level2.json", GAME_LEVEL_TYPE_LEVEL));
 	this->playlist.push_back(new Level("level4.json", GAME_LEVEL_TYPE_CHAT));
-	this->playlist.push_back(new Level("level5.json", GAME_LEVEL_TYPE_CHAT));
 	//song 2
+	this->playlist.push_back(new Level("level5.json", GAME_LEVEL_TYPE_CHAT));
 	this->playlist.push_back(new Level("level_bassTelekinesis.json", GAME_LEVEL_TYPE_LEVEL));
+	//song 3
 
+	//song 4
+	this->playlist.push_back(new Level("level_EyesHalfClosed.json", GAME_LEVEL_TYPE_LEVEL));
 }
 
-//ï¿½ï¿½ï¿½ï¿½Ð§
+//°ó¶¨ÌØÐ§
 void LevelManager::bindEffects()
 {
 	//bind
@@ -137,7 +140,7 @@ void LevelManager::update(float deltaTime)
 		/////////
 		//in play
 		if (playingLevel->getLevelType() == GAME_LEVEL_TYPE_PURESONG) {
-			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			//Ñåâý£¬ÄãÀ´µ÷²ÎÊý
 			m_Player->currentSize = m_Player->DefaultSize + 1500.0f * soundSystem->getSpectrumCurruentTime(7);
 		}
 		else if (playingLevel->getLevelType() == GAME_LEVEL_TYPE_LEVEL) {//dspTIME refresh
@@ -173,7 +176,7 @@ void LevelManager::update(float deltaTime)
 				if (playingLevel->beatmap[nextHitObjectCur].bindSprite->CloneSprite(currentSprite.c_str())) {
 
 					//pathBuffer[0].push_back(this->playingLevel->beatmap[nextHitObjectCur]);
-					int _I = 0;//"_I"ï¿½ï¿½ï¿½ï¿½È·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+					int _I = 0;//"_I"ÓÃÀ´È·¶¨·½Ïò
 					switch (playingLevel->beatmap[nextHitObjectCur].getType()) {
 					case HIT_UP:
 						_I = 0; break;
@@ -213,10 +216,10 @@ void LevelManager::update(float deltaTime)
 					
 				}
 				////////////////////////////////////
-				//ï¿½Ð¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï£¡ï¿½ï¿½
-				//ï¿½ï¿½Ã¿Ò»ï¿½ßµÄµï¿½Ò»ï¿½ï¿½Ôªï¿½Ø½ï¿½ï¿½ï¿½ï¿½Ð¶ï¿½
+				//ÅÐ¶¨£¡£¡ÔÚÕâÀï£¡£¡
+				//¶ÔÃ¿Ò»±ßµÄµÚÒ»¸öÔªËØ½øÐÐÅÐ¶¨
 				if (pathBuffer[_I].size() > 0) {
-					//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+					//µ½´ïµ×Ïß
 					if (pathBuffer[_I][0].getPosInMs() - songPosition < - HIT_CHECKTIME_MISS) {
 						
 						//Miss Event Here
@@ -233,13 +236,13 @@ void LevelManager::update(float deltaTime)
 			}
 		}
 		else if (playingLevel->getLevelType() == GAME_LEVEL_TYPE_CHAT) {
-			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´
+			//ÒÀ³¿ÄãÀ´Ð´
 			m_Player->currentSize = m_Player->DefaultSize + 1500.0f * soundSystem->getSpectrumCurruentTime(7);
 
 		}
 	}
 }
-//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+//°´¼ü°´ÏÂ
 void LevelManager::keyDown(const int iKey)
 {
 	if (iKey == KEY_R) {//test
@@ -276,14 +279,14 @@ void LevelManager::keyDown(const int iKey)
 		isHit = false;
 	}
 
-	if (stats == GAME_STATS_PLAYING) {//ï¿½ï¿½ï¿½ï¿½ï¿½æ£¿
-		if (playingLevel->getLevelType() == GAME_LEVEL_TYPE_LEVEL) {//ï¿½ï¿½ï¿½ï¿½Ö»ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½Ô»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½
+	if (stats == GAME_STATS_PLAYING) {//ÕýÔÚÍæ£¿
+		if (playingLevel->getLevelType() == GAME_LEVEL_TYPE_LEVEL) {//°´¼üÖ»ÔÚÓÎÏ·¡¢¶Ô»°ÀïÃæÏìÓ¦·½Ïò¡£
 			//Level Mode
-			m_Player->OnKeyPressed(type);//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			m_Player->OnKeyPressed(type);//´«ÈëÊý¾Ý
 			if (isHit) { 
-				//ï¿½ï¿½Ð§
+				//ÒôÐ§
 				soundSystem->playFX(SOUND_FX_CLICK); 
-				//ï¿½Ð¶ï¿½
+				//ÅÐ¶¨
 				if (pathBuffer[_I].size() > 0) {
 					if (MathHandle::AbsFloat(pathBuffer[_I][0].getPosInMs() - songPosition) < HIT_CHECKTIME_MISS) {
 						//Hit Event Here
@@ -305,11 +308,11 @@ void LevelManager::keyDown(const int iKey)
 		else if (playingLevel->getLevelType() == GAME_LEVEL_TYPE_CHAT) {
 			//Chat Mode
 			if (!this->nextDiag()) this->nextLevel();
-			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´
+			//ÒÀ³¿ÄãÀ´Ð´
 		}
 		else {//PureSong Mode
-			_nextdelay--;//ï¿½ï¿½ï¿½ï¿½
-			//ï¿½Ù°ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+			_nextdelay--;//·ÀÎó´¥
+			//ÔÙ°´Ò»´ÎÌø¹ý
 			if (_nextdelay < 1) { this->nextLevel(); _nextdelay = 1; }
 		}
 	}
@@ -317,11 +320,11 @@ void LevelManager::keyDown(const int iKey)
 
 void LevelManager::playLevel(Level* level)
 {
-	//ï¿½Ð»ï¿½ï¿½ï¿½Ï·×´Ì¬
+	//ÇÐ»»ÓÎÏ·×´Ì¬
 	this->stats = GAME_STATS_PASSING;
 
 	/////
-	//ï¿½ï¿½ï¿½ï¿½Levelï¿½Ø¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	//ÖØÖÃLevel¹Ø¿¨µÄÉèÖÃ
 	nextHitObjectCur = 0;
 	for (int __I = 0; __I < 4; __I++) { 
 		for (int __J = 0; __J < pathBuffer[__I].size(); __J++) {
@@ -332,15 +335,15 @@ void LevelManager::playLevel(Level* level)
 	}
 
 	/////
-	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½
+	//ÖØÖÃÏÔÊ¾ÉèÖÃ
 	
 
 	/////
-	//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	//ÖØÖÃÒôÀÖ
 	soundSystem->killPlaying();
 	
 	/////
-	//ï¿½ï¿½ï¿½ï¿½chatï¿½Ô»ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½
+	//ÖØÖÃchat¶Ô»°¿òµÈÔªËØ
 	this->m_textBox->SetSpriteColorAlpha(0);
 	m_Player->combo_text->SetTextString("");
 	/////
@@ -348,7 +351,7 @@ void LevelManager::playLevel(Level* level)
 	if (level->loadLevel()) {
 		this->playingLevel = level;
 		if (level->getLevelType() == GAME_LEVEL_TYPE_LEVEL) {
-			//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï·ï¿½ï¿½ï¿½ï¿½Ð§
+			//ÖØÖÃÓÎÏ·ÄÚÌØÐ§
 			
 			effects["noteSlide_UP"]->start(); 
 			effects["noteSlide_DOWN"]->start(); 
@@ -367,7 +370,7 @@ void LevelManager::playLevel(Level* level)
 			effects["noteSlide_LEFT"]->currents =
 			effects["noteSlide_RIGHT"]->currents = 0;
 			if (level->getLevelType() == GAME_LEVEL_TYPE_CHAT) {
-				//ï¿½ï¿½ï¿½ï¿½ChatÄ£Ê½ï¿½Ä±ï¿½Òªï¿½ï¿½Ï¢
+				//¼ÓÔØChatÄ£Ê½µÄ±ØÒªÐÅÏ¢
 				this->currentDiagCur = 999;//infinity
 				this->currentChatCur = -1;
 				this->chatStage[0] = this->chatStage[1] = this->chatStage[2]= new CSprite("chr_blank");
@@ -409,20 +412,20 @@ void LevelManager::checkNote(bool isHitted)
 	if (m_Player->getHitCount() == playingLevel->beatmap.size()) {
 		std::string alertInfo = "";
 		if (m_Player->getAcc() == 100.f) {
-			alertInfo += "Full Combo!!";
+			alertInfo += "Full Combo!!   ÊÕÌýÂÊ£ºÈ«Çò100%";
 		}
 		else {
 			if (m_Player->getAcc() >= 90.f) {
-				alertInfo += "Ì«ï¿½ï¿½ï¿½Ë£ï¿½  Acc : ";
+				alertInfo += "Ì«°ôÁË£¡  ÊÕÌýÂÊ : ";
 			}
 			else if (m_Player->getAcc() >= 80.f) {
-				alertInfo += "ï¿½ï¿½ï¿½ï¿½Ç±ï¿½ï¿½Å¶   Acc : ";
+				alertInfo += "ºÜÓÐÇ±Á¦Å¶   ÊÕÌýÂÊ : ";
 			}
 			else if (m_Player->getAcc() >= 70.f) {
-				alertInfo += "ï¿½ï¿½ï¿½ï¿½Ç¿Ç¿~   Acc : ";
+				alertInfo += "ÃãÃãÇ¿Ç¿~   ÊÕÌýÂÊ : ";
 			}
 			else {
-				alertInfo += "ï¿½Ù½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½  Acc : ";
+				alertInfo += "ÔÙ½ÓÔÙÀ÷£¡  ÊÕÌýÂÊ : ";
 			}
 			alertInfo += std::to_string((int)m_Player->getAcc());
 			alertInfo += ".";
@@ -435,7 +438,8 @@ void LevelManager::checkNote(bool isHitted)
 
 bool LevelManager::nextDiag()
 {
-	if (currentChatCur >= 0 && playingLevel->chats[currentChatCur].diags.size() > currentDiagCur) {
+	if (currentChatCur >= 0 && 
+		playingLevel->chats[currentChatCur].diags.size() > currentDiagCur) {
 		//load next Diag text
 		m_textInner->SetTextString(playingLevel->chats[currentChatCur].diags[currentDiagCur].c_str());
 		currentDiagCur++;
@@ -474,9 +478,13 @@ bool LevelManager::nextDiag()
 					effectsOnce["fade_in"]->addObject(chatStage[0]);
 					effectsOnce["fade_128"]->addObject(chatStage[1]);
 				}
-				else {
+				else if(playingLevel->chats[currentChatCur].onChating == 1){
 					effectsOnce["fade_128"]->addObject(chatStage[0]);
 					effectsOnce["fade_in"]->addObject(chatStage[1]);
+				}
+				else {
+					effectsOnce["fade_128"]->addObject(chatStage[0]);
+					effectsOnce["fade_128"]->addObject(chatStage[1]);
 				}
 			}
 			currentDiagCur = 0;

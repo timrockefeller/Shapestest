@@ -134,7 +134,6 @@ private:
 
 	//////////////////////////////////////////
 	//////////////   EFFECTS   ///////////////
-	//CSprite* effect_processBar;
 	void alertSongInfo(std::string);
 	CTextSprite*	m_text_songInfo = NULL;
 	float		_text_songInfo_delay=-1;

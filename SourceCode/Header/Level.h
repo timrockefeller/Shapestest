@@ -15,12 +15,7 @@ private:
 	//关卡文件路径
 	std::string levelPath;
 
-	
-
-	
 	std::string songPath;
-
-	
 
 	//关卡模式
 	GAME_LEVEL_TYPE type = GAME_LEVEL_TYPE_PURESONG;

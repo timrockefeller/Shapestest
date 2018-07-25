@@ -37,7 +37,7 @@ public:
 
 
 	void OnKeyPressed(HitObjectType type);
-
+	//计分相关
 	void Hitted(int isHitted);
 	int getCombo() { return this->combo; }
 	int getHitCount() { return this->hitCount; }

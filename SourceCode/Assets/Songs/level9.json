@@ -1,0 +1,521 @@
+{
+	"songName": "Day 3 Crescendia's home",
+	"songPath": "./[chat]ThankYou.mp3",
+	"songTempo": 128,
+	"songOffset": 750,
+	"levelType": 2,
+	"beatmap": [],
+	"chat": [
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				".......",
+				"为什么家里那么乱？",
+				"花盆也碎在地上了...桌子也十分混乱...",
+				"还有外面猫咪咖啡厅的猫也太吵了...\n感觉比之前几次来的都吵",
+				"唔...怪不得呢，窗户没关",
+				"等等，不是窗户没关，是整块玻璃都碎掉了？！\n还是碎在里面的...",
+				"你记不记得昨天在节目上\nCrescendia好像有说自己家住在猫咪咖啡厅旁边？",
+				"糟了...",
+				"她...",
+				"她...不会是...",
+				"她...不会是...被绑架了？"
+				
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"Syncopy..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"就因为她多说了那句话？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"Syncopy..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"我昨晚为什么没有意识到？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"大姐！"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"呀！"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"哇，大姐发出了兔兔般的声音！"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"啥？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"大姐你一思考就停不下来呢\n啊应该是瞎想才对"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"啊？Crescedia？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"大姐你干嘛呢？\n等等我家怎么那么乱？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"Crescedia你怎么在这？你家怎么这么乱？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"这是咱家的家咱家当然在这了！\n咱家还想问大姐为啥咱家这么乱呢！"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"等等，先别急...你今天怎么没来电台？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"啊？？？不是台长说休息一天吗？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"啊？？？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"？？？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"？？？？？？",
+				"等等我脑袋有点乱，我一个一个问吧",
+				"一：你的房间为什么这么乱？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"大姐这问题咱家也想问你呢！"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"好吧...",
+				"二：你今天为什么没来电台？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"刚才咱家说了不是台长说休息一天吗？\n大姐你需要冷静一下呀"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"那看来有第三个问题了...为什么我不知道今天休息？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"不知道啊？台长说Channel 3节目暂停一天\n我就出去跟Mimim玩了一整天呢\n回来就成这样了"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"回来就成这样了...你是说你走之前还是好好的吗？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"是啊！不会是遭贼了吧",
+				"啊！冰箱里的小鱼干全没了！",
+				"等等，突然想起来走之前忘记喂猫猫先生了！"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"你还忘记带手机了..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"仔细一看窗外有好多猫猫！都在吃小鱼干呢",
+				"等等，那不是猫猫先生吗？还有其他的都是Mimim的猫猫呀"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"我好像明白是怎么回事了..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"啊？大姐你明白什么了？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"今天我给你打电话...是猫猫先生接的..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"啊？猫猫先生原来这么聪明吗？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"我随口跟它说...猫粮在冰箱里..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"啊？大姐原来会说猫猫语吗？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"然后它翻出来之后...Mimim的猫猫就冲了进来..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"啊？原来Mimim的猫猫们那么凶猛吗？",
+				"咱家和Mimim不在的时候发生了这么多事情吗？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"嗯...看来你们两个迷糊鬼都忘了喂猫猫了",
+				"能出去玩就这么激动吗..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"毕竟咱们电台是每天都要播放的节目嘛\n节假日不仅不放假还要有特别节目\n能休息一天当然激动啦"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"那台长为什么不告诉我休息呢？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"噗噗噗，大姐这是嫉妒了吗？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"更多的是奇怪吧...\n他知道如果你不在的话节目就无法正常播出啊？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"对啊？这是为什么？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"还有就是为什么这几天的电台节目都能正常播出呢？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"大姐是又在考虑节拍器的事情吗？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"嗯..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"......",
+				"就算是咱家也好像知道是怎么回事了",
+				"但是咱家不愿意怀疑..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"......",
+				"我也不想怀疑的..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"...",
+				"大姐..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"怎么了？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"既然你们都来了",
+				"就帮咱家收拾一下家里吧>3-"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"...好吧..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"谢谢谢谢谢谢大姐你们啦>3<",
+				"那我去把猫猫先生叫回来，你们加油噢"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"...",
+				"虚惊一场...",
+				"幸好只是虚惊一场...",
+				"...",
+				"台长到底为什么..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"抱歉打扰大姐思考了,但咱家很好奇一个问题呀"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"你怎么突然折回来了"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"刚才咱家忘记拿钥匙出去啦",
+				"所以咱家好奇一个问题呀"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"什么问题？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"大姐你是怎么进到咱家的家里的呀？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"...",
+				"...",
+				"←_←"
+			]
+		},
+		{
+			"left": "chr_blank",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+			]
+		}
+	]
+}

@@ -1,0 +1,232 @@
+{
+	"songName": "Day 4 After",
+	"songPath": "./[chat]1021.mp3",
+	"songTempo": 128,
+	"songOffset": 750,
+	"levelType": 2,
+	"beatmap": [],
+	"chat": [
+		{
+			"left": "chr_blank",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"...",
+				"这也太难了吧！！！"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"很棒呢"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"太棒了呀~~~台长已经在外面哭作一坨了"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"原来你是觉得那个棒吗..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"虽然这样的简单曲还会失误那么多\n但是把台长的犯罪发言都混进去啦"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"如各位听众所听到的，我们台长就是罪魁祸首呢"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"他好像只是想让我们的电台节目更受欢迎呢...\n想法是好的但做法不可取，不可取\n对不对呀玩偶版猫猫先生~摸摸~摸摸~"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"Crescendia，摸完台长要先洗手"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"好吧...我会注意的"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"诶？好像已经听到警车的声音了"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"是呢！四四拍果然是最帅气的节奏~"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"就在这帅气的节拍下为大家介绍我们的新成员吧~"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"太棒啦~"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 2,
+			"dialogue": [
+				"...",
+				"向大家问好"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"新朋友很沉默呢"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"是呢~"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 2,
+			"dialogue": [
+				"(按下白色的按钮)因为猫猫很害羞嘛~~~"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"啊啊啊刚才那句话不是咱家说的>_<"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"两个人害羞了呢"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 2,
+			"dialogue": [
+				"(按下淡粉色的按钮)咱家今天好开心啊~"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"咱家今天确实很开心呢"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"各位请听，当时我那个朋友吃纸的时候也是这样说的\n"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"烦人！！！"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 2,
+			"dialogue": [
+				"(按下淡紫色的按钮)烦人！！！"
+			]
+		},
+		{
+			"left": "chr_blank",
+			"right": "chr_blank",
+			"onChating": 1,
+			"dialogue": [
+				"...",
+				"DJ台泛着微微蓝光",
+				"自己仿佛要被吸进去一般",
+				"一朵电子云略过光碟",
+				"\"电台节目结束了，感谢各位的收听\""
+			]
+		},
+		{
+			"left": "chr_blank",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				""
+			]
+		},
+		{
+			"left": "chr_thanks",
+			"right": "chr_blank",
+			"onChating": -1,
+			"dialogue": [
+				
+			]
+		}
+	]
+}

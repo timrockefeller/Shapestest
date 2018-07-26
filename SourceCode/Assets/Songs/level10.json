@@ -1,0 +1,326 @@
+{
+	"songName": "Day 4 Crescendia's home",
+	"songPath": "./[chat]1021.mp3",
+	"songTempo": 128,
+	"songOffset": 750,
+	"levelType": 2,
+	"beatmap": [],
+	"chat": [
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"起床了"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"该起床了"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"......"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"Crescendia，起床了"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"唔喵...大姐怎么起那么早呀"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"你自己看看几点了..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"呀！这么晚了！"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"都炸毛了..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"不对！现在离上班还有三个小时呢！"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"这点我都开始练习发声了"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"咱家不会那么早练习打碟的...咱家都是深夜练习",
+				"还有昨天玩到那么晚，大姐你不困的吗？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"主要是今天还想去定拍钟再确认一下"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"唔...我太困了...想再睡一会..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"那我先做饭，你打算让我什么时候叫你？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"三小时后"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"好好好你做好饭就叫我啦，咱家要睡觉了"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"恩"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"确实昨天玩到太晚了\n我也感觉到困了",
+				"能凑齐三个人玩\"三脚猫\"的机会可不多呢",
+				"我们两个虽然工作上相处的很久，但是私下往来不算多\n一般是晚上一起吃顿饭\n再有机会就会一起出去玩",
+				"啊不多说了，我去做饭了，你也可以再睡一会"
+			]
+		},
+		{
+			"left": "chr_blank",
+			"right": "chr_blank",
+			"onChating": 1,
+			"dialogue": [
+				"...",
+				"看向窗外明亮的天空",
+				"感觉今天就要迎来结局了..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"Crescendia，起床了\n饭做好了"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"喵...辣末筷马？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"半个小时了，差不多了"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"好好好咱家这就起来啦",
+				"猫猫先生昨天睡得怎么样呀，摸摸，摸摸"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"摸完猫要洗手"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"猫猫先生可爱干净了\n每次洗澡都可兴奋了"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"我猜他是想逃跑"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"才不是呢，猫猫先生可喜欢我啦\n对不对呀猫猫先生，摸摸~摸摸~"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 2,
+			"dialogue": [
+				"喵~~~"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"你没发现他的叫声不是七八拍了吗？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"唔...咱家早就发现了啦...只是没联想到是节拍器的问题..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"...",
+				"今天我们可能要揭发谁偷了节拍器了..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"咱家还没准备好！咱家不太愿意相信是他干的..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"还没确定呢...",
+				"赶紧吃完饭咱们就走吧"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"好吧..."
+			]
+		},
+		{
+			"left": "chr_blank",
+			"right": "chr_blank",
+			"onChating": 1,
+			"dialogue": [
+				"...",
+				"一朵云影略过窗帘",
+				"你已经做好迎接结局的准备了",
+				"...",
+				"说白了就是吃饱饭啦~"
+			]
+		},
+		{
+			"left": "chr_blank",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+			]
+		}
+	]
+}

@@ -19,6 +19,7 @@ Level::Level(std::string mapname, GAME_LEVEL_TYPE _type)
 
 boolean Level::loadLevel()
 {
+	this->notenum = 0;
 	std::ifstream ifs;
 	ifs.open(this->levelPath);
 	if (!ifs.is_open()) {
@@ -29,7 +30,7 @@ boolean Level::loadLevel()
 	Json::Value root;
 	if (!reader.parse(ifs, root, false))
 	{
-		printf("parse failed \n");
+	 	printf("parse failed \n");
 		return false;
 	}
 
@@ -81,6 +82,7 @@ void Level::loadMap(Json::Value root)
 		case HIT_EFFECT: temptype = HIT_EFFECT; break;
 		default:temptype = HIT_UNDEFINE;
 		}
+		if (temptype != HIT_EFFECT&&temptype!=HIT_UNDEFINE) { this->notenum++; }
 		temp.setType(temptype);
 		beatmap.push_back(temp);
 	}

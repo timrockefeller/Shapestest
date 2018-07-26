@@ -1,0 +1,296 @@
+{
+	"songName": "Day 3 Before",
+	"songPath": "./[chat]BubbleBath.mp3",
+	"songTempo": 128,
+	"songOffset": 750,
+	"levelType": 2,
+	"beatmap": [],
+	"chat": [
+		{
+			"left": "chr_Syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"早上好\n你来的挺早呢",
+				"哈...昨晚有点没睡好\n不知道为什么大半夜的会有那么多车\n虽然离我家有点远但还是能听得清楚",
+				"我对自己的听力还是很有自信的",
+				"你怎么一脸\"因为兔兔耳朵很灵敏嘛\"的表情？",
+				"啊对了对了，说好的今天告诉你为什么我要招人吧？",
+				"是这样的，前几天Crescendia说自己练习时有点把握不好节奏\n所以想找人和她一起练习\n虽然我有绝对音感，但是我对节奏却拿捏不准",
+				"应该说，自己远远达不到Crescendia的要求\n我的节奏感其实是在平均水平偏下的\n这件事你可要保密噢",
+				"之前Crescendia开玩笑说大街上随便拉一个人都比我强\n于是我就拉你过来了\n看来还真是比我强呢",
+				"...",
+				"别在意，我没别的意思",
+				"说起来，Crescendia怎么还没来？\n一般来说这点她就该到了\n我先给她发条消息吧",
+				"...",
+				"好了，再过十五分钟她就会到了",
+				"说起来，昨天我回去的时候又去看了一下定拍钟\n它还是很奇怪\n但是没多少人注意到",
+				"人就是很难注意到已经习惯的东西发生了变化...\n一旦注意到了变化就又会疯狂的去怀疑",
+				"我现在感觉不仅是定拍种、平时很多东西都不对劲了\n一切都没有了节律...",
+				"但为什么昨天我们的电台节目没有受到影响？",
+				"...",
+				"这样下去我都要偏执了",
+				"Crescendia还没来吗？睡懒觉也要有个度吧\n你稍等，我给她打个电话"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 1,
+			"dialogue": [
+				"嘟...嘟...嘟..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"奇怪？电话打不通...\n我再试试..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 1,
+			"dialogue": [
+				"嘟...嘟...嘟...滴",
+				"喵~喵~~"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"啊？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 1,
+			"dialogue": [
+				"喵~"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"等等...Crescendia是你吗？",
+				"你变成猫了吗？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 1,
+			"dialogue": [
+				"喵~~喵~"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"等等...这声音",
+				"你不是Crescedia家的猫吗..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 1,
+			"dialogue": [
+				"喵~喵~"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"果然不是七八拍的了...",
+				"等等，你为什么会接电话？",
+				"不不不Crescendia呢？她去哪了？手机忘家里了？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 1,
+			"dialogue": [
+				"喵~~~~~"
+			]
+		},
+
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"...",
+				"冰箱里有猫粮，你自己去吃点，我挂了..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 1,
+			"dialogue": [
+				"嘟"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"Crescendia到底在干什么...\n节目就要开始了...",
+				"没办法了，看来现在只能让你上了",
+				"没问题的，Crescendia在她的DJ台里预设了一些对话\n以便她喝饮料...",
+				"你只要根据我说的话按相应按键就可以了\n应该可以撑一会",
+				"那我要开始准备了,你先试着按一按预设对话吧。"
+			]
+		},
+		{
+			"left": "chr_blank",
+			"right": "chr_blank",
+			"onChating": 1,
+			"dialogue": [
+				"(按绿色的按钮)\n诶~~~是这样的吗?",
+				"(按红色的按钮)\n猫猫也喜欢噢~~~",
+				"(按黄色的按钮)\n噗噗，大姐你也会这样呀",
+				"...",
+				"你意识到这次电台节目可能要被你搞砸了"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"我这边准备好了，你也熟悉预设语音了吧？",
+				"那我开始了"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"各位好，感谢准时收听我们的节目\n我是你们熟悉的声音,Syncopy"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 1,
+			"dialogue": [
+				"(按粉色的按钮)\n感谢各位收听我们的节目啦~~~\n这里是可爱的猫猫Crescendia噢~"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"你能不能说点有实质性的..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 1,
+			"dialogue": [
+				"(按淡蓝色的按钮)\n这里是会为你播放欢快音乐的Crescendia噢~",
+				"(按黄绿色的按钮)\n大姐的语气有时候还真是吓人呢"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"还不是你有时候太不让我省心了..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 1,
+			"dialogue": [
+				"(按绿色的按钮)\n诶~~~是这样的吗?"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"...",
+				"说起来之前你有提到过猫咪咖啡厅的事情\n我都还不知道你喜欢喝咖啡呢"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 1,
+			"dialogue": [
+				"(按紫色的按钮)不是我喜欢是猫猫喜欢噢"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"喝咖啡对猫猫不太好吧...",
+				"咱们继续昨天的话题吧\n很多听众给我私信想听后续呢",
+				"据说医院的人赶到我朋友家里时，他正在吃纸呢\n后来医院检查结果出来了\n说胃里面有一张博士证书，还有很多论文",
+				"不过医生说比起他的胃，更重要的是他的精神问题\n所以就先把他给安排到了精神科\n让他慢慢\"消化消化\"那些知识",
+				"不过我个人是觉得他可能就是喜欢吃纸而已"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 1,
+			"dialogue": [
+				"(不知道按哪个按钮...)",
+				"(纠结的按下红色的按钮)\n猫猫也喜欢噢~~~"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"...",
+				"你说的是\"撕纸\"吧(强行讲冷笑话让对话有逻辑)",
+				"(完了，气氛又冷下来了)",
+				"看来某猫让气氛冷下来了呢\n我们听一首歌缓和一下气氛如何？",
+				"(严厉的看着你)可别搞砸了噢~"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 1,
+			"dialogue": [
+				"(按下深红色按钮)交给咱家吧~"
+			]
+		},
+		{
+			"left": "chr_blank",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				
+			]
+		}
+	]
+}

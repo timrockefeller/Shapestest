@@ -1,0 +1,575 @@
+{
+	"songName": "Day 4 Before",
+	"songPath": "./[chat]1021.mp3",
+	"songTempo": 128,
+	"songOffset": 750,
+	"levelType": 2,
+	"beatmap": [],
+	"chat": [
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"...",
+				"开始吧"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"玩偶版猫猫先生好呀，摸摸~摸摸~"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"别逃避了...快找找吧"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"好吧......"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"...",
+				"啊！"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"找到了？！"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"玩偶版兔兔小姐的屁股脏了！",
+				"大姐你这可不行呀\n要注意卫生呢",
+				"看看猫猫先生,无论是真猫版还是玩偶版都很干净呢"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"...好吧...我会注意的...",
+				"..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"都找遍了...除了那个地方"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"别吧大姐...\n本来怀疑别人就让咱家难受了\n结果赃物还藏在咱家这里吗"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"如果不在那里的话就既没有赃物也没有怀疑对象了",
+				"你要是不去检查的话就说明你还是相信他就是..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"大姐你把我说服了,咱家这就去看看"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"怎么样？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"大姐...",
+				"我好像平时踢了它好几脚..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"啊？谁？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"镇国之宝啊！！！节拍器啊！！！",
+				"咱家平时打碟的时候经常不小心踢到什么东西啦\n我还以为是块突出来的铁板啥的就没在意呀！！！",
+				"结果竟然是国宝啊！！！\n还bulingbuling发光呢！！！"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"被你踢那么多次还能发光说明它没事..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"咱家有时候还踩着节奏踢呢！！！"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"喂，警察局吗？有人亵渎国宝"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"别呀大姐！！！"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"开个玩笑...",
+				"那看来咱们的猜想是对的..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"唔...先是偷窃国宝然后是亵渎国宝...",
+				"下一个是不是该大姐销毁国宝了呀"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"你这样说会让人觉得咱们电台是犯罪窝点的..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 2,
+			"dialogue": [
+				"滴滴滴"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"啊座机响了！"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"是台内线路呢\n估计是台长",
+				"Crescendia你准备好了吗？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"好...好吧(按下灰色的按钮)"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"那我接电话了",
+				"喂？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 2,
+			"dialogue": [
+				"咳咳...两位...不，三位在聊什么呀"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"啊？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"台长您说笑了..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 2,
+			"dialogue": [
+				"不用隐瞒了，我知道你们又招了一个人",
+				"Crescendia是不想干了吗？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"没有啊台长，怎么会呢？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 2,
+			"dialogue": [
+				"我为你们付出了多少你们知道吗？\n结果Crescendia竟然要撒手不干了？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"台长您到底在说什么？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 2,
+			"dialogue": [
+				"电台的收听率可都靠你们了啊，可不要出什么出岔子才好"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"台长咱家怎么听不懂您在说什么呀？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 2,
+			"dialogue": [
+				"你们是真不懂吗？还是我不懂？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"？？？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"？？？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 2,
+			"dialogue": [
+				"那我就直说了",
+				"我之前看到你们贴的告示了"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"是那个招人的告示吗？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 2,
+			"dialogue": [
+				"\"简单上手！只要会按↑↓←→就能完成工作！\n高薪酬，欢快明亮的工作环境！\"",
+				"我可反复读了很多次了呢..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"台长那只是..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 2,
+			"dialogue": [
+				"于是我前天特地让你们改变了一下定位",
+				"果然你们变得特别不默契！",
+				"我就猜测你们之间肯定发生什么了\n而且有人想退出！\n所以才要招人的"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"不是啦台长..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 2,
+			"dialogue": [
+				"但我不确定你们是否召到了人...\n于是昨天我就让Crescendia放了一天假\n而且没告诉syncopy",
+				"你猜怎么着？节目竟然正常播出了！"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"啊"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 2,
+			"dialogue": [
+				"而且那一期电台节目竟然播出的都是Crescendia的预设语音！",
+				"我心爱的Crescendia还是爱着她的电台的\n所以才预设了语音对不对"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"呃..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"等等！台长你怎么知道咱家有预设语音的！"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 2,
+			"dialogue": [
+				"我之前把节拍器放在你DJ台底下的时候\n那些花花绿绿的按钮实在是太吸引人了\n台长年轻的时候也是当过DJ的...太令人怀念了"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 2,
+			"dialogue": [
+				"...",
+				"诶嘿~"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"Crescendia你录下来了吧..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"嗯，放在台长最喜欢的花花绿绿的按钮里面了\n是深红色呢\n混音的时候有好素材了"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 2,
+			"dialogue": [
+				"等等我刚才说错了！！！别！！！"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 2,
+			"dialogue": [
+				"滴"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 0,
+			"dialogue": [
+				"我们快出去拦住他",
+				"一会节目就要开始了，开始的时候你直接开始混音\n把他说的话全混进去"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_crescendia",
+			"onChating": 1,
+			"dialogue": [
+				"拜托你了呀，我们出发了！"
+			]
+		},
+		{
+			"left": "chr_blank",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"...",
+				"节目就要开始了...",
+				"这可能会很难...",
+				"5秒...",
+				"4秒...",
+				"3秒...",
+				"2秒...",
+				"1秒...",
+				"(按下开始按钮)"
+			]
+		},
+		{
+			"left": "chr_blank",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+			]
+		}
+	]
+}

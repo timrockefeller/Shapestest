@@ -432,4 +432,39 @@
       FillMode = "1";
          mountID = "28";
    };
+   new t2dStaticSprite(title_img) {
+      imageMap = "titleImageMap";
+      frame = "0";
+      useSourceRect = "0";
+      sourceRect = "-1.07374e+008 -1.07374e+008 -1.07374e+008 -1.07374e+008";
+      canSaveDynamicFields = "1";
+      size = "800.000 600.000";
+      WorldLimitMin = "-50.000 -37.500";
+      WorldLimitMax = "50.000 37.500";
+         mountID = "29";
+   };
+   new t2dStaticSprite(effect_slap) {
+      imageMap = "slapImageMap";
+      frame = "0";
+      useSourceRect = "0";
+      sourceRect = "-1.07374e+008 -1.07374e+008 -1.07374e+008 -1.07374e+008";
+      canSaveDynamicFields = "1";
+      Position = "0.000 -600.000";
+      size = "800.000 600.000";
+      WorldLimitMin = "-50.000 -37.500";
+      WorldLimitMax = "50.000 37.500";
+         mountID = "30";
+   };
+   new t2dStaticSprite(chr_thanks) {
+      imageMap = "chr_thanksImageMap";
+      frame = "0";
+      useSourceRect = "0";
+      sourceRect = "0 0 0 0";
+      canSaveDynamicFields = "1";
+      Position = "-800.000 0.000";
+      size = "800.000 600.000";
+      WorldLimitMin = "-50.000 -37.500";
+      WorldLimitMax = "50.000 37.500";
+         mountID = "31";
+   };
 };

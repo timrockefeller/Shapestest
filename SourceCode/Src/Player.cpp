@@ -61,7 +61,7 @@ void Player::OnKeyPressed(HitObjectType type)
 
 void Player::Hitted(int isHitted)
 {
-	hitCount++;
+	this->hitCount++;
 	if (isHitted > 0) {
 		this->combo++;
 		score += (combo / 10 + 1) + (combo / 100 + 1)*20;

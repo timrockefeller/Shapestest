@@ -58,6 +58,7 @@
 
 
         { "posInBeat":32.0, "type":3  },
+        { "posInBeat":32.0, "type":5  },
         { "posInBeat":33.0, "type":3  },
         { "posInBeat":33.5, "type":3  },
         { "posInBeat":34.0, "type":3  },
@@ -83,6 +84,7 @@
         { "posInBeat":47.5, "type":4  },
 
         { "posInBeat":48.0, "type":4  },
+        { "posInBeat":48.0, "type":5  },
         { "posInBeat":49.0, "type":3  },
         { "posInBeat":49.5, "type":3  },
         { "posInBeat":50.0, "type":3  },
@@ -144,7 +146,6 @@
 
         { "posInBeat":95.0, "type":2  },
 				{ "posInBeat":95.0, "type":3  },
-
         { "posInBeat":97.0, "type":3  },
         { "posInBeat":99.0, "type":4  },
         { "posInBeat":101.0, "type":1  },
@@ -174,6 +175,7 @@
 
 
         { "posInBeat":128.0, "type":3  },
+        { "posInBeat":128.0, "type":5  },
         { "posInBeat":129.0, "type":3  },
         { "posInBeat":130.0, "type":3  },
         { "posInBeat":131.0, "type":3  },
@@ -183,6 +185,7 @@
         { "posInBeat":135.0, "type":3  },
         { "posInBeat":135.5, "type":3  },
         { "posInBeat":136.0, "type":1  },
+        { "posInBeat":136.0, "type":5  },
         { "posInBeat":137.0, "type":1  },
         { "posInBeat":138.0, "type":1  },
         { "posInBeat":139.0, "type":1  },
@@ -192,6 +195,7 @@
         { "posInBeat":143.0, "type":1  },
         { "posInBeat":143.5, "type":1  },
         { "posInBeat":144.0, "type":4  },
+        { "posInBeat":144.0, "type":5  },
         { "posInBeat":145.0, "type":4  },
         { "posInBeat":146.0, "type":4  },
         { "posInBeat":147.0, "type":4  },
@@ -201,6 +205,7 @@
         { "posInBeat":151.0, "type":4  },
         { "posInBeat":151.5, "type":4  },
         { "posInBeat":152.0, "type":2  },
+        { "posInBeat":152.0, "type":5  },
         { "posInBeat":153.0, "type":2  },
         { "posInBeat":154.0, "type":2  },
         { "posInBeat":155.0, "type":2  },
@@ -214,6 +219,7 @@
         { "posInBeat":159.0, "type":2  },
 
         { "posInBeat":160.0, "type":3  },
+        { "posInBeat":160.0, "type":5  },
         { "posInBeat":161.0, "type":3  },
         { "posInBeat":162.0, "type":3  },
         { "posInBeat":163.0, "type":3  },
@@ -223,6 +229,7 @@
         { "posInBeat":167.0, "type":3  },
         { "posInBeat":167.5, "type":3  },
         { "posInBeat":168.0, "type":1  },
+        { "posInBeat":168.0, "type":5  },
         { "posInBeat":169.0, "type":1  },
         { "posInBeat":170.0, "type":1  },
         { "posInBeat":171.0, "type":1  },
@@ -233,6 +240,7 @@
         { "posInBeat":175.0, "type":2  },
         { "posInBeat":175.5, "type":2  },
         { "posInBeat":176.0, "type":3  },
+        { "posInBeat":176.0, "type":5  },
         { "posInBeat":177.0, "type":3  },
         { "posInBeat":178.0, "type":3  },
         { "posInBeat":179.0, "type":3  },
@@ -242,6 +250,7 @@
         { "posInBeat":182.0, "type":4  },
         { "posInBeat":183.0, "type":4  },
         { "posInBeat":184.0, "type":4  },
+        { "posInBeat":184.0, "type":5  },
         { "posInBeat":185.0, "type":4  },
         { "posInBeat":186.0, "type":4  },
         { "posInBeat":187.0, "type":4  },
@@ -255,6 +264,7 @@
         { "posInBeat":191.0, "type":1  },
         
         { "posInBeat":192.0, "type":3  },
+        { "posInBeat":192.0, "type":5  },
         { "posInBeat":193.0, "type":3  },
         { "posInBeat":193.5, "type":3  },
         { "posInBeat":194.0, "type":3  },
@@ -265,6 +275,7 @@
         { "posInBeat":198.0, "type":3  },
         { "posInBeat":199.0, "type":3  },
         { "posInBeat":200.0, "type":3  },
+        { "posInBeat":200.0, "type":5  },
         { "posInBeat":201.0, "type":3  },
         { "posInBeat":201.5, "type":3  },
         { "posInBeat":202.0, "type":3  },
@@ -276,6 +287,7 @@
         { "posInBeat":207.0, "type":2  },
         { "posInBeat":207.5, "type":2  },
         { "posInBeat":208.0, "type":1  },
+        { "posInBeat":208.0, "type":5  },
         { "posInBeat":209.0, "type":1  },
         { "posInBeat":209.5, "type":1  },
         { "posInBeat":210.0, "type":1  },
@@ -286,6 +298,8 @@
         { "posInBeat":214.0, "type":1  },
         { "posInBeat":215.0, "type":1  },
         { "posInBeat":216.0, "type":1  },
+        
+        { "posInBeat":216.0, "type":5  },
         { "posInBeat":217.0, "type":1  },
         { "posInBeat":217.5, "type":1  },
         { "posInBeat":218.0, "type":1  },
@@ -297,6 +311,7 @@
         { "posInBeat":223.0, "type":4  },
         { "posInBeat":223.5, "type":4  },
         { "posInBeat":224.0, "type":3  },
+        { "posInBeat":224.0, "type":5  },
         { "posInBeat":225.0, "type":3  },
         { "posInBeat":225.5, "type":3  },
         { "posInBeat":225.5, "type":2  },
@@ -309,6 +324,7 @@
         { "posInBeat":230.0, "type":3  },
         { "posInBeat":231.0, "type":3  },
         { "posInBeat":232.0, "type":3  },
+        { "posInBeat":232.0, "type":5  },
         { "posInBeat":233.0, "type":3  },
         { "posInBeat":233.5, "type":3  },
         { "posInBeat":233.5, "type":2  },
@@ -323,6 +339,7 @@
         { "posInBeat":238.5, "type":1  },
         { "posInBeat":239.0, "type":1  },
         { "posInBeat":240.0, "type":1  },
+        { "posInBeat":240.0, "type":5  },
         { "posInBeat":241.0, "type":1  },
         { "posInBeat":241.5, "type":1  },
         { "posInBeat":241.5, "type":4  },
@@ -335,6 +352,7 @@
         { "posInBeat":246.0, "type":1  },
         { "posInBeat":247.0, "type":1  },
         { "posInBeat":248.0, "type":1  },
+        { "posInBeat":248.0, "type":5  },
         { "posInBeat":249.0, "type":1  },
         { "posInBeat":249.5, "type":1  },
         { "posInBeat":249.5, "type":4  },
@@ -347,7 +365,8 @@
         { "posInBeat":254.0, "type":4  },
         { "posInBeat":254.5, "type":4  },
         { "posInBeat":254.5, "type":3  },
-        { "posInBeat":256, "type":3  }
+        { "posInBeat":256.0, "type":3  },
+        { "posInBeat":256.0, "type":5  }
 
     ],
     "chat":[]

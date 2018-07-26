@@ -95,6 +95,9 @@ private:
 	//level->songTempo / 70.0f  note速度
 	float beatsShownInAdvance = 1.0f;
 
+	//出现slap的时间点
+	float beatsOfNextSlap = -1;
+
 	//常量，note出生点
 	const float beatsSpawn = 500.0f;
 

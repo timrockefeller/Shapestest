@@ -1,0 +1,133 @@
+{
+	"songName": "Day 3 After",
+	"songPath": "./[chat]BubbleBath.mp3",
+	"songTempo": 128,
+	"songOffset": 750,
+	"levelType": 2,
+	"beatmap": [],
+	"chat": [
+		{
+			"left": "chr_Syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"今天的Crescendia状态不太好呢\n这么简单的歌曲都能失误这么多\n看来是昨晚跟猫猫玩太久了"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 1,
+			"dialogue": [
+				"(按下墨绿色的按钮)\n因为猫猫太会撒娇了嘛"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"状态永远在狡辩的时候最好呢"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 1,
+			"dialogue": [
+				"(按下宝蓝色的按钮)\n猫猫才不会撒谎呢！"
+			]
+		},
+		{
+			"left": "chr_blank",
+			"right": "chr_blank",
+			"onChating": 1,
+			"dialogue": [
+				"经过一些机械般的对话后..."
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 1,
+			"dialogue": [
+				"(按下黑色的按钮)\n啊！看来到时间了呢！"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"是呢，又到了道别的时候"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 1,
+			"dialogue": [
+				"(按下彩色的按钮)\n咱家要回家撸猫猫啦~~~今天就到这里啦，掰掰"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"再会啦"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"终于结束了...\n这两天的收视率肯定要大跳水了",
+				"Crescendia还没来...",
+				"我有些在意...我们去她家里看一看吧？"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 1,
+			"dialogue": [
+				"(按下草绿色的按钮)\n好~~~"
+			]
+		},
+
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"你是不是玩上瘾了"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 1,
+			"dialogue": [
+				"(按下橙色的按钮)\n没有啦~~~"
+			]
+		},
+		{
+			"left": "chr_syncopy",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				"别玩了，走吧"
+			]
+		},
+		{
+			"left": "chr_blank",
+			"right": "chr_blank",
+			"onChating": 0,
+			"dialogue": [
+				
+			]
+		}
+	]
+}

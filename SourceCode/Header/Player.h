@@ -26,7 +26,9 @@ public:
 	const float DefaultSize = 128;
 	//const float JudgeSize = 500;
 	float currentSize=128;
-
+	void reset() {
+		this->score = this->_score = this->hitCount = 0;
+	}
 	void start() {
 		this->combo = this->hitCount = this->miss = 0;
 		check_miss->SpriteAlpha = check_great->SpriteAlpha = 0;

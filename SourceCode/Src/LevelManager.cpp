@@ -54,15 +54,26 @@ void LevelManager::init()
 	// this->playlist.push_back(new Level("examplesong.json",GAME_LEVEL_TYPE_PURESONG));
 	//song 1
 	this->playlist.push_back(new Level("level1.json",GAME_LEVEL_TYPE_CHAT));//defaule song
-	this->playlist.push_back(new Level("level2.json", GAME_LEVEL_TYPE_LEVEL));
+	this->playlist.push_back(new Level("level_shelter.json", GAME_LEVEL_TYPE_LEVEL));
 	this->playlist.push_back(new Level("level4.json", GAME_LEVEL_TYPE_CHAT));
 	//song 2
 	this->playlist.push_back(new Level("level5.json", GAME_LEVEL_TYPE_CHAT));
-	this->playlist.push_back(new Level("level_bassTelekinesis.json", GAME_LEVEL_TYPE_LEVEL));
+	this->playlist.push_back(new Level("level2.json", GAME_LEVEL_TYPE_LEVEL));
+	this->playlist.push_back(new Level("level6.json", GAME_LEVEL_TYPE_CHAT));
 	//song 3
+	this->playlist.push_back(new Level("level7.json", GAME_LEVEL_TYPE_CHAT));
+	this->playlist.push_back(new Level("level_bassTelekinesis.json", GAME_LEVEL_TYPE_LEVEL));
+	this->playlist.push_back(new Level("level8.json", GAME_LEVEL_TYPE_CHAT));
+	this->playlist.push_back(new Level("level9.json", GAME_LEVEL_TYPE_CHAT));
 
 	//song 4
+
+	this->playlist.push_back(new Level("level10.json", GAME_LEVEL_TYPE_CHAT));
+	this->playlist.push_back(new Level("level11.json", GAME_LEVEL_TYPE_CHAT));
+
 	this->playlist.push_back(new Level("level_EyesHalfClosed.json", GAME_LEVEL_TYPE_LEVEL));
+	this->playlist.push_back(new Level("level12.json", GAME_LEVEL_TYPE_CHAT));
+
 }
 
 //绑定特效
@@ -152,6 +163,18 @@ void LevelManager::update(float deltaTime)
 			effects["noteSlide_RIGHT"]->currents =
 				MathHandle::ClampFloat(50, 128, (50 + 1000 * soundSystem->getSpectrumCurruentTime(2)));
 
+			//other effects
+			//slap
+			if (beatsOfNextSlap >= 0 && beatsOfNextSlap < songPosInBeats) {
+				//generate slap
+				CSprite* slap = new CSprite("slap");
+				slap->CloneSprite("effect_slap");
+				slap->SetSpritePosition(0, 0);
+				slap->SetSpriteLifeTime(2);
+				slap->SpriteAlpha = 255;
+				effectsOnce["fade_out"]->addObject(slap);
+				beatsOfNextSlap = -1;
+			}
 
 			songPosition = soundSystem->getPositionInMs();
 
@@ -159,45 +182,55 @@ void LevelManager::update(float deltaTime)
 
 			//load NextClick
 			if (nextHitObjectCur < playingLevel->beatmap.size() &&
-				this->playingLevel->beatmap[nextHitObjectCur].getPosInBeat() <= beatsShownInAdvance+ songPosInBeats) {
+				this->playingLevel->beatmap[nextHitObjectCur].getPosInBeat() <= beatsShownInAdvance + songPosInBeats) {
 
-				//Instantiate( /* Music Note Prefab */);
-				char tempName[128];
-				sprintf(tempName, "note_%d", nextHitObjectCur);
-				playingLevel->beatmap[nextHitObjectCur].bindSprite = new CSprite(tempName);
-				std::string  currentSprite = "note_prefab";
-				//check double
-				if (nextHitObjectCur > 0 && playingLevel->beatmap[nextHitObjectCur - 1].getPosInBeat() == playingLevel->beatmap[nextHitObjectCur].getPosInBeat() ||
-					nextHitObjectCur < playingLevel->beatmap.size() - 1 && playingLevel->beatmap[nextHitObjectCur + 1].getPosInBeat() == playingLevel->beatmap[nextHitObjectCur].getPosInBeat()) {
-					currentSprite = "note_prefab_double";
+				if (playingLevel->beatmap[nextHitObjectCur].getType() == HIT_EFFECT) {
+					beatsOfNextSlap = playingLevel->beatmap[nextHitObjectCur].getPosInBeat();
 				}
-					
-					
-				if (playingLevel->beatmap[nextHitObjectCur].bindSprite->CloneSprite(currentSprite.c_str())) {
-
-					//pathBuffer[0].push_back(this->playingLevel->beatmap[nextHitObjectCur]);
-					int _I = 0;//"_I"用来确定方向
-					switch (playingLevel->beatmap[nextHitObjectCur].getType()) {
-					case HIT_UP:
-						_I = 0; break;
-					case HIT_RIGHT:
-						_I = 1; break;
-					case HIT_DOWN:
-						_I = 2; break;
-					case HIT_LEFT:
-						_I = 3; break;
-					default:
-						_I = -1;
+				else 
+				{
+					//Instantiate( /* Music Note Prefab */);
+					char tempName[10];
+					sprintf(tempName, "note_%d", nextHitObjectCur);
+					playingLevel->beatmap[nextHitObjectCur].bindSprite = new CSprite(tempName);
+					std::string  currentSprite = "note_prefab";
+					//check double
+					if (nextHitObjectCur > 0 &&
+						playingLevel->beatmap[nextHitObjectCur - 1].getType()!=HIT_EFFECT && 
+						playingLevel->beatmap[nextHitObjectCur - 1].getPosInBeat() == playingLevel->beatmap[nextHitObjectCur].getPosInBeat() ||
+						nextHitObjectCur < playingLevel->beatmap.size() - 1 && 
+						playingLevel->beatmap[nextHitObjectCur + 1].getType()!=HIT_EFFECT&&
+						playingLevel->beatmap[nextHitObjectCur + 1].getPosInBeat() == playingLevel->beatmap[nextHitObjectCur].getPosInBeat()) {
+						currentSprite = "note_prefab_double";
 					}
-					if (_I != -1)
-						pathBuffer[_I].push_back(this->playingLevel->beatmap[nextHitObjectCur]);
-					nextHitObjectCur++;
+					if (playingLevel->beatmap[nextHitObjectCur].bindSprite->CloneSprite(currentSprite.c_str())) {
+
+						//pathBuffer[0].push_back(this->playingLevel->beatmap[nextHitObjectCur]);
+						int _I = 0;//"_I"用来确定方向
+						switch (playingLevel->beatmap[nextHitObjectCur].getType()) {
+						case HIT_UP:
+							_I = 0; break;
+						case HIT_RIGHT:
+							_I = 1; break;
+						case HIT_DOWN:
+							_I = 2; break;
+						case HIT_LEFT:
+							_I = 3; break;
+						default:
+							_I = -1;
+						}
+						if (_I != -1)
+							pathBuffer[_I].push_back(this->playingLevel->beatmap[nextHitObjectCur]);
+					}
+					
 				}
+				nextHitObjectCur++;
 			}
+			//checking end
 			if (songPosition >= (int)(soundSystem->getSongLengthInMs()) - 200) {
 				nextLevel();
 			}
-			//update notes positions and check
+			//update notes positions and check miss
 			for (int _I = 0; _I < 4; _I++) {
 				for (int _J = 0; _J < pathBuffer[_I].size(); _J++) {
 					
@@ -246,13 +279,23 @@ void LevelManager::update(float deltaTime)
 void LevelManager::keyDown(const int iKey)
 {
 	if (iKey == KEY_R) {//test
+		CSprite * a = new CSprite("title_img");
+		a->SpriteAlpha = 255;
+		effectsOnce["fade_out"]->addObject(a);
+		m_Player->reset();
 		this->playIndex = 0;
 		this->playLevel(playlist[playIndex]);
 		this->m_box_message->SetSpriteColorAlpha(this->m_box_message->SpriteAlpha=255);
+		alertMessage("仅需要按下WASD或↑→↓←哦~");
 		return;
 	}
 	if (iKey == KEY_P) {//test
-		this->nextLevel();
+		if(this->playingLevel->getLevelType()==GAME_LEVEL_TYPE_LEVEL)
+			this->nextLevel();
+		return;
+	}
+	if (iKey == KEY_O) {//test
+		alertMessage("Hi");
 		return;
 	}
 	HitObjectType type = HIT_UNDEFINE;
@@ -359,6 +402,7 @@ void LevelManager::playLevel(Level* level)
 			effects["noteSlide_RIGHT"]->start();
 			effects["handleFlash"]->start();
 			m_Player->start();
+			beatsOfNextSlap = -1;
 			beatsShownInAdvance = level->songTempo / 70.0f;
 
 			effectsOnce["fade_in"]->addObject(m_Player->score_text);
@@ -409,7 +453,7 @@ void LevelManager::checkNote(bool isHitted)
 			soundSystem->playFX(SOUND_FX_MISS);
 		m_Player->Hitted(0);
 	}
-	if (m_Player->getHitCount() == playingLevel->beatmap.size()) {
+	if (m_Player->getHitCount() >= playingLevel->notenum) {
 		std::string alertInfo = "";
 		if (m_Player->getAcc() == 100.f) {
 			alertInfo += "Full Combo!!   收听率：全球100%";

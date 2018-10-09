@@ -441,6 +441,9 @@ void LevelManager::nextLevel() {
 		playIndex++;
 		playLevel(playlist[playIndex]);
 	}
+	else {
+		alertMessage(m_Player->getScoreStr());
+	}
 }
 
 void LevelManager::checkNote(bool isHitted)

@@ -21,3 +21,8 @@ v0.2已更新，更少的bug更多的歌曲。
 - [x] Level type :: Chat
 - [ ] color changing when song changed
 - [ ] more effect when reaching the high point
+
+## More
+文档详见 __33-2018 计算机应用实践报告.doc__ ，因为只是一次课程作业，故要提交这么一份奇怪的东西……
+
+以及Release已发布与github，视频预览见[此处（bilibili）](https://www.bilibili.com/video/av30433180/)

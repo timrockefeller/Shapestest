@@ -19,7 +19,7 @@ int PASCAL WinMain(HINSTANCE hInstance,
 		return 0;
 
 	// To do : 在此使用API更改窗口标题
-	CSystem::SetWindowTitle("LessonX");
+	CSystem::SetWindowTitle("Shapestest Demo");
 
 	// 引擎主循环，处理屏幕图像刷新等工作
 	while( CSystem::EngineMainLoop() )

@@ -46,6 +46,11 @@ public:
 	float getAcc() { 
 		return (float)((int)((1.0f - this->miss * 1.0f / this->hitCount) * 10000)) / 100;
 	}
+	std::string getScoreStr() {
+		std::string a="µãÔÞÊý£º";
+		a += std::to_string(this->score);
+		return a;
+	}
 private:
 	//just set sprite size..
 	void OnKeyAction(CSprite* obj);
